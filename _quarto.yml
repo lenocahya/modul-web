@@ -1,0 +1,32 @@
+project:
+  type: book
+
+book:
+  title: "Junior Web Developer"
+  author: "Bengkel Koding"
+  date: "6/3/2023"
+  chapters:
+    - index.qmd
+    - 1_konsep_dasar_web.qmd
+    - 2_pengenalan_tools.qmd
+    - 3_responsive_web.qmd
+    - 4_pembuatan_front_page.qmd
+    - 5_konsep_database.qmd
+    - 6_praktik_database_todolist.qmd
+    - 7_program_todolist.qmd
+    - 8_studi_kasus_poliklinik.qmd
+    - 9_penguji_web.qmd
+    - 10_tugas_akhir.qmd
+ 
+   
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: darkly
+  pdf:
+    documentclass: scrreprt
+
+
+

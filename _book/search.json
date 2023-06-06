@@ -40,5 +40,117 @@
     "title": "Tugas Akhir",
     "section": "Penambahan Fitur pada aplikasi Poliklinik",
     "text": "Penambahan Fitur pada aplikasi Poliklinik"
+  },
+  {
+    "objectID": "2_pengenalan_tools.html#teks-editor",
+    "href": "2_pengenalan_tools.html#teks-editor",
+    "title": "Pengenalan tools",
+    "section": "Teks Editor",
+    "text": "Teks Editor\nBanyak pilihan untuk teks editor yang dapat digunakan, seperti Notepad++, Sublime Text, dan Visual Studio Code. namun pada modul ini teks editor yang digunakan adalah Visual Studio Code.   Visual Studio Code\nDownload Visual Studio Code melalui link berikut download\n\n\n\nvscode"
+  },
+  {
+    "objectID": "2_pengenalan_tools.html#web-browser",
+    "href": "2_pengenalan_tools.html#web-browser",
+    "title": "Pengenalan tools",
+    "section": "Web Browser",
+    "text": "Web Browser\nBanyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox \n\n\n\n\n\n\nChrome\n\n\n\n\n\n\n\nMozilla Firefox"
+  },
+  {
+    "objectID": "2_pengenalan_tools.html#web-server",
+    "href": "2_pengenalan_tools.html#web-server",
+    "title": "Pengenalan tools",
+    "section": "Web Server",
+    "text": "Web Server\nYang dibutuhkan : PHP 7.4++, MySQL 5.1+, Phpmyadmin\nXAMPP  download XAMPP versi terbaru mealalui link berikut download \n\n\n\nXAMPP\n\n\nUntuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini \n\n\n\nApache Config\n\n\nCek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya , letakkan pada C:\\xampp\\htdocs. Lalu buka localhost/info.php pada browser"
+  },
+  {
+    "objectID": "2_pengenalan_tools.html#bootstrap",
+    "href": "2_pengenalan_tools.html#bootstrap",
+    "title": "Pengenalan tools",
+    "section": "Bootstrap",
+    "text": "Bootstrap\nBootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat.   Berikut adalah beberapa penjelasan mengenai Bootstrap: \n\nResponsif: Salah satu fitur utama Bootstrap adalah kemampuannya untuk menghasilkan tampilan yang responsif secara otomatis. Dengan menggunakan kelas CSS yang telah disediakan oleh Bootstrap, elemen-elemen halaman web dapat menyesuaikan diri dengan baik pada berbagai perangkat dan ukuran layar, mulai dari desktop hingga perangkat mobile.\nGrid System: Bootstrap menyediakan sistem grid yang fleksibel untuk membagi layout halaman web menjadi kolom-kolom yang responsif. Grid system ini memungkinkan pengaturan layout yang mudah dan dapat diatur untuk menciptakan tampilan yang rapi dan terstruktur pada berbagai perangkat.\nKomponen Siap Pakai: Bootstrap menyediakan beragam komponen UI siap pakai seperti tombol, navigasi, formulir, jumbotron, kartu, jendela modal, dan banyak lagi. Komponen ini telah dirancang dengan baik dan dapat langsung digunakan dalam proyek tanpa perlu memikirkan desain atau gaya dasar, menghemat waktu dan usaha pengembangan.\nGaya dan Tema: Bootstrap memiliki gaya dan tema default yang estetis dan modern. Selain itu, Bootstrap juga menyediakan beragam tema kustom yang dapat diterapkan dengan mudah untuk memberikan tampilan yang unik dan sesuai dengan kebutuhan proyek Anda. Anda juga dapat menyesuaikan gaya dan tema Bootstrap sesuai dengan preferensi Anda sendiri.\nKompatibilitas Browser: Bootstrap dirancang untuk mendukung sebagian besar browser modern. Ini berarti tampilan dan fungsionalitas situs web yang dibangun dengan menggunakan Bootstrap akan konsisten dan berfungsi dengan baik di berbagai browser yang umum digunakan.\nDokumentasi dan Komunitas: Bootstrap memiliki dokumentasi yang sangat baik, lengkap dengan contoh-contoh kode dan penjelasan yang rinci. Selain itu, karena popularitasnya, Bootstrap memiliki komunitas pengembang yang besar dan aktif, yang dapat memberikan dukungan dan sumber daya yang berguna untuk menjawab pertanyaan, memecahkan masalah, dan berbagi pengalaman."
+  },
+  {
+    "objectID": "1_konsep_dasar_web.html#apa-itu-pemrograman-web",
+    "href": "1_konsep_dasar_web.html#apa-itu-pemrograman-web",
+    "title": "Konsep Dasar Web Programmming",
+    "section": "Apa itu Pemrograman Web?",
+    "text": "Apa itu Pemrograman Web?\nPemrograman web adalah proses menciptakan dan mengembangkan aplikasi web menggunakan bahasa pemrograman, teknologi, dan standar web.  Aplikasi web dapat diakses melalui browser web dan memungkinkan pengguna untuk berinteraksi dengan konten dan layanan yang disediakan."
+  },
+  {
+    "objectID": "1_konsep_dasar_web.html#komponen-utama-pemrograman-web",
+    "href": "1_konsep_dasar_web.html#komponen-utama-pemrograman-web",
+    "title": "Konsep Dasar Web Programmming",
+    "section": "Komponen Utama Pemrograman Web",
+    "text": "Komponen Utama Pemrograman Web\nBahasa Markup: HTML (Hypertext Markup Language) digunakan untuk membuat struktur dan konten dasar halaman web. CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan tata letak halaman.  Bahasa Pemrograman: JavaScript adalah bahasa pemrograman yang umum digunakan untuk membuat interaktivitas dan fungsi tambahan pada halaman web.  Server-Side Programming: Teknologi seperti PHP, Python, atau Node.js digunakan untuk memproses logika dan data di sisi server sebelum mengirimkan halaman ke browser pengguna.  Database: Digunakan untuk menyimpan dan mengelola data yang digunakan oleh aplikasi web. Contohnya MySQL, PostgreSQL, atau MongoDB."
+  },
+  {
+    "objectID": "1_konsep_dasar_web.html#arsitektur-klien-dan-server",
+    "href": "1_konsep_dasar_web.html#arsitektur-klien-dan-server",
+    "title": "Konsep Dasar Web Programmming",
+    "section": "Arsitektur Klien dan Server",
+    "text": "Arsitektur Klien dan Server\nPada pemrograman web, arsitektur klien dan server digunakan. Klien (misalnya browser web) mengirimkan permintaan ke server, dan server merespons dengan mengirimkan halaman web yang diminta.  Klien menginterpretasikan halaman web menggunakan HTML, CSS, dan JavaScript, sementara server mengurus pemrosesan data dan logika di balik halaman."
+  },
+  {
+    "objectID": "1_konsep_dasar_web.html#konsep-dasar-pemrograman-web",
+    "href": "1_konsep_dasar_web.html#konsep-dasar-pemrograman-web",
+    "title": "Konsep Dasar Web Programmming",
+    "section": "Konsep Dasar Pemrograman Web",
+    "text": "Konsep Dasar Pemrograman Web\nURL (Uniform Resource Locator): Alamat yang digunakan untuk mengakses halaman web. URL terdiri dari protokol (misalnya http:// atau https://), nama domain, dan path halaman.  HTTP (Hypertext Transfer Protocol): Protokol komunikasi yang digunakan untuk mentransfer data antara klien dan server. Permintaan klien dan respons server terjadi melalui metode HTTP seperti GET, POST, PUT, dan DELETE.  DOM (Document Object Model): Representasi struktur halaman web yang memungkinkan JavaScript untuk berinteraksi dengan elemen HTML dan mengubahnya secara dinamis."
+  },
+  {
+    "objectID": "1_konsep_dasar_web.html#lingkungan-pengembangan-web",
+    "href": "1_konsep_dasar_web.html#lingkungan-pengembangan-web",
+    "title": "Konsep Dasar Web Programmming",
+    "section": "Lingkungan Pengembangan Web",
+    "text": "Lingkungan Pengembangan Web\nEditor kode: Gunakan editor teks atau lingkungan pengembangan terintegrasi (IDE) seperti Visual Studio Code, Sublime Text, atau Atom untuk menulis kode web.  Browser: Berbagai browser seperti Chrome, Firefox, atau Safari digunakan untuk menguji dan melihat hasil dari halaman web yang dikembangkan.  Server lokal: Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik."
+  },
+  {
+    "objectID": "5_konsep_database.html",
+    "href": "5_konsep_database.html",
+    "title": "Konsep Database",
+    "section": "",
+    "text": "test"
+  },
+  {
+    "objectID": "8_studi_kasus_poliklinik.html",
+    "href": "8_studi_kasus_poliklinik.html",
+    "title": "Studi Kasus (Poliklinik)",
+    "section": "",
+    "text": "Studi Kasus (Poliklinik)\nDalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan fitur home, data master (berisi data dokter dan pasien), dan periksa."
+  },
+  {
+    "objectID": "8_studi_kasus_poliklinik.html#database",
+    "href": "8_studi_kasus_poliklinik.html#database",
+    "title": "Studi Kasus (Poliklinik)",
+    "section": "Database",
+    "text": "Database\nMembuat database baru pada localhost/phpmyadmin dengan nama poliklinik. setelah itu dapat membuat tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.\n\n\n\ndatabase baru\n\n\n\nDokter  Pada tabel dokter dapat menyimpan id, nama, alamat dan nomor hp. Pada tabel tersebut id merupakan primary key dengan tipe data integer, pada field nama, alamat, dan nomor hp memiliki tipe data varchar.\n\n\n\n\ntabel-dokter\n\n\n\nPasien  Pada tabel pasien dapat menyimpan id, data nama, alamat, dan nomor hp. Primary key terletak pada id dengan tipe data integer, pada field nama, alamat dan nomor hp bertipe data varchar.\n\n\n\n\ntabel-pasien\n\n\n\nPeriksa  Pada tabel periksa menyimpan data id periksa, id dokter, id pasien, tanggal periksa dan catatan. Pada tabel periksa saling terhubung dengan tabel dokter dan pasien melalui id dokter dan id pasien. id dokter dan id pasien berperan sebaga foreign key.\n\n\n\n\ntabel-dokter"
+  },
+  {
+    "objectID": "8_studi_kasus_poliklinik.html#koneksi",
+    "href": "8_studi_kasus_poliklinik.html#koneksi",
+    "title": "Studi Kasus (Poliklinik)",
+    "section": "Koneksi",
+    "text": "Koneksi\nKoneksi berfungsi untuk menghubungkan database dengan web yang dibuat. \n&lt;?php \n$databaseHost = 'localhost';\n$databaseName = 'poliklinik';\n$databaseUsername = 'root';\n$databasePassword = '';\n \n$mysqli = mysqli_connect($databaseHost, \n    $databaseUsername, $databasePassword, $databaseName);\n\nuntuk terkoneksi ke server mysql kita menggunakan argumen mysqli_connect. Pada mysqli_connect terdapat beberapa parameter, yaitu mysql_host, mysql_host, mysql_user, mysql_password, dan mysql_database.\n\nmysql_host  Jika menjalankan MySQL menggunakan XAMPP di komputer yang sama dengan tempat web server Apache berjalan, maka alamat ini bisa diisi dengan “localhost” atau “127.0.0.1”. Namun jika MySQL server dijalankan dari perangkat komputer server lain, argumen ini akan berisi IP address dari komputer server tersebut. \nmysql_user  berisi nama pengguna MySQL yang digunakan untuk login ke server database, seperti “root”, “admin”, atau “nama_anda”. Karena kita menggunakan MySQL dari XAMPP, secara default, nama pengguna yang digunakan adalah “root”. Jadi, jika Anda tidak mengubah pengaturan default XAMPP, Anda dapat menggunakan “root” sebagai nilai argumen nama pengguna saat memanggil fungsi mysqli_connect(). \nmysql_password  diisi dengan password user yang terdaftar pada server mysql. Secara default karena kita menggunakan MySQL dari xampp tanpa mengubah passwordnya maka nilai passwordnya adalah kosong sehingga dapat diisikan ““. \nmysql_database  pada parameter mysql_database diisikan nama database yang telah kita buat. Database yang kita buat sebelumnya adalah poliklinik atau sesuai yang telah anda buat."
+  },
+  {
+    "objectID": "8_studi_kasus_poliklinik.html#index",
+    "href": "8_studi_kasus_poliklinik.html#index",
+    "title": "Studi Kasus (Poliklinik)",
+    "section": "Index",
+    "text": "Index"
+  },
+  {
+    "objectID": "8_studi_kasus_poliklinik.html#bootstrap",
+    "href": "8_studi_kasus_poliklinik.html#bootstrap",
+    "title": "Studi Kasus (Poliklinik)",
+    "section": "Bootstrap",
+    "text": "Bootstrap\nUntuk membuat tampilan dapat menggunakan Bootstrap. Pada halaman bootstrap buka halaman docs untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Komponen-komponen yang digunakan : \n\nNavbar (dengan dropdown)\nForm\nTabel\nButton\n\n Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan."
+  },
+  {
+    "objectID": "8_studi_kasus_poliklinik.html#crud",
+    "href": "8_studi_kasus_poliklinik.html#crud",
+    "title": "Studi Kasus (Poliklinik)",
+    "section": "CRUD",
+    "text": "CRUD\n\nCreate\nRead\nUpdate\nDelete"
   }
 ]

@@ -4,3 +4,98 @@ format: html
 --- -->
 
 # Studi Kasus (Poliklinik) {.unnumbered}
+<br>
+Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan fitur home, data master (berisi data dokter dan pasien), dan periksa.
+
+::: {layout-ncol=2}
+![Preview Poliklinik](assets/poliklinik/home.png)
+
+![Preview Dokter](assets/poliklinik/dokter.png)
+
+![Preview Pasien](assets/poliklinik/pasien.png)
+
+![Preview Periksa](assets/poliklinik/periksa.png)
+:::
+
+## Database
+Membuat database baru pada `localhost/phpmyadmin` dengan nama poliklinik. setelah itu dapat membuat  tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.
+
+![database baru](assets/poliklinik/database-baru.png){width="60%"}
+
+1. **Dokter**
+<br>
+Pada tabel dokter dapat menyimpan id, nama, alamat dan nomor hp. Pada tabel tersebut id merupakan primary key dengan tipe data integer, pada field nama, alamat, dan nomor hp memiliki tipe data varchar.
+
+![tabel-dokter](assets/poliklinik/tabel-dokter.png){width="60%"}
+
+2. **Pasien**
+<br>
+Pada tabel pasien dapat menyimpan id, data nama, alamat, dan nomor hp. Primary key terletak pada id dengan tipe data integer, pada field nama, alamat dan nomor hp bertipe data varchar.
+
+![tabel-pasien](assets/poliklinik/tabel-pasien.png){width="60%"}
+
+3. **Periksa**
+<br>
+Pada tabel periksa menyimpan data id periksa, id dokter, id pasien, tanggal periksa dan catatan. Pada tabel periksa saling terhubung dengan tabel dokter dan pasien melalui id dokter dan id pasien. id dokter dan id pasien berperan sebaga foreign key.
+
+![tabel-dokter](assets/poliklinik/tabel-periksa.png){width="60%"}
+
+<br>
+
+## Koneksi
+Koneksi berfungsi untuk menghubungkan database dengan web yang dibuat.
+<br>
+
+```php
+<?php 
+$databaseHost = 'localhost';
+$databaseName = 'poliklinik';
+$databaseUsername = 'root';
+$databasePassword = '';
+ 
+$mysqli = mysqli_connect($databaseHost, 
+    $databaseUsername, $databasePassword, $databaseName);
+```
+<br>
+
+untuk terkoneksi ke server mysql kita menggunakan argumen mysqli_connect. Pada mysqli_connect terdapat beberapa parameter, yaitu mysql_host, mysql_host, mysql_user, mysql_password, dan mysql_database. 
+
+1. **mysql_host**
+<br> 
+Jika menjalankan MySQL menggunakan XAMPP di komputer yang sama dengan tempat web server Apache berjalan, maka alamat ini bisa diisi dengan "localhost" atau "127.0.0.1". Namun jika MySQL server dijalankan dari perangkat komputer server lain, argumen ini akan berisi IP address dari komputer server tersebut. 
+<br>
+2. **mysql_user**
+<br>
+berisi nama pengguna MySQL yang digunakan untuk login ke server database, seperti "root", "admin", atau "nama_anda". Karena kita menggunakan MySQL dari XAMPP, secara default, nama pengguna yang digunakan adalah "root". Jadi, jika Anda tidak mengubah pengaturan default XAMPP, Anda dapat menggunakan "root" sebagai nilai argumen nama pengguna saat memanggil fungsi mysqli_connect().
+<br>
+3. **mysql_password**
+<br>
+diisi dengan password user yang terdaftar pada server mysql. Secara default karena kita menggunakan MySQL dari xampp tanpa mengubah passwordnya maka nilai passwordnya adalah kosong sehingga dapat diisikan "".
+<br>
+4. **mysql_database**
+<br>
+pada parameter mysql_database diisikan nama database yang telah kita buat. Database yang kita buat sebelumnya adalah poliklinik atau sesuai yang telah anda buat.
+
+
+## Index
+
+
+## Bootstrap
+
+Untuk membuat tampilan dapat menggunakan Bootstrap. Pada halaman bootstrap buka halaman docs untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Komponen-komponen yang digunakan :
+<br>
+
+1. Navbar (dengan dropdown)
+2. Form
+3. Tabel
+4. Button
+
+<br>
+Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
+
+## CRUD
+
+1. Create 
+2. Read
+3. Update
+4. Delete

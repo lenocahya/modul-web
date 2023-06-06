@@ -170,7 +170,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#teks-editor" id="toc-teks-editor" class="nav-link active" data-scroll-target="#teks-editor">Teks Editor</a></li>
+  <li><a href="#web-browser" id="toc-web-browser" class="nav-link" data-scroll-target="#web-browser">Web Browser</a></li>
+  <li><a href="#web-server" id="toc-web-server" class="nav-link" data-scroll-target="#web-server">Web Server</a></li>
+  <li><a href="#bootstrap" id="toc-bootstrap" class="nav-link" data-scroll-target="#bootstrap">Bootstrap</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,8 +205,78 @@ ul.task-list li input[type="checkbox"] {
 title: "Pengenalan Tools"
 format: html
 --- -->
+<p>Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu! <br></p>
+<section id="teks-editor" class="level2">
+<h2 class="anchored" data-anchor-id="teks-editor">Teks Editor</h2>
+<p>Banyak pilihan untuk teks editor yang dapat digunakan, seperti <em>Notepad++</em>, <em>Sublime Text</em>, dan <em>Visual Studio Code</em>. namun pada modul ini teks editor yang digunakan adalah Visual Studio Code. <br> <br> <strong>Visual Studio Code</strong></p>
+<p>Download Visual Studio Code melalui link berikut <a href="https://code.visualstudio.com/download">download</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">vscode</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
+<section id="web-browser" class="level2">
+<h2 class="anchored" data-anchor-id="web-browser">Web Browser</h2>
+<p>Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox <br></p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/chrome.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Chrome</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/firefox.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Mozilla Firefox</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><br> <!-- ![web-browser]() --></p>
+</section>
+<section id="web-server" class="level2">
+<h2 class="anchored" data-anchor-id="web-server">Web Server</h2>
+<p><strong>Yang dibutuhkan : PHP 7.4++, MySQL 5.1+, Phpmyadmin</strong></p>
+<p><strong>XAMPP</strong> <br> download XAMPP versi terbaru mealalui link berikut <a href="https://www.apachefriends.org/download.html">download</a> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/xampp.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">XAMPP</figcaption>
+</figure>
+</div>
+<p>Untuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/php-config.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Apache Config</figcaption>
+</figure>
+</div>
+<p>Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <!--?php phpinfo(); ?-->, letakkan pada <a href="C:\xampp\htdocs"><code>C:\xampp\htdocs</code></a>. Lalu buka <a href="localhost/info.php"><code>localhost/info.php</code></a> pada browser</p>
+<p><br></p>
+</section>
+<section id="bootstrap" class="level2">
+<h2 class="anchored" data-anchor-id="bootstrap">Bootstrap</h2>
+<p>Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat. <br> <br> Berikut adalah beberapa penjelasan mengenai Bootstrap: <br></p>
+<ul>
+<li><p>Responsif: Salah satu fitur utama Bootstrap adalah kemampuannya untuk menghasilkan tampilan yang responsif secara otomatis. Dengan menggunakan kelas CSS yang telah disediakan oleh Bootstrap, elemen-elemen halaman web dapat menyesuaikan diri dengan baik pada berbagai perangkat dan ukuran layar, mulai dari desktop hingga perangkat mobile.</p></li>
+<li><p>Grid System: Bootstrap menyediakan sistem grid yang fleksibel untuk membagi layout halaman web menjadi kolom-kolom yang responsif. Grid system ini memungkinkan pengaturan layout yang mudah dan dapat diatur untuk menciptakan tampilan yang rapi dan terstruktur pada berbagai perangkat.</p></li>
+<li><p>Komponen Siap Pakai: Bootstrap menyediakan beragam komponen UI siap pakai seperti tombol, navigasi, formulir, jumbotron, kartu, jendela modal, dan banyak lagi. Komponen ini telah dirancang dengan baik dan dapat langsung digunakan dalam proyek tanpa perlu memikirkan desain atau gaya dasar, menghemat waktu dan usaha pengembangan.</p></li>
+<li><p>Gaya dan Tema: Bootstrap memiliki gaya dan tema default yang estetis dan modern. Selain itu, Bootstrap juga menyediakan beragam tema kustom yang dapat diterapkan dengan mudah untuk memberikan tampilan yang unik dan sesuai dengan kebutuhan proyek Anda. Anda juga dapat menyesuaikan gaya dan tema Bootstrap sesuai dengan preferensi Anda sendiri.</p></li>
+<li><p>Kompatibilitas Browser: Bootstrap dirancang untuk mendukung sebagian besar browser modern. Ini berarti tampilan dan fungsionalitas situs web yang dibangun dengan menggunakan Bootstrap akan konsisten dan berfungsi dengan baik di berbagai browser yang umum digunakan.</p></li>
+<li><p>Dokumentasi dan Komunitas: Bootstrap memiliki dokumentasi yang sangat baik, lengkap dengan contoh-contoh kode dan penjelasan yang rinci. Selain itu, karena popularitasnya, Bootstrap memiliki komunitas pengembang yang besar dan aktif, yang dapat memberikan dukungan dan sumber daya yang berguna untuk menjawab pertanyaan, memecahkan masalah, dan berbagi pengalaman.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

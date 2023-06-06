@@ -4,3 +4,77 @@ format: html
 --- -->
 
 # Pengenalan tools {.unnumbered}
+<br>
+
+Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu!
+<br>
+
+## Teks Editor
+Banyak pilihan untuk teks editor yang dapat digunakan, seperti *Notepad++*, *Sublime Text*, dan *Visual Studio Code*. namun pada modul ini teks editor yang digunakan adalah Visual Studio Code.
+<br>
+<br>
+**Visual Studio Code**
+
+Download Visual Studio Code melalui link berikut
+[download](https://code.visualstudio.com/download)
+
+![vscode](assets/tools/vscode.png)
+
+</br>
+
+## Web Browser
+Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox
+<br>
+
+::: {layout-ncol=2}
+![Chrome](assets/tools/chrome.png)
+
+![Mozilla Firefox](assets/tools/firefox.png)
+:::
+
+<br>
+<!-- ![web-browser]() -->
+
+## Web Server 
+
+**Yang dibutuhkan : PHP 7.4++, MySQL 5.1+, Phpmyadmin**
+
+**XAMPP**
+<br>
+download XAMPP versi terbaru mealalui link berikut 
+[download](https://www.apachefriends.org/download.html)
+<br>
+
+![XAMPP](assets/tools/xampp.png){width="70%"}
+
+Untuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini
+<br>
+
+![Apache Config](assets/tools/php-config.png){width="70%"}
+
+
+Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <?php phpinfo(); ?>, letakkan pada [`C:\xampp\htdocs`](C:\xampp\htdocs).  Lalu buka [`localhost/info.php`](localhost/info.php) pada browser
+
+<br>
+
+## Bootstrap
+
+Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat.
+<br>
+<br>
+Berikut adalah beberapa penjelasan mengenai Bootstrap:
+<br>
+
+- Responsif: Salah satu fitur utama Bootstrap adalah kemampuannya untuk menghasilkan tampilan yang responsif secara otomatis. Dengan menggunakan kelas CSS yang telah disediakan oleh Bootstrap, elemen-elemen halaman web dapat menyesuaikan diri dengan baik pada berbagai perangkat dan ukuran layar, mulai dari desktop hingga perangkat mobile.
+
+- Grid System: Bootstrap menyediakan sistem grid yang fleksibel untuk membagi layout halaman web menjadi kolom-kolom yang responsif. Grid system ini memungkinkan pengaturan layout yang mudah dan dapat diatur untuk menciptakan tampilan yang rapi dan terstruktur pada berbagai perangkat.
+
+- Komponen Siap Pakai: Bootstrap menyediakan beragam komponen UI siap pakai seperti tombol, navigasi, formulir, jumbotron, kartu, jendela modal, dan banyak lagi. Komponen ini telah dirancang dengan baik dan dapat langsung digunakan dalam proyek tanpa perlu memikirkan desain atau gaya dasar, menghemat waktu dan usaha pengembangan.
+
+- Gaya dan Tema: Bootstrap memiliki gaya dan tema default yang estetis dan modern. Selain itu, Bootstrap juga menyediakan beragam tema kustom yang dapat diterapkan dengan mudah untuk memberikan tampilan yang unik dan sesuai dengan kebutuhan proyek Anda. Anda juga dapat menyesuaikan gaya dan tema Bootstrap sesuai dengan preferensi Anda sendiri.
+
+- Kompatibilitas Browser: Bootstrap dirancang untuk mendukung sebagian besar browser modern. Ini berarti tampilan dan fungsionalitas situs web yang dibangun dengan menggunakan Bootstrap akan konsisten dan berfungsi dengan baik di berbagai browser yang umum digunakan.
+
+- Dokumentasi dan Komunitas: Bootstrap memiliki dokumentasi yang sangat baik, lengkap dengan contoh-contoh kode dan penjelasan yang rinci. Selain itu, karena popularitasnya, Bootstrap memiliki komunitas pengembang yang besar dan aktif, yang dapat memberikan dukungan dan sumber daya yang berguna untuk menjawab pertanyaan, memecahkan masalah, dan berbagi pengalaman.
+
+

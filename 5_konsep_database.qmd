@@ -4,5 +4,66 @@ format: html
 --- -->
 
 # Konsep Database {.unnumbered}
-mySQL
+Basis Data (Database) 
+<br>
+Secara umum, sekumpulan data terintegrasi dengan ukuran yang sangat besar, dikelola (diolah) dengan cara tertentu yang secara khusus menjelaskan aktifitas - aktifitas dari satu atau beberapa organisasi yang satu sama lain saling terkait.
+<br>
+Apa itu DDL?
+<br>
+DDL ( Data Definition Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi:
+<br>
+CREATE: Pernyataan ini membuat objek database baru, seperti tabel, tampilan, atau indeks. Misalnya, pernyataan SQL berikut membuat tabel yang disebut "pelanggan":
+<br>
+```sql
+CREATE TABLE pelanggan ( id INT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255));
+```
+<br>
+ALTER: Pernyataan ini digunakan untuk memodifikasi objek database yang sudah ada. Misalnya, pernyataan SQL berikut menambahkan kolom baru bernama " email " ke tabel " customers ":
+<br>
 
+```sql
+pelanggan ALTER TABLE ADD email VARCHAR(255);
+```
+<br>
+DROP: Pernyataan ini digunakan untuk menghapus objek database yang sudah ada. Misalnya, pernyataan SQL berikut menghapus tabel "pelanggan":
+<br>
+pelanggan DROP TABLE;
+<br>
+TRUNCATE: Pernyataan ini digunakan untuk menghapus semua baris dalam tabel, tetapi tidak seperti pernyataan DROP, pernyataan ini mempertahankan struktur dan indeks tabel.
+<br>
+RENAME: Pernyataan ini digunakan untuk mengganti nama objek database yang sudah ada. Misalnya, pernyataan SQL berikut mengganti nama tabel "pelanggan" menjadi "klien":
+<br>
+```sql
+RENAME TABLE pelanggan TO klien;
+```
+<br>
+Penting untuk dicatat bahwa pernyataan DDL dieksekusi segera dan bersifat permanen, artinya setelah objek dibuat, diubah, atau dihapus, perubahan tidak dapat diurungkan. Oleh karena itu, sangat penting untuk berhati-hati dan memastikan bahwa Anda memiliki cadangan basis data sebelum menjalankan pernyataan DDL apa pun. Selain itu, pernyataan DDL biasanya dijalankan oleh administrator database atau pengembang dengan hak istimewa dan izin yang sesuai untuk mengubah struktur database.
+<br>
+Apa itu DML?
+<br>
+DML ( Data Manipulation Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk memanipulasi data dalam database. Pernyataan DML digunakan untuk menyisipkan, memperbarui, dan menghapus data dalam database. Beberapa pernyataan DML yang paling umum meliputi:
+<br>
+SELECT: Pernyataan ini digunakan untuk mengambil data dari satu atau lebih tabel dalam database. Sebagai contoh, kueri SQL berikut mengambil semua rekaman dari tabel "pelanggan":
+<br>
+```sql
+SELECT * FROM pelanggan;
+```
+<br>
+INSERT: Pernyataan ini digunakan untuk memasukkan data baru ke dalam tabel. Sebagai ilustrasi, pernyataan SQL berikut menyisipkan baris baru ke dalam tabel "pelanggan":
+<br>
+```sql
+INSERT INTO pelanggan (id, nama, alamat) VALUES (1, 'John Smith,' '123 Main St');
+```
+<br>
+UPDATE: Pernyataan ini digunakan untuk memodifikasi data yang ada dalam sebuah tabel. Misalnya, pernyataan SQL berikut memperbarui alamat pelanggan dengan ID 1 di tabel "pelanggan":
+<br>
+```sql
+UPDATE pelanggan SET address = '456 Park Ave' WHERE id = 1;
+```
+<br>
+DELETE: Pernyataan ini digunakan untuk menghapus data dari tabel. Misalnya, pernyataan SQL berikut menghapus pelanggan dengan ID 1 dari tabel "pelanggan":
+<br>
+```sql
+DELETE FROM pelanggan WHERE id = 1;
+```
+<br>

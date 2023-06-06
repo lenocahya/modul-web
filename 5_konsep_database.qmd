@@ -10,7 +10,7 @@ Secara umum, sekumpulan data terintegrasi dengan ukuran yang sangat besar, dikel
 <br>
 Apa itu DDL?
 <br>
-DDL ( Data Definition Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi:
+DDL ( Data Definition Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi beberapa jenis:
 <br>
 CREATE: Pernyataan ini membuat objek database baru, seperti tabel, tampilan, atau indeks. Misalnya, pernyataan SQL berikut membuat tabel yang disebut "pelanggan":
 <br>

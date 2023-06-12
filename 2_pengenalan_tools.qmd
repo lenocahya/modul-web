@@ -10,7 +10,13 @@ Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahu
 <br>
 
 ## Teks Editor
-Banyak pilihan untuk teks editor yang dapat digunakan, seperti *Notepad++*, *Sublime Text*, dan *Visual Studio Code*. namun pada modul ini teks editor yang digunakan adalah Visual Studio Code.
+Banyak pilihan untuk teks editor yang dapat digunakan, seperti *Notepad++*, *Sublime Text*, dan *Visual Studio Code*. 
+<br>
+
+![Tools Pemrograman Web](assets/tools/toolsWeb.png){width="60%"}
+
+<br>
+Namun pada modul ini teks editor yang digunakan adalah Visual Studio Code.
 <br>
 <br>
 **Visual Studio Code**
@@ -18,7 +24,7 @@ Banyak pilihan untuk teks editor yang dapat digunakan, seperti *Notepad++*, *Sub
 Download Visual Studio Code melalui link berikut
 [download](https://code.visualstudio.com/download)
 
-![vscode](assets/tools/vscode.png)
+![vscode](assets/tools/vscode.png){width="60%"}
 
 </br>
 
@@ -26,7 +32,7 @@ Download Visual Studio Code melalui link berikut
 Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox
 <br>
 
-::: {layout-ncol=2}
+::: {layout="[[43,-4,43]]"}
 ![Chrome](assets/tools/chrome.png)
 
 ![Mozilla Firefox](assets/tools/firefox.png)
@@ -45,15 +51,15 @@ download XAMPP versi terbaru mealalui link berikut
 [download](https://www.apachefriends.org/download.html)
 <br>
 
-![XAMPP](assets/tools/xampp.png){width="70%"}
+![XAMPP](assets/tools/xampp.png){width="60%"}
 
 Untuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini
 <br>
 
-![Apache Config](assets/tools/php-config.png){width="70%"}
+![Apache Config](assets/tools/php-config.png){width="60%"}
 
 
-Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <?php phpinfo(); ?>, letakkan pada [`C:\xampp\htdocs`](C:\xampp\htdocs).  Lalu buka [`localhost/info.php`](localhost/info.php) pada browser
+Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <?php phpinfo(); ?>, letakkan pada [`C:\xampp\htdocs`](C:\xampp\htdocs).  Lalu buka [`localhost/info.php`](http://localhost/info.php) pada browser
 
 <br>
 
@@ -61,20 +67,48 @@ Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isi
 
 Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat.
 <br>
+
+![Bootstrap](assets/tools/bootstrap1.png){width="70%"}
+
 <br>
-Berikut adalah beberapa penjelasan mengenai Bootstrap:
 <br>
 
-- Responsif: Salah satu fitur utama Bootstrap adalah kemampuannya untuk menghasilkan tampilan yang responsif secara otomatis. Dengan menggunakan kelas CSS yang telah disediakan oleh Bootstrap, elemen-elemen halaman web dapat menyesuaikan diri dengan baik pada berbagai perangkat dan ukuran layar, mulai dari desktop hingga perangkat mobile.
+**Cara installasi Bootstrap**
+<br>
 
-- Grid System: Bootstrap menyediakan sistem grid yang fleksibel untuk membagi layout halaman web menjadi kolom-kolom yang responsif. Grid system ini memungkinkan pengaturan layout yang mudah dan dapat diatur untuk menciptakan tampilan yang rapi dan terstruktur pada berbagai perangkat.
+1.	Buka halaman resmi Bootstrap di https://getbootstrap.com.
 
-- Komponen Siap Pakai: Bootstrap menyediakan beragam komponen UI siap pakai seperti tombol, navigasi, formulir, jumbotron, kartu, jendela modal, dan banyak lagi. Komponen ini telah dirancang dengan baik dan dapat langsung digunakan dalam proyek tanpa perlu memikirkan desain atau gaya dasar, menghemat waktu dan usaha pengembangan.
+2.	Di halaman utama, Anda akan melihat tombol "Download" di bagian bawah. Klik tombol tersebut untuk mengunduh file Bootstrap.
+<br>
 
-- Gaya dan Tema: Bootstrap memiliki gaya dan tema default yang estetis dan modern. Selain itu, Bootstrap juga menyediakan beragam tema kustom yang dapat diterapkan dengan mudah untuk memberikan tampilan yang unik dan sesuai dengan kebutuhan proyek Anda. Anda juga dapat menyesuaikan gaya dan tema Bootstrap sesuai dengan preferensi Anda sendiri.
+:::{layout="[[43,-4,43]]"}
+![Tampilan Laman Bootstrap](assets/tools/bootstrap2.png)
 
-- Kompatibilitas Browser: Bootstrap dirancang untuk mendukung sebagian besar browser modern. Ini berarti tampilan dan fungsionalitas situs web yang dibangun dengan menggunakan Bootstrap akan konsisten dan berfungsi dengan baik di berbagai browser yang umum digunakan.
+![Download Paker Bootstrap](assets/tools/bootstrap3.png)
+:::
 
-- Dokumentasi dan Komunitas: Bootstrap memiliki dokumentasi yang sangat baik, lengkap dengan contoh-contoh kode dan penjelasan yang rinci. Selain itu, karena popularitasnya, Bootstrap memiliki komunitas pengembang yang besar dan aktif, yang dapat memberikan dukungan dan sumber daya yang berguna untuk menjawab pertanyaan, memecahkan masalah, dan berbagi pengalaman.
+3.	Setelah selesai mengunduh, ekstrak file zip Bootstrap yang telah diunduh ke direktori proyek web Anda.
+<br>
 
+![Ekstrak File](assets/tools/bootstrap4.png){width="60%"}
 
+4.	Di dalam direktori proyek, buatlah folder baru (misalnya "css" dan "js") untuk menyimpan file CSS dan JavaScript Bootstrap.
+<br>
+
+![Ekstrak File](assets/tools/bootstrap5.png){width="60%"}
+
+5.	Salin file bootstrap.min.css yang ada di dalam direktori "dist/css" dalam file Bootstrap yang telah diekstrak, ke dalam folder "css" di dalam direktori proyek Anda.
+
+6.	Salin file bootstrap.min.js yang ada di dalam direktori "dist/js" dalam file Bootstrap yang telah diekstrak, ke dalam folder "js" di dalam direktori proyek Anda.
+
+7.	Setelah itu, Anda dapat menggunakan Bootstrap dengan menautkan file CSS dan JavaScript ke dalam halaman HTML Anda. Dalam elemen `<head>` dari file HTML, tambahkan tag link berikut untuk menautkan file CSS Bootstrap:
+<br>
+```html
+<link rel="stylesheet" href="css/bootstrap.min.css">
+```
+8.	Juga di dalam elemen <body> atau sebelum penutup tag </body> dalam file HTML, tambahkan tag script berikut untuk menautkan file JavaScript Bootstrap:
+<br>
+```html
+<script src="js/bootstrap.min.js"></script> 
+```
+9.	Sekarang, Anda dapat menggunakan kelas-kelas, komponen, dan gaya Bootstrap dalam halaman web Anda.Sekarang, Anda dapat menggunakan kelas-kelas, komponen, dan gaya Bootstrap dalam halaman web Anda.

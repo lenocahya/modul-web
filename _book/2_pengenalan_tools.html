@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -205,14 +239,74 @@ ul.task-list li input[type="checkbox"] {
 title: "Pengenalan Tools"
 format: html
 --- -->
-<p>Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu! <br></p>
+<p><br> Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu! <br></p>
 <section id="teks-editor" class="level2">
 <h2 class="anchored" data-anchor-id="teks-editor">Teks Editor</h2>
-<p>Banyak pilihan untuk teks editor yang dapat digunakan, seperti <em>Notepad++</em>, <em>Sublime Text</em>, dan <em>Visual Studio Code</em>. namun pada modul ini teks editor yang digunakan adalah Visual Studio Code. <br> <br> <strong>Visual Studio Code</strong></p>
-<p>Download Visual Studio Code melalui link berikut <a href="https://code.visualstudio.com/download">download</a></p>
+<p>Banyak pilihan untuk teks editor yang dapat digunakan, seperti <em>Notepad++</em>, <em>Sublime Text</em>, dan <em>Visual Studio Code</em>. <br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/tools/vscode.png" class="img-fluid figure-img"></p>
+<p><img src="assets/tools/toolsWeb.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption class="figure-caption">Tools Pemrograman Web</figcaption>
+</figure>
+</div>
+<p><br></p>
+<p><strong>Visual Studio Code</strong></p>
+<hr>
+<p>Teks Editor yang umum digunakan saat ini adalah Visual Studio Code.Untuk melakukan installasi Visual Studio Code silah ikuti langkah-langkah berikut: <br></p>
+<ol type="1">
+<li>Silahkan download file installer dari <a href="https://code.visualstudio.com/download">vscode</a>. Klik download pada halaman web Visual Studio Code sesuai dengan sistem operasi yang digunakan.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode/webvscode.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Laman VSCode</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>Setelah selesai download, klik dua kali pada file installer.</p></li>
+<li><p>Jika muncul peingan Run as Administrator, klik Yes.</p></li>
+<li><p>Kemudian akan tampil window Installer Microsoft Visual Studio Code. Untuk menyetujui <em>License Agreement</em>, pilih “I accept the aggrement” lalu next</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode/vscodeagreement.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">License Agreement VS Code</figcaption>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>Lalu pilih lokasi instalasinya. Jika ingin menggunakan lokasi default dapat langsung klik next</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode/dirvscode.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Lokasi Installasi VS Code</figcaption>
+</figure>
+</div>
+<ol start="6" type="1">
+<li>Memilih lokasi shortcuts program. Jika ingin menggunakan default dapat langsung klik next</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode/foldervscode.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Shortcuts VS Code</figcaption>
+</figure>
+</div>
+<ol start="7" type="1">
+<li>Pada bagian <strong>Select Additional Tasks</strong>, terdapat beberapa tasks yang bisa diinstall atau tidak. Untuk memudahkan ketika membuka file melalui berkas atau explorer dapat di pilih semua dan klik next</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode/vscready.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Additional Task VS Code</figcaption>
+</figure>
+</div>
+<ol start="8" type="1">
+<li>Klik Install dan Jalan Visual Studio Code <br></li>
+</ol>
+<p>Berikut adalah tampilan dari Visual Studio Code <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/vscode.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption class="figure-caption">vscode</figcaption>
 </figure>
 </div>
@@ -220,10 +314,10 @@ format: html
 </section>
 <section id="web-browser" class="level2">
 <h2 class="anchored" data-anchor-id="web-browser">Web Browser</h2>
-<p>Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox <br></p>
+<p>Web browser adalah perangkat lunak yang awalnya dirancang untuk menampilkan dokumen web/HTML. Namun, pada saat ini, web browser harus memiliki kemampuan untuk menginterpretasikan dan menjalankan JavaScript atau VBScript, menjalankan Java Applet, memahami dokumen XML, dan menjalankan dokumen khusus dengan menggunakan fasilitas plugin seperti file .swf Macromedia Flash, dan lain sebagainya. <br><br> Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox atau dapat menggunakan web browser yang tersedia pada laptop atau pc yang digunakan seperti safari atau microsoft edge. <br></p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 47.8%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/tools/chrome.png" class="img-fluid figure-img"></p>
@@ -231,7 +325,10 @@ format: html
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 4.4%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 47.8%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/tools/firefox.png" class="img-fluid figure-img"></p>
@@ -241,39 +338,109 @@ format: html
 </div>
 </div>
 </div>
-<p><br> <!-- ![web-browser]() --></p>
+<p><br></p>
 </section>
 <section id="web-server" class="level2">
 <h2 class="anchored" data-anchor-id="web-server">Web Server</h2>
-<p><strong>Yang dibutuhkan : PHP 7.4++, MySQL 5.1+, Phpmyadmin</strong></p>
-<p><strong>XAMPP</strong> <br> download XAMPP versi terbaru mealalui link berikut <a href="https://www.apachefriends.org/download.html">download</a> <br></p>
+<p>Web Server adalah server HTTP yang bertugas menyediakan dokumen yang diminta oleh web browser. Saat ini, web server telah berkembang menjadi lebih kompleks karena harus melayani banyak fungsi dan bahkan menjadi pusat layanan-layanan lain. <br><br> Web server juga menjadi komponen yang sangat penting dalam application server. Sebagai server HTTP, web server harus dapat menangani permintaan dokumen yang diberikan oleh web browser dan juga harus bisa dikonfigurasi untuk berinteraksi dengan program-program seperti JSP, ASP, PHP, melalui CGI, dan sebagainya. Contoh-contoh web server yang populer antara lain Apache dan IIS (Internet Information Service). <br> <br></p>
+<p><strong>XAMPP</strong> <br></p>
+<p>XAMPP adalah sebuah web server open source yang dapat berjalan di berbagai sistem operasi seperti Windows, Linux, dan MacOS. <br><br> XAMPP menyediakan semua komponen yang diperlukan untuk mengelola sebuah website, termasuk Apache, MySQL/MariaDB, PHP, dan Perl. XAMPP dapat digunakan untuk membuat web server lokal di komputer. <br><br> Untuk menginstall XAMPP ikuti langkah-langkah berikut: <br></p>
+<ol type="1">
+<li>Unduh file installer dari website <a href="https://www.apachefriends.org/download.html">XAMPP</a></li>
+<li>Lakukan instalasi XAMPP sesuai panduan (wizard) yang ditampilkan dan pilih Yes untuk melanjutkan instalasi.</li>
+<li>Pilih komponen yang Anda butuhkan dalam instalasi tersebut. Sebagai contoh, centang MySQL dan phpMyAdmin.</li>
+<li>Tentukan direktori instalasi yang tepat, misalnya C:\xampp.</li>
+<li>Lakukan instalasi Bitnami untuk memudahkan dalam memasang WordPress, Drupal atau Joomla secara otomatis. <br></li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/tools/xampp.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="assets/tools/xampp.png" class="img-fluid figure-img" style="width:60.0%"></p>
 <figcaption class="figure-caption">XAMPP</figcaption>
 </figure>
 </div>
-<p>Untuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini <br></p>
+<p><br> Untuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini <br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/tools/php-config.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="assets/tools/php-config.png" class="img-fluid figure-img" style="width:60.0%"></p>
 <figcaption class="figure-caption">Apache Config</figcaption>
 </figure>
 </div>
-<p>Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <!--?php phpinfo(); ?-->, letakkan pada <a href="C:\xampp\htdocs"><code>C:\xampp\htdocs</code></a>. Lalu buka <a href="localhost/info.php"><code>localhost/info.php</code></a> pada browser</p>
+<p>Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <!--?php phpinfo(); ?-->, letakkan pada <a href="C:\xampp\htdocs"><code>C:\xampp\htdocs</code></a>. Lalu buka <a href="http://localhost/info.php"><code>localhost/info.php</code></a> pada browser</p>
 <p><br></p>
 </section>
 <section id="bootstrap" class="level2">
 <h2 class="anchored" data-anchor-id="bootstrap">Bootstrap</h2>
-<p>Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat. <br> <br> Berikut adalah beberapa penjelasan mengenai Bootstrap: <br></p>
-<ul>
-<li><p>Responsif: Salah satu fitur utama Bootstrap adalah kemampuannya untuk menghasilkan tampilan yang responsif secara otomatis. Dengan menggunakan kelas CSS yang telah disediakan oleh Bootstrap, elemen-elemen halaman web dapat menyesuaikan diri dengan baik pada berbagai perangkat dan ukuran layar, mulai dari desktop hingga perangkat mobile.</p></li>
-<li><p>Grid System: Bootstrap menyediakan sistem grid yang fleksibel untuk membagi layout halaman web menjadi kolom-kolom yang responsif. Grid system ini memungkinkan pengaturan layout yang mudah dan dapat diatur untuk menciptakan tampilan yang rapi dan terstruktur pada berbagai perangkat.</p></li>
-<li><p>Komponen Siap Pakai: Bootstrap menyediakan beragam komponen UI siap pakai seperti tombol, navigasi, formulir, jumbotron, kartu, jendela modal, dan banyak lagi. Komponen ini telah dirancang dengan baik dan dapat langsung digunakan dalam proyek tanpa perlu memikirkan desain atau gaya dasar, menghemat waktu dan usaha pengembangan.</p></li>
-<li><p>Gaya dan Tema: Bootstrap memiliki gaya dan tema default yang estetis dan modern. Selain itu, Bootstrap juga menyediakan beragam tema kustom yang dapat diterapkan dengan mudah untuk memberikan tampilan yang unik dan sesuai dengan kebutuhan proyek Anda. Anda juga dapat menyesuaikan gaya dan tema Bootstrap sesuai dengan preferensi Anda sendiri.</p></li>
-<li><p>Kompatibilitas Browser: Bootstrap dirancang untuk mendukung sebagian besar browser modern. Ini berarti tampilan dan fungsionalitas situs web yang dibangun dengan menggunakan Bootstrap akan konsisten dan berfungsi dengan baik di berbagai browser yang umum digunakan.</p></li>
-<li><p>Dokumentasi dan Komunitas: Bootstrap memiliki dokumentasi yang sangat baik, lengkap dengan contoh-contoh kode dan penjelasan yang rinci. Selain itu, karena popularitasnya, Bootstrap memiliki komunitas pengembang yang besar dan aktif, yang dapat memberikan dukungan dan sumber daya yang berguna untuk menjawab pertanyaan, memecahkan masalah, dan berbagi pengalaman.</p></li>
-</ul>
+<p>Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat. <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/bootstrap/bootstrap1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Bootstrap</figcaption>
+</figure>
+</div>
+<p><br> <br></p>
+<p><strong>Cara installasi Bootstrap</strong> <br></p>
+<ol type="1">
+<li><p>Buka halaman resmi Bootstrap di https://getbootstrap.com.</p></li>
+<li><p>Di halaman utama, Anda akan melihat tombol “Download” di bagian bawah. Klik tombol tersebut untuk mengunduh file Bootstrap. <br></p></li>
+</ol>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 47.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/bootstrap/bootstrap2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Tampilan Laman Bootstrap</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 4.4%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 47.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/bootstrap/bootstrap3.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Download Paker Bootstrap</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Setelah selesai mengunduh, ekstrak file zip Bootstrap yang telah diunduh ke direktori proyek web Anda. <br></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/bootstrap/bootstrap4.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Ekstrak File</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Di dalam direktori proyek, buatlah folder baru (misalnya “css” dan “js”) untuk menyimpan file CSS dan JavaScript Bootstrap. <br></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tools/bootstrap/bootstrap5.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Ekstrak File</figcaption>
+</figure>
+</div>
+<ol start="5" type="1">
+<li><p>Salin file bootstrap.min.css yang ada di dalam direktori “dist/css” dalam file Bootstrap yang telah diekstrak, ke dalam folder “css” di dalam direktori proyek Anda.</p></li>
+<li><p>Salin file bootstrap.min.js yang ada di dalam direktori “dist/js” dalam file Bootstrap yang telah diekstrak, ke dalam folder “js” di dalam direktori proyek Anda.</p></li>
+<li><p>Setelah itu, Anda dapat menggunakan Bootstrap dengan menautkan file CSS dan JavaScript ke dalam halaman HTML Anda. Dalam elemen <code>&lt;head&gt;</code> dari file HTML, tambahkan tag link berikut untuk menautkan file CSS Bootstrap: <br></p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"css/bootstrap.min.css"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="8" type="1">
+<li>Juga di dalam elemen
+
+atau sebelum penutup tag
+
+dalam file HTML, tambahkan tag script berikut untuk menautkan file JavaScript Bootstrap: <br></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"js/bootstrap.min.js"</span><span class="kw">&gt;&lt;/script&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="9" type="1">
+<li>Sekarang, Anda dapat menggunakan kelas-kelas, komponen, dan gaya Bootstrap dalam halaman web Anda.Sekarang, Anda dapat menggunakan kelas-kelas, komponen, dan gaya Bootstrap dalam halaman web Anda.</li>
+</ol>
 
 
 </section>

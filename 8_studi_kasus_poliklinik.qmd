@@ -7,7 +7,7 @@ format: html
 <br>
 Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan fitur home, data master (berisi data dokter dan pasien), dan periksa.
 
-::: {layout-ncol=2}
+::: {layout="[[43,-4,43]]"}
 ![Preview Poliklinik](assets/poliklinik/home.png)
 
 ![Preview Dokter](assets/poliklinik/dokter.png)
@@ -56,6 +56,7 @@ $databasePassword = '';
 $mysqli = mysqli_connect($databaseHost, 
     $databaseUsername, $databasePassword, $databaseName);
 ```
+
 <br>
 
 untuk terkoneksi ke server mysql kita menggunakan argumen mysqli_connect. Pada mysqli_connect terdapat beberapa parameter, yaitu mysql_host, mysql_host, mysql_user, mysql_password, dan mysql_database. 

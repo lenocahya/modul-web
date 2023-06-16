@@ -5,7 +5,6 @@ format: html
 
 # Pengenalan tools {.unnumbered}
 <br>
-
 Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu!
 <br>
 
@@ -13,23 +12,54 @@ Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahu
 Banyak pilihan untuk teks editor yang dapat digunakan, seperti *Notepad++*, *Sublime Text*, dan *Visual Studio Code*. 
 <br>
 
-![Tools Pemrograman Web](assets/tools/toolsWeb.png){width="60%"}
+![Tools Pemrograman Web](assets/tools/toolsWeb.png){width="40%"}
 
 <br>
-Namun pada modul ini teks editor yang digunakan adalah Visual Studio Code.
-<br>
-<br>
+
 **Visual Studio Code**
+---
+Teks Editor yang umum digunakan saat ini adalah Visual Studio Code.Untuk melakukan installasi Visual Studio Code silah ikuti langkah-langkah berikut:
+<br>
 
-Download Visual Studio Code melalui link berikut
-[download](https://code.visualstudio.com/download)
+1. Silahkan download file installer dari [vscode](https://code.visualstudio.com/download). Klik download pada halaman web Visual Studio Code sesuai dengan sistem operasi yang digunakan.
 
-![vscode](assets/tools/vscode.png){width="60%"}
+![Laman VSCode](assets/tools/vscode/webvscode.png){width="50%"}
 
-</br>
+2. Setelah selesai download, klik dua kali pada file installer.
+
+3. Jika muncul peingan Run as Administrator, klik Yes.
+
+4. Kemudian akan tampil window Installer Microsoft Visual Studio Code. Untuk menyetujui *License Agreement*, pilih "I accept the aggrement" lalu next
+
+![License Agreement VS Code](assets/tools/vscode/vscodeagreement.png){width="50%"}
+
+5. Lalu pilih lokasi instalasinya. Jika ingin menggunakan lokasi default dapat langsung klik next
+
+![Lokasi Installasi VS Code](assets/tools/vscode/dirvscode.png){width="50%"}
+
+6. Memilih lokasi shortcuts program. Jika ingin menggunakan default dapat langsung klik next
+
+![Shortcuts VS Code](assets/tools/vscode/foldervscode.png){width="50%"}
+
+7. Pada bagian **Select Additional Tasks**, terdapat beberapa tasks yang bisa diinstall atau tidak. Untuk memudahkan ketika membuka file melalui berkas atau explorer dapat di pilih semua dan klik next
+
+![Additional Task VS Code](assets/tools/vscode/vscready.png){width="50%"}
+
+8. Klik Install dan Jalan Visual Studio Code
+<br>
+
+Berikut adalah tampilan dari Visual Studio Code
+<br>
+
+![vscode](assets/tools/vscode.png){width="70%"}
+
+<br>
 
 ## Web Browser
-Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox
+
+Web browser adalah perangkat lunak yang awalnya dirancang untuk menampilkan dokumen web/HTML. Namun, pada saat ini, web browser harus memiliki kemampuan untuk menginterpretasikan dan menjalankan JavaScript atau VBScript, menjalankan Java Applet, memahami dokumen XML, dan menjalankan dokumen khusus dengan menggunakan fasilitas plugin seperti file .swf Macromedia Flash, dan lain sebagainya.
+<br><br>
+Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google Chrome dan Mozilla Firefox atau dapat menggunakan web browser yang tersedia pada laptop atau pc yang digunakan seperti safari atau microsoft edge.
 <br>
 
 ::: {layout="[[43,-4,43]]"}
@@ -39,20 +69,35 @@ Banyak web browser yang dapat digunakan, dan paling umum digunakan adalah Google
 :::
 
 <br>
-<!-- ![web-browser]() -->
 
 ## Web Server 
 
-**Yang dibutuhkan : PHP 7.4++, MySQL 5.1+, Phpmyadmin**
+Web Server adalah server HTTP yang bertugas menyediakan dokumen yang diminta oleh web browser. Saat ini, web server telah berkembang menjadi lebih kompleks karena harus melayani banyak fungsi dan bahkan menjadi pusat layanan-layanan lain.
+<br><br>
+Web server juga menjadi komponen yang sangat penting dalam application server. Sebagai server HTTP, web server harus dapat menangani permintaan dokumen yang diberikan oleh web browser dan juga harus bisa dikonfigurasi untuk berinteraksi dengan program-program seperti JSP, ASP, PHP, melalui CGI, dan sebagainya. Contoh-contoh web server yang populer antara lain Apache dan IIS (Internet Information Service).
+<br>
+<br>
 
 **XAMPP**
 <br>
-download XAMPP versi terbaru mealalui link berikut 
-[download](https://www.apachefriends.org/download.html)
+
+XAMPP adalah sebuah web server open source yang dapat berjalan di berbagai sistem operasi seperti Windows, Linux, dan MacOS.
+<br><br>
+XAMPP menyediakan semua komponen yang diperlukan untuk mengelola sebuah website, termasuk Apache, MySQL/MariaDB, PHP, dan Perl. XAMPP dapat digunakan untuk membuat web server lokal di komputer.
+<br><br>
+Untuk menginstall XAMPP ikuti langkah-langkah berikut:
+<br>
+
+1. Unduh file installer dari website [XAMPP](https://www.apachefriends.org/download.html)
+2. Lakukan instalasi XAMPP sesuai panduan (wizard) yang ditampilkan dan pilih Yes untuk melanjutkan instalasi.
+3. Pilih komponen yang Anda butuhkan dalam instalasi tersebut. Sebagai contoh, centang MySQL dan phpMyAdmin.
+4. Tentukan direktori instalasi yang tepat, misalnya C:\\xampp.
+5. Lakukan instalasi Bitnami untuk memudahkan dalam memasang WordPress, Drupal atau Joomla secara otomatis.
 <br>
 
 ![XAMPP](assets/tools/xampp.png){width="60%"}
 
+<br>
 Untuk melihat confiurasi php dapat membuka config pada baris apache lalu membuka php.ini
 <br>
 
@@ -68,7 +113,7 @@ Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isi
 Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat.
 <br>
 
-![Bootstrap](assets/tools/bootstrap1.png){width="70%"}
+![Bootstrap](assets/tools/bootstrap/bootstrap1.png){width="70%"}
 
 <br>
 <br>
@@ -82,20 +127,20 @@ Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk 
 <br>
 
 :::{layout="[[43,-4,43]]"}
-![Tampilan Laman Bootstrap](assets/tools/bootstrap2.png)
+![Tampilan Laman Bootstrap](assets/tools/bootstrap/bootstrap2.png)
 
-![Download Paker Bootstrap](assets/tools/bootstrap3.png)
+![Download Paker Bootstrap](assets/tools/bootstrap/bootstrap3.png)
 :::
 
 3.	Setelah selesai mengunduh, ekstrak file zip Bootstrap yang telah diunduh ke direktori proyek web Anda.
 <br>
 
-![Ekstrak File](assets/tools/bootstrap4.png){width="60%"}
+![Ekstrak File](assets/tools/bootstrap/bootstrap4.png){width="60%"}
 
 4.	Di dalam direktori proyek, buatlah folder baru (misalnya "css" dan "js") untuk menyimpan file CSS dan JavaScript Bootstrap.
 <br>
 
-![Ekstrak File](assets/tools/bootstrap5.png){width="60%"}
+![Ekstrak File](assets/tools/bootstrap/bootstrap5.png){width="60%"}
 
 5.	Salin file bootstrap.min.css yang ada di dalam direktori "dist/css" dalam file Bootstrap yang telah diekstrak, ke dalam folder "css" di dalam direktori proyek Anda.
 

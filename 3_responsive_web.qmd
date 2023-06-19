@@ -4,11 +4,14 @@ format: html
 --- -->
 
 # Responsive Web Design {.unnumbered}
-<br>
 
 ## Pengenalan Responsive Web Design
 
 Desain Web Responsif (Responsive Web Design)merupakan penggunaan HTML dan CSS untuk dapat mengubah ukuran, menyembunyikan, mengecilkan, atau memperbesar situs web secara otomatis, agar dapat terlihat bagus pada semua perangkat (desktop, tablet, dan handphone).
+<br>
+
+![Responsive Web](assets/responsive/responsive_web.jpg){width="50%"}
+
 <br>
 
 Halaman web responsive dilakukan dengan menambahkan elemen <meta> pada dokumen HTML seperti berikut:

@@ -18,32 +18,51 @@ Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poli
 :::
 
 ## Database
-Membuat database baru pada `localhost/phpmyadmin` dengan nama poliklinik. setelah itu dapat membuat  tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.
+Membuat database baru pada [localhost/phpmyadmin](http://localhost/phpmyadmin/) dengan nama poliklinik. setelah itu dapat membuat  tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.
+<br>
 
-![database baru](assets/poliklinik/database-baru.png){width="60%"}
+![Tabel Database Poliklinik](assets/poliklinik/tabeldatabase.png){width="60%"}
+
+<br>
+Tabel Dokter dan Pasien bisa dikatakan memiliki hubungan many-to-many, jika setiap dokter dapat melayani banyak pasien, dan setiap pasien dapat ditangani banyak dokter. Sehingga diperlukan adanya tabel penghubung dari kedua tabel tersebut, yaitu tabel periksa.
+<br>
 
 1. **Dokter**
 <br>
 Pada tabel dokter dapat menyimpan id, nama, alamat dan nomor hp. Pada tabel tersebut id merupakan primary key dengan tipe data integer, pada field nama, alamat, dan nomor hp memiliki tipe data varchar.
-
-![tabel-dokter](assets/poliklinik/tabel-dokter.png){width="60%"}
+<br>
 
 2. **Pasien**
 <br>
 Pada tabel pasien dapat menyimpan id, data nama, alamat, dan nomor hp. Primary key terletak pada id dengan tipe data integer, pada field nama, alamat dan nomor hp bertipe data varchar.
-
-![tabel-pasien](assets/poliklinik/tabel-pasien.png){width="60%"}
+<br>
 
 3. **Periksa**
 <br>
-Pada tabel periksa menyimpan data id periksa, id dokter, id pasien, tanggal periksa dan catatan. Pada tabel periksa saling terhubung dengan tabel dokter dan pasien melalui id dokter dan id pasien. id dokter dan id pasien berperan sebaga foreign key.
+Pada tabel periksa menyimpan data id periksa, id dokter, id pasien, tanggal periksa dan catatan. Pada tabel periksa saling terhubung dengan tabel dokter dan pasien melalui id dokter dan id pasien. id dokter dan id pasien berperan sebagai foreign key.
+<br>
 
-![tabel-dokter](assets/poliklinik/tabel-periksa.png){width="60%"}
+Buatlah tabel-tabel yang diperlukan untuk membuat web mengenai poliklinik sesuai dengan yang telah diperlajari sebelumnya, berikut adalah contoh pembuatan tabel dokter.
+<br>
+
+![Tabel Dokter](assets/poliklinik/tabel-dokter.png)
 
 <br>
 
+```sql
+CREATE TABLE `poliklinik`.`dokter` (
+    `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT , 
+    `nama` VARCHAR(255) NULL DEFAULT NULL , 
+    `alamat` VARCHAR(255) NULL DEFAULT NULL , 
+    `no_hp` VARCHAR(50) NULL DEFAULT NULL , 
+    PRIMARY KEY (`id`)) ENGINE = InnoDB;
+```
+
+<br>
+Id pada setiap tabel ditambahkan dengan auto increment, sehingga id akan secara otomatis menambahkan data integer secara berurut pada setiap id tabel. Dari contoh tabel dokter di atas dapat dilanjutkan dengan membuat 2 tabel lainnya, yaitu tabel pasien dan tabel periksa.
+
 ## Koneksi
-Koneksi berfungsi untuk menghubungkan database dengan web yang dibuat.
+Koneksi merupakan penghubung antara database dengaan web yang dibuat.
 <br>
 
 ```php
@@ -59,44 +78,223 @@ $mysqli = mysqli_connect($databaseHost,
 
 <br>
 
-untuk terkoneksi ke server mysql kita menggunakan argumen mysqli_connect. Pada mysqli_connect terdapat beberapa parameter, yaitu mysql_host, mysql_host, mysql_user, mysql_password, dan mysql_database. 
-
-1. **mysql_host**
-<br> 
-Jika menjalankan MySQL menggunakan XAMPP di komputer yang sama dengan tempat web server Apache berjalan, maka alamat ini bisa diisi dengan "localhost" atau "127.0.0.1". Namun jika MySQL server dijalankan dari perangkat komputer server lain, argumen ini akan berisi IP address dari komputer server tersebut. 
-<br>
-2. **mysql_user**
-<br>
-berisi nama pengguna MySQL yang digunakan untuk login ke server database, seperti "root", "admin", atau "nama_anda". Karena kita menggunakan MySQL dari XAMPP, secara default, nama pengguna yang digunakan adalah "root". Jadi, jika Anda tidak mengubah pengaturan default XAMPP, Anda dapat menggunakan "root" sebagai nilai argumen nama pengguna saat memanggil fungsi mysqli_connect().
-<br>
-3. **mysql_password**
-<br>
-diisi dengan password user yang terdaftar pada server mysql. Secara default karena kita menggunakan MySQL dari xampp tanpa mengubah passwordnya maka nilai passwordnya adalah kosong sehingga dapat diisikan "".
-<br>
-4. **mysql_database**
-<br>
-pada parameter mysql_database diisikan nama database yang telah kita buat. Database yang kita buat sebelumnya adalah poliklinik atau sesuai yang telah anda buat.
-
+Sama seperti yang digunakan sebelumnya, dimana untuk menghubungkan SQL dengan PHP digunakan fungsi mysqli_connect dengan parameter host, username, password, dan nama dari database.
 
 ## Index
 
+Setelah membuat file koneksi, maka perlu load kode koneksi tersebut ke file php yang akan dibuat.
+<br>
+Untuk membuat tampilan yang resposive dapat load atau install Bootstripe dengan menggunakan kode url yang disediakan pada web Bootstripe atau mendownload paket yang disediakan oleh Bootstripe.
 
-## Bootstrap
+### Index
 
-Untuk membuat tampilan dapat menggunakan Bootstrap. Pada halaman bootstrap buka halaman docs untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Komponen-komponen yang digunakan :
+Pada bagian index akan menampilkan home atau dashboard dari web poliklinik yang berisikan navbar dan ucapan selamat datang di website poliklinik.
 <br>
 
-1. Navbar (dengan dropdown)
-2. Form
-3. Tabel
-4. Button
+![Preview Poliklinik](assets/poliklinik/home.png){width="60%"}
 
 <br>
-Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
 
-## CRUD
+**Navbar**
+<br>
 
-1. Create 
-2. Read
-3. Update
-4. Delete
+Untuk membuat navbar dapat membuka bootstrap dan mencari pada kolom pencarian yang telah disediakan dengan kata kunci nav atau navbar. Carilah navbar yang sesuai dengan navbar yang ada pada tampilan home poliklinikk diatas. Pada navbar ditampilkan nama website, home, dropdown yang berisi dokter dan pasien, dan yang terakhir adalah periksa. Modifikasi kode navbar dari Bootstrap, hapus bagian yang tidak digunakan.
+<br>
+
+> Pada bagian href untuk mengarahkan atau berpindah halaman web dapat langsung menuliskan nama/path file, untuk file dinamis maka dapat menuliskan alamat href seperti berikut.
+<br>
+
+```php
+<li>
+    <a class="dropdown-item" href="index.php?page=dokter">
+        Dokter
+    </a>
+</li>
+<li>
+    <a class="dropdown-item" href="index.php?page=pasien">
+        Pasien
+    </a>
+    </li>
+```
+
+> Dari kode diatas melalui file index dapat menampilkan tampilan atau data sesuai dengan parameter yang dimasukkan, misalnya tampilan halaman dokter.
+
+**Membuat tampilan dinamis.**
+<br>
+
+Masih pada file index, setelah menuliskan kode untuk menampilkan navbar adalah menuliskan kode untuk menampilkan tampilan dinamis sesuai dengan halaman yang dipilih pada navbar.
+<br>
+
+Tampilan dinamis merupakan kemampuan sebuah aplikasi atau halaman web untuk menyesuaikan dan mengubah kontennya secara dinamis berdasarkan input, data, atau kondisi tertentu. Dengan tampilan dinamis, halaman web dapat menampilkan konten yang berbeda untuk setiap pengguna atau situasi yang berbeda.
+<br>
+
+```php
+<main role="main" class="container">
+    <?php
+    if (isset($_GET['page'])) {
+    ?>
+        <h2><?php echo ucwords($_GET['page']) ?></h2>
+    <?php
+        include($_GET['page'] . ".php");
+    } else {
+        echo "Selamat Datang di Sistem Informasi Poliklinik";
+    }
+    ?>
+</main>
+```
+
+<br>
+
+Kode tersebut menunjukkan cara dinamis untuk menampilkan halaman berdasarkan nilai parameter "page" dalam URL. Jika parameter "page" ada, maka konten halaman akan bervariasi sesuai dengan nilai tersebut. Jika tidak ada parameter "page", maka halaman akan menampilkan pesan selamat datang.
+<br>
+
+### Dokter
+
+Pada halaman dokter.php menampilkan form, tabel dan beberapa tombol. Seperti pada program [todolist](7_program_todolist.qmd), gunakan source code class tabel yang sesuai pada Bootstrap. 
+<br>
+
+**Form**
+<br>
+Setelah tag form tambahkan kode php untuk menampilkan isi dari tabel yang dipilih ketika melakukan perintah ubah atau update, berdasarkan id dari baris yang akan diubah dengan menggunakan metode get.
+<br>
+
+:::{layout="[[43,-4,43]]"}
+![Form Dokter](assets/poliklinik/form-dokter.png)
+
+![Ubah Dokter](assets/poliklinik/ubah-dokter.png)
+:::
+
+<br>
+Kode berikut ditambahkan setelah tag form dan sebelum input nama.
+
+```php
+<?php
+$isi = '';
+$tgl_awal = '';
+$tgl_akhir = '';
+if (isset($_GET['id'])) {
+    $ambil = mysqli_query($mysqli, "SELECT * FROM kegiatan 
+    WHERE id='" . $_GET['id'] . "'");
+    while ($row = mysqli_fetch_array($ambil)) {
+        $isi = $row['isi'];
+        $tgl_awal = $row['tgl_awal'];
+        $tgl_akhir = $row['tgl_akhir'];
+    }
+?>
+    <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
+<?php
+}
+?>
+```
+
+<br>
+
+**Tabel**
+<br>
+
+pada bagian tabel sama dengan form dapat mencari kelas Bootstrap yang sesuai dan modifikasi sesuai kebutuhan. Pada bagian tabel body seperti berikut :
+<br>
+
+```php
+<?php
+$result = mysqli_query($mysqli, "SELECT * FROM dokter");
+$no = 1;
+while ($data = mysqli_fetch_array($result)) {
+?>
+    <tr>
+        <td><?php echo $no++ ?></td>
+        <td><?php echo $data['nama'] ?></td>
+        <td><?php echo $data['alamat'] ?></td>
+        <td><?php echo $data['no_hp'] ?></td>
+        <td>
+            <a class="btn btn-success rounded-pill px-3" href="index.php?page=dokter&id=<?php echo $data['id'] ?>">Ubah</a>
+            <a class="btn btn-danger rounded-pill px-3" href="index.php?page=dokter&id=<?php echo $data['id'] ?>&aksi=hapus">Hapus</a>
+        </td>
+    </tr>
+<?php
+}
+?>
+```
+
+### Pasien
+<br>
+
+Pada halaman pasien.php menampilkan form dan tabel yang sama dengan halaman dokter, sehingga dapat memodifikasi kode-kode dari dari halaman dokter untuk disesuaikan ada halaman pasien.
+
+## Periksa
+<br>
+
+Ppada halaman periksa.php untuk kelas tabel dan form yang digunakan sama dengan halaman-halaman sebelumnya. Namun ada perbedaan pada fungsi php yang digunakan, misalnya pada bagian input dokter.
+<br>
+
+```php
+ <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPasien" class="sr-only">Pasien</label>
+    <select class="form-control" name="id_pasien">
+        <?php
+        $selected = '';
+        $pasien = mysqli_query($mysqli, "SELECT * FROM pasien");
+        while ($data = mysqli_fetch_array($pasien)) {
+            if ($data['id'] == $id_pasien) {
+                $selected = 'selected="selected"';
+            } else {
+                $selected = '';
+            }
+        ?>
+            <option value="<?php echo $data['id'] ?>" <?php echo $selected ?>><?php echo $data['nama'] ?></option>
+        <?php
+        }
+        ?>
+    </select>
+</div>
+```
+
+<br>
+
+Selain itu pada form yang digunakan juga terdapat form untuk input tanggal dan waktu sehingga digunakan tipe input "datetime-local". Sehingga ketika akan mengisikan data akan muncul *icon* tanggal dan hanya perlu memilih tanggal dan waktu yang sesuai.
+<br>
+
+![Form Periksa](assets/poliklinik/formperiksa.png)
+
+<br>
+
+```php
+<?php
+$result = mysqli_query($mysqli, "SELECT pr.*,d.nama as 'nama_dokter', p.nama as 'nama_pasien' FROM periksa pr LEFT JOIN dokter d ON (pr.id_dokter=d.id) LEFT JOIN pasien p ON (pr.id_pasien=p.id) ORDER BY pr.tgl_periksa DESC");
+$no = 1;
+while ($data = mysqli_fetch_array($result)) {
+?>
+    <tr>
+        <td><?php echo $no++ ?></td>
+        <td><?php echo $data['nama_pasien'] ?></td>
+        <td><?php echo $data['nama_dokter'] ?></td>
+        <td><?php echo $data['tgl_periksa'] ?></td>
+        <td><?php echo $data['catatan'] ?></td>
+        <td>
+            <a class="btn btn-success rounded-pill px-3" 
+            href="index.php?page=periksa&id=<?php echo $data['id'] ?>">
+            Ubah</a>
+            <a class="btn btn-danger rounded-pill px-3" 
+            href="index.php?page=periksa&id=<?php echo $data['id'] ?>&aksi=hapus">Hapus</a>
+        </td>
+    </tr>
+<?php
+}
+?>
+```
+
+<br>
+
+Kode tersebut merupakan contoh pengambilan data dari tabel "periksa" dalam database menggunakan MySQLi dengan menggunakan operasi LEFT JOIN untuk menggabungkan data dari tabel "dokter" dan "pasien". Data tersebut kemudian ditampilkan dalam bentuk tabel pada halaman web.
+<br>
+
+Pertama, query SQL dieksekusi dengan menggunakan fungsi mysqli_query() untuk mengambil data dari tabel "periksa" dan melakukan JOIN dengan tabel "dokter" dan "pasien" berdasarkan ID dokter dan ID pasien yang terkait. Data tersebut kemudian disimpan dalam variabel $result.
+<br>
+
+Selanjutnya, menggunakan loop while, setiap baris data dari hasil query (data) untuk membentuk baris dalam tabel. Pada setiap sel, data seperti nomor urut (no++), nama pasien (data['nama_pasien']), nama dokter (data['nama_dokter']), tanggal periksa (data['tgl_periksa']), dan catatan (data['catatan']) ditampilkan.
+<br>
+
+Selain itu, pada setiap baris data, terdapat tautan "Ubah" dan "Hapus" yang mengarahkan ke halaman yang sesuai untuk mengedit atau menghapus data periksa. Tautan tersebut memiliki atribut href yang dinamis dengan menggunakan nilai ID periksa dari baris data saat ini (data['id']).
+<br>
+
+Dengan menggunakan kode di atas, data periksa, termasuk informasi terkait dokter dan pasien, akan ditampilkan dalam bentuk tabel. Tautan "Ubah" dan "Hapus" memungkinkan pengguna untuk melakukan operasi edit dan hapus terhadap data periksa yang sesuai.

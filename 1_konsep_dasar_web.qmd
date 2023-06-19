@@ -4,43 +4,51 @@ format: html
 --- -->
 
 # Konsep Dasar Web Programmming {.unnumbered}
-<br>
 
 ## Apa itu Pemrograman Web?
-<br>
+
 Pemrograman web adalah proses menciptakan dan mengembangkan aplikasi web menggunakan bahasa pemrograman, teknologi, dan standar web.
 <br>
+
 Aplikasi web dapat diakses melalui browser web dan memungkinkan pengguna untuk berinteraksi dengan konten dan layanan yang disediakan.
 
 ## Komponen Utama Pemrograman Web
 
-Bahasa Markup: HTML (Hypertext Markup Language) digunakan untuk membuat struktur dan konten dasar halaman web. CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan tata letak halaman.
+- Bahasa Markup: HTML (Hypertext Markup Language) digunakan untuk membuat struktur dan konten dasar halaman web. CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan tata letak halaman.
 <br>
-Bahasa Pemrograman: JavaScript adalah bahasa pemrograman yang umum digunakan untuk membuat interaktivitas dan fungsi tambahan pada halaman web.
+
+- Bahasa Pemrograman: JavaScript adalah bahasa pemrograman yang umum digunakan untuk membuat interaktivitas dan fungsi tambahan pada halaman web.
 <br>
-Server-Side Programming: Teknologi seperti PHP, Python, atau Node.js digunakan untuk memproses logika dan data di sisi server sebelum mengirimkan halaman ke browser pengguna.
+
+- Server-Side Programming: Teknologi seperti PHP, Python, atau Node.js digunakan untuk memproses logika dan data di sisi server sebelum mengirimkan halaman ke browser pengguna.
 <br>
-Database: Digunakan untuk menyimpan dan mengelola data yang digunakan oleh aplikasi web. Contohnya MySQL, PostgreSQL, atau MongoDB.
+
+- Database: Digunakan untuk menyimpan dan mengelola data yang digunakan oleh aplikasi web. Contohnya MySQL, PostgreSQL, atau MongoDB.
 
 ## Arsitektur Klien dan Server
 
 Pada pemrograman web, arsitektur klien dan server digunakan. Klien (misalnya browser web) mengirimkan permintaan ke server, dan server merespons dengan mengirimkan halaman web yang diminta.
 <br>
+
 Klien menginterpretasikan halaman web menggunakan HTML, CSS, dan JavaScript, sementara server mengurus pemrosesan data dan logika di balik halaman.
 
 ## Konsep Dasar Pemrograman Web
 
 
-URL (Uniform Resource Locator): Alamat yang digunakan untuk mengakses halaman web. URL terdiri dari protokol (misalnya http:// atau https://), nama domain, dan path halaman.
+- URL (Uniform Resource Locator): Alamat yang digunakan untuk mengakses halaman web. URL terdiri dari protokol (misalnya http:// atau https://), nama domain, dan path halaman.
 <br>
-HTTP (Hypertext Transfer Protocol): Protokol komunikasi yang digunakan untuk mentransfer data antara klien dan server. Permintaan klien dan respons server terjadi melalui metode HTTP seperti GET, POST, PUT, dan DELETE.
+
+- HTTP (Hypertext Transfer Protocol): Protokol komunikasi yang digunakan untuk mentransfer data antara klien dan server. Permintaan klien dan respons server terjadi melalui metode HTTP seperti GET, POST, PUT, dan DELETE.
 <br>
-DOM (Document Object Model): Representasi struktur halaman web yang memungkinkan JavaScript untuk berinteraksi dengan elemen HTML dan mengubahnya secara dinamis.
+
+- DOM (Document Object Model): Representasi struktur halaman web yang memungkinkan JavaScript untuk berinteraksi dengan elemen HTML dan mengubahnya secara dinamis.
 
 ## Lingkungan Pengembangan Web
 
-Editor kode: Gunakan editor teks atau lingkungan pengembangan terintegrasi (IDE) seperti Visual Studio Code, Sublime Text, atau Atom untuk menulis kode web.
+- Editor kode: Gunakan editor teks atau lingkungan pengembangan terintegrasi (IDE) seperti Visual Studio Code, Sublime Text, atau Atom untuk menulis kode web.
 <br>
-Browser: Berbagai browser seperti Chrome, Firefox, atau Safari digunakan untuk menguji dan melihat hasil dari halaman web yang dikembangkan.
+
+- Browser: Berbagai browser seperti Chrome, Firefox, atau Safari digunakan untuk menguji dan melihat hasil dari halaman web yang dikembangkan.
 <br>
-Server lokal: Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik.
+
+- Server lokal: Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik.

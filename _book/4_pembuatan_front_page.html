@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -170,7 +204,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#desain-front-page" id="toc-desain-front-page" class="nav-link active" data-scroll-target="#desain-front-page">Desain Front Page</a></li>
+  <li><a href="#membuat-front-page" id="toc-membuat-front-page" class="nav-link" data-scroll-target="#membuat-front-page">Membuat Front Page</a>
+  <ul class="collapse">
+  <li><a href="#judul-heading" id="toc-judul-heading" class="nav-link" data-scroll-target="#judul-heading"><strong>Judul (heading)</strong></a></li>
+  <li><a href="#form" id="toc-form" class="nav-link" data-scroll-target="#form"><strong>Form</strong></a></li>
+  <li><a href="#tabel" id="toc-tabel" class="nav-link" data-scroll-target="#tabel"><strong>Tabel</strong></a></li>
+  <li><a href="#button" id="toc-button" class="nav-link" data-scroll-target="#button">Button</a></li>
+  <li><a href="#warna" id="toc-warna" class="nav-link" data-scroll-target="#warna">Warna</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,8 +244,192 @@ ul.task-list li input[type="checkbox"] {
 title: "Front Page To Do List"
 format: html
 --- -->
+<p>Setelah mempelajari responsive web dan framework bootstrap, selanjutnya adalah mengaplikasikan bootstrap ke php yang akan dibuat. Berikut adalah contoh tampilan front page sederhana untuk mengaplikasikan bootstrap pada website.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/frontpage/frontpage.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Front Page</figcaption>
+</figure>
+</div>
+<p><br> Pembuatan frontpage merupakan langkah awal dalam mengembangkan sebuah situs web. Frontpage, atau halaman depan, adalah halaman pertama yang dilihat oleh pengunjung saat mengakses situs web Anda. Tujuan dari frontpage adalah memberikan informasi yang jelas, menarik, dan menggambarkan dengan baik apa yang situs web Anda tawarkan. <br></p>
+<p>Berikut adalah beberapa langkah untuk membuat frontpage sederhana: <br></p>
+<ol type="1">
+<li><p>Perencanaan: Pertama, tentukan tujuan dan sasaran situs web Anda.</p></li>
+<li><p>Desain tata letak: Pilih tata letak yang sederhana dan mudah dibaca. Gunakan grid atau susunan blok untuk menempatkan elemen-elemen seperti judul, navigasi, konten utama, dan footer. Pastikan tata letak yang Anda pilih responsif sehingga situs web Anda terlihat baik di berbagai perangkat.</p></li>
+<li><p>Header: Header adalah bagian atas halaman yang biasanya berisi judul situs web, logo, dan menu navigasi.</p></li>
+<li><p>Konten utama: Bagian ini berisi informasi penting yang ingin Anda sampaikan kepada pengunjung.</p></li>
+<li><p>Sidebar atau widget: Jika diperlukan, tambahkan sidebar atau widget di sisi halaman untuk menampilkan informasi tambahan seperti daftar kategori, arsip artikel, atau tautan sosial media. Pastikan elemen-elemen ini tidak mengalihkan perhatian dari konten utama.</p></li>
+<li><p>Footer: Footer adalah bagian bawah halaman yang sering berisi tautan tambahan, informasi kontak, atau hak cipta. Pastikan untuk mencantumkan informasi kontak yang relevan dan tautan ke halaman lain di situs web Anda.</p></li>
+<li><p>Responsif dan optimasi: Pastikan frontpage Anda responsif, artinya tampil dengan baik di berbagai perangkat seperti desktop, tablet, dan ponsel. Periksa tampilan halaman di berbagai browser untuk memastikan konsistensi. Selain itu, pastikan frontpage Anda dioptimalkan untuk kecepatan dengan mengompres gambar dan menggunakan kode yang efisien.</p></li>
+<li><p>Uji dan perbaikan: Setelah selesai membuat frontpage, uji situs web Anda di berbagai perangkat dan periksa kembali apakah semua elemen berfungsi dengan baik. Terima umpan balik dari pengguna atau orang lain untuk memperbaiki dan menyempurnakan frontpage Anda.</p></li>
+</ol>
+<section id="desain-front-page" class="level2">
+<h2 class="anchored" data-anchor-id="desain-front-page">Desain Front Page</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/frontpage/frontpage_wireframe.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Desain Front Page</figcaption>
+</figure>
+</div>
+<p><br> Dalam modul Junior Web Developer ini hanya membuat front page sederhana yaitu mengenai To Do List, dimana tahapan yang dilakukan adalah membuat desain, menentukan tata letak, dan bagian-bagian didalamnya. Dari desain tata letak di atas terdapat beberapa komponen yang digunakan, yaitu Header, Form, Table, dan Button. Untuk pembuatan tampilan atau UI menggunakan framework Bootstrap. <br></p>
+</section>
+<section id="membuat-front-page" class="level2">
+<h2 class="anchored" data-anchor-id="membuat-front-page">Membuat Front Page</h2>
+<p>Pada pengenalan tools telah dijelaskan mengenai <a href="2_pengenalan_tools.html#bootstrap">installasi bootstrap</a>. Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumenasi bootstrap. <br></p>
+<p>Memulai dengan kode html5 serta menambahkan tag meta dengan name=“viewport” untuk membuat web yang responsif, selain itu juga melakukan installasi css hingga javascript. <br></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span><span class="cn">DOCTYPE</span> html<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">"en"</span><span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta charset<span class="op">=</span><span class="st">"UTF-8"</span><span class="op">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta name<span class="op">=</span><span class="st">"viewport"</span> content<span class="op">=</span><span class="st">"width=device-width, </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">    initial-scale=1.0"</span><span class="op">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;!--</span> <span class="cn">B</span>ootstrap offline <span class="op">-</span>-&gt;</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="fu">link</span> rel<span class="op">=</span><span class="st">"stylesheet"</span> href<span class="op">=</span><span class="st">"assets/css/bootstrap.css"</span><span class="op">&gt;</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;!--</span> <span class="cn">B</span>ootstrap <span class="cn">O</span>nline <span class="op">-</span>-&gt;</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="fu">link</span> href<span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"</span> </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    rel<span class="op">=</span><span class="st">"stylesheet"</span> </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    integrity<span class="op">=</span><span class="st">"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    crossorigin<span class="op">=</span><span class="st">"anonymous"</span><span class="op">&gt;</span>   </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span><span class="cn">T</span>o <span class="cf">Do</span> <span class="kw">List</span><span class="op">&lt;/</span>title<span class="op">&gt;</span>   <span class="op">&lt;!--</span><span class="cn">J</span>udul <span class="cn">H</span>alaman<span class="op">-</span>-&gt;</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah di pelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-<em>export</em>-nya dan membuat folder asets pada lokasi folder projek untuk menyimpan file paket dari bootstrap. <br></p>
+<p>Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan. <br></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br> Pada tampilan yang dinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container. <br></p>
+<section id="judul-heading" class="level3">
+<h3 class="anchored" data-anchor-id="judul-heading"><strong>Judul (heading)</strong></h3>
+<p><br></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h3<span class="op">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cn">T</span>o <span class="cf">Do</span> <span class="kw">List</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>small <span class="kw">class</span><span class="op">=</span><span class="st">"text-muted"</span><span class="op">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="cn">C</span>atat semua hal yang akan kamu kerjakan disini<span class="op">.</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>small<span class="op">&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>h3<span class="op">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>hr<span class="op">&gt;</span>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<p>Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat <strong>“To Do List”</strong> sebagai kalimat utama dan <strong>“Catat semua hal yang akan kamu kerjakan”</strong> sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan kelas text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memilikki tingkat kepentingan lebih rendah. <br></p>
+</section>
+<section id="form" class="level3">
+<h3 class="anchored" data-anchor-id="form"><strong>Form</strong></h3>
+<p><br></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>form <span class="kw">class</span><span class="op">=</span><span class="st">"form-inline"</span> method<span class="op">=</span><span class="st">"POST"</span> action<span class="op">=</span><span class="st">""</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>name<span class="op">=</span><span class="st">"myForm""&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div class="</span>row<span class="st">"&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;div class="</span>col<span class="st">"&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;label for="</span>inputIsi<span class="st">" class="</span>visually<span class="op">-</span>hidden<span class="st">"&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">            Kegiatan</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;/label&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;input type="</span>text<span class="st">" class="</span>form<span class="op">-</span>control<span class="st">" name="</span>isi<span class="st">" </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">            placeholder="</span><span class="cn">K</span>egiatan<span class="st">"&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;/div&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;div class="</span>col<span class="st">"&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;label for="</span>inputTanggalAwal<span class="st">" class="</span>visually<span class="op">-</span>hidden<span class="st">"&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="st">            Tanggal Awal</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;/label&gt;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;input type="</span>text<span class="st">" class="</span>form<span class="op">-</span>control<span class="st">" name="</span>tgl_awal<span class="st">" </span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="st">            placeholder="</span><span class="cn">T</span>anggal <span class="cn">A</span>wal<span class="st">"&gt;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;/div&gt;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;div class="</span>col<span class="st">"&gt;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;label for="</span>inputTanggalAkhir<span class="st">" class="</span>visually<span class="op">-</span>hidden<span class="st">"&gt;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="st">            Tanggal Akhir</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;/label&gt;</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="st">            &lt;input type="</span>text<span class="st">" class="</span>form<span class="op">-</span>control<span class="st">" name="</span>tgl_akhir<span class="st">" </span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="st">            placeholder="</span><span class="cn">T</span>anggal <span class="cn">A</span>khir<span class="st">"&gt;</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;/div&gt;</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;div class="</span>col<span class="st">"&gt;</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;button type="</span>submit<span class="st">" class="</span>btn btn<span class="op">-</span>primary rounded<span class="op">-</span>pill px<span class="op">-</span><span class="dv">3</span><span class="st">" </span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="st">        name="</span>simpan<span class="st">"&gt;Simpan&lt;/button&gt;</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;/div&gt;</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/form&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<p>Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang disetting untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas “row” dan “col”. Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga di gunakan kelas “visually-hidden” untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja. <br></p>
+<p>Selain form juga terdapat button yang bertype submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience. <br></p>
+</section>
+<section id="tabel" class="level3">
+<h3 class="anchored" data-anchor-id="tabel"><strong>Tabel</strong></h3>
+<p><br></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>table <span class="kw">class</span><span class="op">=</span><span class="st">"table table-hover"</span><span class="op">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>thead<span class="op">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>tr<span class="op">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th scope<span class="op">=</span><span class="st">"col"</span><span class="op">&gt;</span><span class="co">#&lt;/th&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th scope<span class="op">=</span><span class="st">"col"</span><span class="op">&gt;</span><span class="cn">K</span>egiatan<span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th scope<span class="op">=</span><span class="st">"col"</span><span class="op">&gt;</span><span class="cn">A</span>wal<span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th scope<span class="op">=</span><span class="st">"col"</span><span class="op">&gt;</span><span class="cn">A</span>khir<span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th scope<span class="op">=</span><span class="st">"col"</span><span class="op">&gt;</span><span class="cn">S</span>tatus<span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th scope<span class="op">=</span><span class="st">"col"</span><span class="op">&gt;</span><span class="cn">A</span>ksi<span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>tr<span class="op">&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>thead<span class="op">&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>tbody<span class="op">&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>tr<span class="op">&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th<span class="op">&gt;</span><span class="dv">1</span><span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span><span class="cn">M</span>eeting dengan <span class="cn">U</span>nit <span class="cn">K</span>euangan<span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span><span class="dv">2023</span><span class="op">-</span><span class="bn">05</span><span class="op">-</span><span class="dv">10</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span><span class="dv">2023</span><span class="op">-</span><span class="bn">05</span><span class="op">-</span><span class="dv">11</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>a <span class="kw">class</span><span class="op">=</span><span class="st">"btn btn-warning rounded-pill px-3"</span> type<span class="op">=</span><span class="st">"button"</span> </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>                href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span><span class="cn">B</span>elum<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>a <span class="kw">class</span><span class="op">=</span><span class="st">"btn btn-info rounded-pill px-3"</span> href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span><span class="cn">U</span>bah<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>a <span class="kw">class</span><span class="op">=</span><span class="st">"btn btn-danger rounded-pill px-3"</span> href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span><span class="cn">H</span>apus<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>tr<span class="op">&gt;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>tr<span class="op">&gt;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>th<span class="op">&gt;</span><span class="dv">2</span><span class="op">&lt;/</span>th<span class="op">&gt;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span><span class="cn">S</span>epedaan<span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span><span class="dv">2023</span><span class="op">-</span><span class="bn">05</span><span class="op">-</span><span class="dv">23</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span><span class="dv">2023</span><span class="op">-</span><span class="bn">05</span><span class="op">-</span><span class="dv">24</span><span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>a <span class="kw">class</span><span class="op">=</span><span class="st">"btn btn-success rounded-pill px-3"</span> type<span class="op">=</span><span class="st">"button"</span> </span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>                href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span><span class="cn">S</span>udah<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;</span>td<span class="op">&gt;</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>a <span class="kw">class</span><span class="op">=</span><span class="st">"btn btn-info rounded-pill px-3"</span> href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span><span class="cn">U</span>bah<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>a <span class="kw">class</span><span class="op">=</span><span class="st">"btn btn-danger rounded-pill px-3"</span> href<span class="op">=</span><span class="st">"#"</span><span class="op">&gt;</span><span class="cn">H</span>apus<span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>            <span class="op">&lt;/</span>td<span class="op">&gt;</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>tr<span class="op">&gt;</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>tbody<span class="op">&gt;</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>table<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br> Kelas tabel yang digunakan adalah “table table-hover” dimana ketika pointer berada diatas tabel maka baris data akan di<em>highlight</em>. <br></p>
+</section>
+<section id="button" class="level3">
+<h3 class="anchored" data-anchor-id="button">Button</h3>
+<p>Pada form dan tabel terdapat button dengan berbagai warna. Pada kelas button terdapat “btn” yang merupakan kelas dasar yang mengindikasikan bahwa itu adalah kelas button. Lalu terdapat btn-danger merupakan kelas tambahan yang memberikan tampilan warna merah yang menunjukkan bahaya atau aksi negatif. Biasanya digunakan untuk tombol yang mengindikasikan tindakan yang dapat memiliki dampak negatif atau risiko. Selain itu juga terdapat rounded-pill yang merupakan kelas tambahan yang memberikan elemen tersebut sudut yang lebih bulat sehingga tampak seperti bentuk bulat. Dan terdapat px-3 yang juga kelas tambahan yang memberikan padding horizontal pada tombol. Dengan kelas tersebut akan ditampilkan sebagai tombol dengan warna merah, sudut yang lebih bulat, dan padding horizontal yang lebih besar. <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/frontpage/button.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Button Bootstrap</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
+<section id="warna" class="level3">
+<h3 class="anchored" data-anchor-id="warna">Warna</h3>
+<p>Terdapat beberapa template kelas warna yang di sediakan oleh Bootstrap diantaranya <br></p>
+<ol type="1">
+<li>Primary: (Biru tua)</li>
+<li>Secondary: (Abu-abu)</li>
+<li>Success: (Hijau)</li>
+<li>Danger: (Merah)</li>
+<li>Warning: (Kuning)</li>
+<li>Info: (Biru cerah)</li>
+<li>Light: (Putih atau hampir putih)</li>
+<li>Dark: (Hitam atau hampir hitam)</li>
+</ol>
+<p><br> Pemilihan warna juga merupakan hal yang sanggat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut <em>user experience</em></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

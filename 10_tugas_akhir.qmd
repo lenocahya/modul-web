@@ -5,4 +5,12 @@ format: html
 
 # Tugas Akhir {.unnumbered}
 
-## Penambahan Fitur pada aplikasi Poliklinik
+Selamat telah menyelesaikan course-course yang diberikan.
+<br>
+
+Di akhir sesi terdapat tugas akhir yang harus dikerjakan untuk menyelesaikan course Junior Web Developer ini.
+<br>
+
+## **Penilaian Final Project**
+
+Dari Projek Poliklinik yang telah dibuat, peserta dapat menambahkan variasi fitur hingga tampilan.

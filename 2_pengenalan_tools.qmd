@@ -88,11 +88,20 @@ XAMPP menyediakan semua komponen yang diperlukan untuk mengelola sebuah website,
 Untuk menginstall XAMPP ikuti langkah-langkah berikut:
 <br>
 
-1. Unduh file installer dari website [XAMPP](https://www.apachefriends.org/download.html)
-2. Lakukan instalasi XAMPP sesuai panduan (wizard) yang ditampilkan dan pilih Yes untuk melanjutkan instalasi.
+1. Unduh file installer dari website [XAMPP](https://www.apachefriends.org/download.html). Unduh sesuai dengan sistem operasi atau komputer yang digunakan.
+<br>
+
+![Web XAMPP](assets/tools/xampp/webxampp.png){width="60%"}
+
+2. Lakukan instalasi XAMPP sesuai panduan (wizard) yang ditampilkan dan pilih Yes untuk melanjutkan instalasi. Bila ada pesan eror biarkan saja.
+<br>
+
+![Pesan Eror](assets/tools/xampp/pesan_error.png){width="60%"}
+
 3. Pilih komponen yang Anda butuhkan dalam instalasi tersebut. Sebagai contoh, centang MySQL dan phpMyAdmin.
+
 4. Tentukan direktori instalasi yang tepat, misalnya C:\\xampp.
-5. Lakukan instalasi Bitnami untuk memudahkan dalam memasang WordPress, Drupal atau Joomla secara otomatis.
+
 <br>
 
 ![XAMPP](assets/tools/xampp.png){width="60%"}

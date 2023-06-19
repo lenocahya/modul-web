@@ -4,3 +4,21 @@ format: html
 --- -->
 
 # Pengujian Web Apps {.unnumbered}
+
+## **Firebug**
+
+Firebug adalah sebuah perangkat pengembangan web yang digunakan untuk inspeksi, debugging, dan profilasi kode pada browser Mozilla Firefox. Namun, Firebug telah dihentikan pengembangannya dan tidak lagi didukung pada versi terbaru Firefox.
+<br>
+
+Jika Anda ingin melakukan pengujian sederhana menggunakan alat pengembangan di browser modern, seperti Chrome Developer Tools atau Firefox Developer Tools, berikut adalah langkah-langkah umum yang dapat Anda ikuti:
+<br>
+
+1. Buka browser Google Chrome atau Mozilla Firefox.
+2. Buka situs web yang ingin Anda uji.
+3. Klik kanan di area halaman web dan pilih "Inspect" atau "Inspect Element". Ini akan membuka panel Developer Tools.
+4. Di panel Developer Tools, Anda akan melihat berbagai tab, seperti "Elements", "Console", "Network", dan lainnya.
+5. Untuk menguji elemen halaman web, klik tab "Elements" (Chrome) atau "Inspector" (Firefox). Anda dapat menavigasi melalui struktur HTML halaman dan memilih elemen tertentu untuk melihat atau mengubah propertinya.
+6. Untuk menguji kode JavaScript atau mengelola pesan kesalahan, klik tab "Console". Di sini, Anda dapat menulis kode JavaScript langsung atau melihat pesan kesalahan dan keluaran lainnya dari halaman web.
+7. Untuk menguji permintaan jaringan dan melihat responsenya, klik tab "Network". Di sini, Anda dapat melihat semua permintaan jaringan yang dibuat oleh halaman web, termasuk permintaan HTTP, respons, dan waktu yang dibutuhkan.
+8. Selain itu, ada banyak fitur lain yang dapat Anda eksplorasi, seperti debugging JavaScript, memeriksa sumber kode, profilasi performa, dan lain-lain.
+9. Namun, penting untuk dicatat bahwa Firebug sudah tidak lagi digunakan dan disarankan untuk beralih ke alat pengembangan yang lebih baru dan didukung seperti Chrome Developer Tools atau Firefox Developer Tools.

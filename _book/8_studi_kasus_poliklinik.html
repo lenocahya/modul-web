@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_pengenalan_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengenalan tools</span></a>
+ <span class="menu-text">Pengenalan Tools</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -171,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./6_praktik_database_todolist.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Praktek Database</span></a>
+ <span class="menu-text">Praktik Database</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./9_penguji_web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengujian Web Apps</span></a>
+ <span class="menu-text">Pengujian Web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -226,7 +226,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Studi Kasus (Poliklinik)</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">studi kasus</div>
+    <div class="quarto-category">crud</div>
+    <div class="quarto-category">praktik</div>
+  </div>
+  </div>
 
 
 
@@ -240,10 +245,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<!-- ---
-title: "Studi Kasus"
-format: html
---- -->
 <p><br> Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan fitur home, data master (berisi data dokter dan pasien), dan periksa.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -292,9 +293,9 @@ format: html
 <section id="database" class="level2">
 <h2 class="anchored" data-anchor-id="database">Database</h2>
 <p>Membuat database baru pada <a href="http://localhost/phpmyadmin/">localhost/phpmyadmin</a> dengan nama poliklinik. setelah itu dapat membuat tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa. <br></p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="assets/poliklinik/tabeldatabase.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="assets/poliklinik/tabeldatabase.png" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption class="figure-caption">Tabel Database Poliklinik</figcaption>
 </figure>
 </div>
@@ -322,7 +323,7 @@ format: html
 </section>
 <section id="koneksi" class="level2">
 <h2 class="anchored" data-anchor-id="koneksi">Koneksi</h2>
-<p>Koneksi merupakan penghubung antara database dengaan web yang dibuat. <br></p>
+<p>Koneksi merupakan penghubung antara database dengan web yang dibuat. <br></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">$databaseHost</span> <span class="op">=</span> <span class="st">'localhost'</span><span class="ot">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">$databaseName</span> <span class="op">=</span> <span class="st">'poliklinik'</span><span class="ot">;</span></span>
@@ -336,19 +337,19 @@ format: html
 </section>
 <section id="index" class="level2">
 <h2 class="anchored" data-anchor-id="index">Index</h2>
-<p>Setelah membuat file koneksi, maka perlu load kode koneksi tersebut ke file php yang akan dibuat. <br> Untuk membuat tampilan yang resposive dapat load atau install Bootstripe dengan menggunakan kode url yang disediakan pada web Bootstripe atau mendownload paket yang disediakan oleh Bootstripe.</p>
+<p>Setelah membuat file koneksi, maka perlu load kode koneksi tersebut ke file php yang akan dibuat. <br> Untuk membuat tampilan yang responsive dapat load atau install Bootstrap dengan menggunakan kode url yang disediakan pada web Bootstrap atau mendownload paket yang disediakan oleh Bootstrap.</p>
 <section id="index-1" class="level3">
 <h3 class="anchored" data-anchor-id="index-1">Index</h3>
 <p>Pada bagian index akan menampilkan home atau dashboard dari web poliklinik yang berisikan navbar dan ucapan selamat datang di website poliklinik. <br></p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="assets/poliklinik/home.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="assets/poliklinik/home.png" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption class="figure-caption">Preview Poliklinik</figcaption>
 </figure>
 </div>
 <p><br></p>
 <p><strong>Navbar</strong> <br></p>
-<p>Untuk membuat navbar dapat membuka bootstrap dan mencari pada kolom pencarian yang telah disediakan dengan kata kunci nav atau navbar. Carilah navbar yang sesuai dengan navbar yang ada pada tampilan home poliklinikk diatas. Pada navbar ditampilkan nama website, home, dropdown yang berisi dokter dan pasien, dan yang terakhir adalah periksa. Modifikasi kode navbar dari Bootstrap, hapus bagian yang tidak digunakan. <br></p>
+<p>Untuk membuat navbar dapat membuka bootstrap dan mencari pada kolom pencarian yang telah disediakan dengan kata kunci nav atau navbar. Carilah navbar yang sesuai dengan navbar yang ada pada tampilan home poliklinik di atas. Pada navbar ditampilkan nama website, home, dropdown yang berisi dokter dan pasien, dan yang terakhir adalah periksa. Modifikasi kode navbar dari Bootstrap, hapus bagian yang tidak digunakan. <br></p>
 <blockquote class="blockquote">
 <p>Pada bagian href untuk mengarahkan atau berpindah halaman web dapat langsung menuliskan nama/path file, untuk file dinamis maka dapat menuliskan alamat href seperti berikut. <br></p>
 </blockquote>
@@ -385,8 +386,10 @@ format: html
 </section>
 <section id="dokter" class="level3">
 <h3 class="anchored" data-anchor-id="dokter">Dokter</h3>
-<p>Pada halaman dokter.php menampilkan form, tabel dan beberapa tombol. Seperti pada program <a href="./7_program_todolist.html">todolist</a>, gunakan source code class tabel yang sesuai pada Bootstrap. <br></p>
-<p><strong>Form</strong> <br> Setelah tag form tambahkan kode php untuk menampilkan isi dari tabel yang dipilih ketika melakukan perintah ubah atau update, berdasarkan id dari baris yang akan diubah dengan menggunakan metode get. <br></p>
+<p>Pada halaman dokter.php menampilkan form, tabel dan beberapa tombol. Seperti pada program <a href="./7_program_todolist.html">to do list</a>, gunakan source code class tabel yang sesuai pada Bootstrap. <br></p>
+<section id="form" class="level4">
+<h4 class="anchored" data-anchor-id="form">Form</h4>
+<p><br> Setelah tag form tambahkan kode php untuk menampilkan isi dari tabel yang dipilih ketika melakukan perintah ubah atau update, berdasarkan id dari baris yang akan diubah dengan menggunakan metode get. <br></p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 47.8%;justify-content: center;">
@@ -429,7 +432,10 @@ format: html
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<p><strong>Tabel</strong> <br></p>
+</section>
+<section id="tabel" class="level4">
+<h4 class="anchored" data-anchor-id="tabel">Tabel</h4>
+<p><br></p>
 <p>pada bagian tabel sama dengan form dapat mencari kelas Bootstrap yang sesuai dan modifikasi sesuai kebutuhan. Pada bagian tabel body seperti berikut : <br></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="va">$result</span> <span class="op">=</span> <span class="fu">mysqli_query</span>(<span class="va">$mysqli</span><span class="ot">,</span> <span class="st">"SELECT * FROM dokter"</span>)<span class="ot">;</span></span>
@@ -450,6 +456,7 @@ format: html
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="kw">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+</section>
 <section id="pasien" class="level3">
 <h3 class="anchored" data-anchor-id="pasien">Pasien</h3>
 <p><br></p>
@@ -459,7 +466,7 @@ format: html
 <section id="periksa" class="level2">
 <h2 class="anchored" data-anchor-id="periksa">Periksa</h2>
 <p><br></p>
-<p>Ppada halaman periksa.php untuk kelas tabel dan form yang digunakan sama dengan halaman-halaman sebelumnya. Namun ada perbedaan pada fungsi php yang digunakan, misalnya pada bagian input dokter. <br></p>
+<p>Pada halaman periksa.php untuk kelas tabel dan form yang digunakan sama dengan halaman-halaman sebelumnya. Namun ada perbedaan pada fungsi php yang digunakan, misalnya pada bagian input dokter. <br></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a> <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"form-group mx-sm-3 mb-2"</span><span class="op">&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>label <span class="cf">for</span><span class="op">=</span><span class="st">"inputPasien"</span> <span class="kw">class</span><span class="op">=</span><span class="st">"sr-only"</span><span class="op">&gt;</span><span class="cn">P</span>asien<span class="op">&lt;/</span>label<span class="op">&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>select <span class="kw">class</span><span class="op">=</span><span class="st">"form-control"</span> name<span class="op">=</span><span class="st">"id_pasien"</span><span class="op">&gt;</span></span>
@@ -762,7 +769,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./9_penguji_web.html" class="pagination-link">
-        <span class="nav-page-text">Pengujian Web Apps</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Pengujian Web</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

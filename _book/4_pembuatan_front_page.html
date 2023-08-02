@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_pengenalan_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengenalan tools</span></a>
+ <span class="menu-text">Pengenalan Tools</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -171,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./6_praktik_database_todolist.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Praktek Database</span></a>
+ <span class="menu-text">Praktik Database</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./9_penguji_web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengujian Web Apps</span></a>
+ <span class="menu-text">Pengujian Web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -226,7 +226,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Front Page</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">ui</div>
+    <div class="quarto-category">praktik</div>
+    <div class="quarto-category">bootstrap</div>
+  </div>
+  </div>
 
 
 
@@ -240,14 +245,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<!-- ---
-title: "Front Page To Do List"
-format: html
---- -->
 <p>Setelah mempelajari responsive web dan framework bootstrap, selanjutnya adalah mengaplikasikan bootstrap ke php yang akan dibuat. Berikut adalah contoh tampilan front page sederhana untuk mengaplikasikan bootstrap pada website.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="assets/frontpage/frontpage.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="assets/frontpage/frontpage.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption class="figure-caption">Front Page</figcaption>
 </figure>
 </div>
@@ -265,9 +266,9 @@ format: html
 </ol>
 <section id="desain-front-page" class="level2">
 <h2 class="anchored" data-anchor-id="desain-front-page">Desain Front Page</h2>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="assets/frontpage/frontpage_wireframe.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="assets/frontpage/frontpage_wireframe.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption class="figure-caption">Desain Front Page</figcaption>
 </figure>
 </div>
@@ -275,8 +276,8 @@ format: html
 </section>
 <section id="membuat-front-page" class="level2">
 <h2 class="anchored" data-anchor-id="membuat-front-page">Membuat Front Page</h2>
-<p>Pada pengenalan tools telah dijelaskan mengenai <a href="2_pengenalan_tools.html#bootstrap">installasi bootstrap</a>. Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumenasi bootstrap. <br></p>
-<p>Memulai dengan kode html5 serta menambahkan tag meta dengan name=“viewport” untuk membuat web yang responsif, selain itu juga melakukan installasi css hingga javascript. <br></p>
+<p>Pada pengenalan tools telah dijelaskan mengenai <a href="2_pengenalan_tools.html#bootstrap">instalasi bootstrap</a>. Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumentasi bootstrap. <br></p>
+<p>Memulai dengan kode html5 serta menambahkan tag meta dengan name=“viewport” untuk membuat web yang responsif, selain itu juga melakukan instalasi css hingga javascript. <br></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span><span class="cn">DOCTYPE</span> html<span class="op">&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">"en"</span><span class="op">&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
@@ -300,10 +301,10 @@ format: html
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah di pelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-<em>export</em>-nya dan membuat folder asets pada lokasi folder projek untuk menyimpan file paket dari bootstrap. <br></p>
-<p>Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan. <br></p>
+<p>Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah dipelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-<em>export</em>-nya dan membuat folder assets pada lokasi folder projek untuk menyimpan file paket dari bootstrap. <br></p>
+<p>Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunaan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan. <br></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> Pada tampilan yang dinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container. <br></p>
+<p><br> Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container. <br></p>
 <section id="judul-heading" class="level3">
 <h3 class="anchored" data-anchor-id="judul-heading"><strong>Judul (heading)</strong></h3>
 <p><br></p>
@@ -315,7 +316,7 @@ format: html
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>h3<span class="op">&gt;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>hr<span class="op">&gt;</span>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<p>Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat <strong>“To Do List”</strong> sebagai kalimat utama dan <strong>“Catat semua hal yang akan kamu kerjakan”</strong> sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan kelas text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memilikki tingkat kepentingan lebih rendah. <br></p>
+<p>Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat <strong>“To Do List”</strong> sebagai kalimat utama dan <strong>“Catat semua hal yang akan kamu kerjakan”</strong> sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah. <br></p>
 </section>
 <section id="form" class="level3">
 <h3 class="anchored" data-anchor-id="form"><strong>Form</strong></h3>
@@ -351,8 +352,8 @@ format: html
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/form&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<p>Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang disetting untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas “row” dan “col”. Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga di gunakan kelas “visually-hidden” untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja. <br></p>
-<p>Selain form juga terdapat button yang bertype submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience. <br></p>
+<p>Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur dengan autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas “row” dan “col”. Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga digunakan kelas “visually-hidden” untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja. <br></p>
+<p>Selain form juga terdapat button yang bertipe submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience. <br></p>
 </section>
 <section id="tabel" class="level3">
 <h3 class="anchored" data-anchor-id="tabel"><strong>Tabel</strong></h3>
@@ -399,14 +400,14 @@ format: html
 <span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>tr<span class="op">&gt;</span></span>
 <span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>tbody<span class="op">&gt;</span></span>
 <span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>table<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> Kelas tabel yang digunakan adalah “table table-hover” dimana ketika pointer berada diatas tabel maka baris data akan di<em>highlight</em>. <br></p>
+<p><br> Kelas tabel yang digunakan adalah “table table-hover” dimana ketika pointer berada diatas tabel maka baris data akan di <em>highlight</em>. <br></p>
 </section>
 <section id="button" class="level3">
 <h3 class="anchored" data-anchor-id="button">Button</h3>
 <p>Pada form dan tabel terdapat button dengan berbagai warna. Pada kelas button terdapat “btn” yang merupakan kelas dasar yang mengindikasikan bahwa itu adalah kelas button. Lalu terdapat btn-danger merupakan kelas tambahan yang memberikan tampilan warna merah yang menunjukkan bahaya atau aksi negatif. Biasanya digunakan untuk tombol yang mengindikasikan tindakan yang dapat memiliki dampak negatif atau risiko. Selain itu juga terdapat rounded-pill yang merupakan kelas tambahan yang memberikan elemen tersebut sudut yang lebih bulat sehingga tampak seperti bentuk bulat. Dan terdapat px-3 yang juga kelas tambahan yang memberikan padding horizontal pada tombol. Dengan kelas tersebut akan ditampilkan sebagai tombol dengan warna merah, sudut yang lebih bulat, dan padding horizontal yang lebih besar. <br></p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="assets/frontpage/button.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="assets/frontpage/button.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption class="figure-caption">Button Bootstrap</figcaption>
 </figure>
 </div>
@@ -414,7 +415,7 @@ format: html
 </section>
 <section id="warna" class="level3">
 <h3 class="anchored" data-anchor-id="warna">Warna</h3>
-<p>Terdapat beberapa template kelas warna yang di sediakan oleh Bootstrap diantaranya <br></p>
+<p>Terdapat beberapa template kelas warna yang disediakan oleh Bootstrap diantaranya <br></p>
 <ol type="1">
 <li>Primary: (Biru tua)</li>
 <li>Secondary: (Abu-abu)</li>
@@ -425,7 +426,7 @@ format: html
 <li>Light: (Putih atau hampir putih)</li>
 <li>Dark: (Hitam atau hampir hitam)</li>
 </ol>
-<p><br> Pemilihan warna juga merupakan hal yang sanggat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut <em>user experience</em></p>
+<p><br> Pemilihan warna juga merupakan hal yang sangat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut <em>user experience</em></p>
 
 
 </section>

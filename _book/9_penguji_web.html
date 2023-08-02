@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Junior Web Developer - Pengujian Web Apps</title>
+<title>Junior Web Developer - Pengujian Web</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./9_penguji_web.html">Pengujian Web Apps</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./9_penguji_web.html">Pengujian Web</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_pengenalan_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengenalan tools</span></a>
+ <span class="menu-text">Pengenalan Tools</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./6_praktik_database_todolist.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Praktek Database</span></a>
+ <span class="menu-text">Praktik Database</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./9_penguji_web.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Pengujian Web Apps</span></a>
+ <span class="menu-text">Pengujian Web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -174,7 +174,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#firebug" id="toc-firebug" class="nav-link active" data-scroll-target="#firebug"><strong>Firebug</strong></a></li>
+  <li><a href="#debugging" id="toc-debugging" class="nav-link active" data-scroll-target="#debugging">Debugging</a>
+  <ul class="collapse">
+  <li><a href="#identifikasi-bug" id="toc-identifikasi-bug" class="nav-link" data-scroll-target="#identifikasi-bug">Identifikasi Bug</a></li>
+  <li><a href="#log-dan-pesan-kesalahan" id="toc-log-dan-pesan-kesalahan" class="nav-link" data-scroll-target="#log-dan-pesan-kesalahan">Log dan Pesan Kesalahan</a></li>
+  <li><a href="#debugging-tools" id="toc-debugging-tools" class="nav-link" data-scroll-target="#debugging-tools">Debugging Tools</a></li>
+  </ul></li>
+  <li><a href="#pengujian" id="toc-pengujian" class="nav-link" data-scroll-target="#pengujian">Pengujian</a>
+  <ul class="collapse">
+  <li><a href="#pengujian-fungsional" id="toc-pengujian-fungsional" class="nav-link" data-scroll-target="#pengujian-fungsional">Pengujian Fungsional</a></li>
+  <li><a href="#pengujian-kompatibilitas" id="toc-pengujian-kompatibilitas" class="nav-link" data-scroll-target="#pengujian-kompatibilitas">Pengujian Kompatibilitas</a></li>
+  <li><a href="#pengujian-kinerja" id="toc-pengujian-kinerja" class="nav-link" data-scroll-target="#pengujian-kinerja">Pengujian Kinerja</a></li>
+  <li><a href="#pengujian-keamanan" id="toc-pengujian-keamanan" class="nav-link" data-scroll-target="#pengujian-keamanan">Pengujian Keamanan</a></li>
+  </ul></li>
+  <li><a href="#browser-developer-tools---inspect" id="toc-browser-developer-tools---inspect" class="nav-link" data-scroll-target="#browser-developer-tools---inspect">Browser Developer tools - Inspect</a>
+  <ul class="collapse">
+  <li><a href="#inspect" id="toc-inspect" class="nav-link" data-scroll-target="#inspect">Inspect</a></li>
+  <li><a href="#membuka-inspect" id="toc-membuka-inspect" class="nav-link" data-scroll-target="#membuka-inspect">Membuka Inspect</a></li>
+  <li><a href="#memeriksa-pesan-kesalahan" id="toc-memeriksa-pesan-kesalahan" class="nav-link" data-scroll-target="#memeriksa-pesan-kesalahan">Memeriksa Pesan Kesalahan</a></li>
+  <li><a href="#network" id="toc-network" class="nav-link" data-scroll-target="#network">Network</a></li>
+  <li><a href="#responsive-web" id="toc-responsive-web" class="nav-link" data-scroll-target="#responsive-web">Responsive Web</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -183,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pengujian Web Apps</h1>
+<h1 class="title">Pengujian Web</h1>
 </div>
 
 
@@ -202,23 +222,97 @@ ul.task-list li input[type="checkbox"] {
 title: "Pengujian Web"
 format: html
 --- -->
-<section id="firebug" class="level2">
-<h2 class="anchored" data-anchor-id="firebug"><strong>Firebug</strong></h2>
-<p>Firebug adalah sebuah perangkat pengembangan web yang digunakan untuk inspeksi, debugging, dan profilasi kode pada browser Mozilla Firefox. Namun, Firebug telah dihentikan pengembangannya dan tidak lagi didukung pada versi terbaru Firefox. <br></p>
-<p>Jika Anda ingin melakukan pengujian sederhana menggunakan alat pengembangan di browser modern, seperti Chrome Developer Tools atau Firefox Developer Tools, berikut adalah langkah-langkah umum yang dapat Anda ikuti: <br></p>
-<ol type="1">
-<li>Buka browser Google Chrome atau Mozilla Firefox.</li>
-<li>Buka situs web yang ingin Anda uji.</li>
-<li>Klik kanan di area halaman web dan pilih “Inspect” atau “Inspect Element”. Ini akan membuka panel Developer Tools.</li>
-<li>Di panel Developer Tools, Anda akan melihat berbagai tab, seperti “Elements”, “Console”, “Network”, dan lainnya.</li>
-<li>Untuk menguji elemen halaman web, klik tab “Elements” (Chrome) atau “Inspector” (Firefox). Anda dapat menavigasi melalui struktur HTML halaman dan memilih elemen tertentu untuk melihat atau mengubah propertinya.</li>
-<li>Untuk menguji kode JavaScript atau mengelola pesan kesalahan, klik tab “Console”. Di sini, Anda dapat menulis kode JavaScript langsung atau melihat pesan kesalahan dan keluaran lainnya dari halaman web.</li>
-<li>Untuk menguji permintaan jaringan dan melihat responsenya, klik tab “Network”. Di sini, Anda dapat melihat semua permintaan jaringan yang dibuat oleh halaman web, termasuk permintaan HTTP, respons, dan waktu yang dibutuhkan.</li>
-<li>Selain itu, ada banyak fitur lain yang dapat Anda eksplorasi, seperti debugging JavaScript, memeriksa sumber kode, profilasi performa, dan lain-lain.</li>
-<li>Namun, penting untuk dicatat bahwa Firebug sudah tidak lagi digunakan dan disarankan untuk beralih ke alat pengembangan yang lebih baru dan didukung seperti Chrome Developer Tools atau Firefox Developer Tools.</li>
-</ol>
+<section id="debugging" class="level2">
+<h2 class="anchored" data-anchor-id="debugging">Debugging</h2>
+<p>proses mengidentifikasi, memahami, dan memperbaiki kesalahan atau bug dalam kode web. Tujuan utama dari debugging adalah untuk memastikan bahwa aplikasi web berfungsi dengan baik, memperbaiki masalah yang muncul, dan mengoptimalkan kualitas serta kinerja situs web.</p>
+<section id="identifikasi-bug" class="level3">
+<h3 class="anchored" data-anchor-id="identifikasi-bug">Identifikasi Bug</h3>
+<p>Proses debugging dimulai dengan mengidentifikasi adanya bug atau masalah dalam aplikasi web. Ini bisa didasarkan pada keluhan pengguna, error message yang muncul, atau perilaku yang tidak diharapkan pada situs web. Pemahaman yang jelas tentang apa yang seharusnya terjadi dan apa yang sebenarnya terjadi penting untuk mengidentifikasi bug.</p>
+</section>
+<section id="log-dan-pesan-kesalahan" class="level3">
+<h3 class="anchored" data-anchor-id="log-dan-pesan-kesalahan">Log dan Pesan Kesalahan</h3>
+<p>Menggunakan log dan pesan kesalahan adalah cara umum untuk memahami dan melacak bug dalam pemrograman web. Penggunaan pernyataan log untuk mencatat informasi penting saat aplikasi web berjalan, serta menampilkan pesan kesalahan yang informatif saat bug terjadi, membantu dalam mengidentifikasi penyebab dan lokasi bug</p>
+</section>
+<section id="debugging-tools" class="level3">
+<h3 class="anchored" data-anchor-id="debugging-tools">Debugging Tools</h3>
+<p>Alat-alat debugger web browser yang memungkinkan inspeksi elemen HTML, CSS, dan JavaScript, serta memberikan kemampuan untuk menghentikan eksekusi kode pada titik tertentu dan melacak variabel dan status program.</p>
+</section>
+</section>
+<section id="pengujian" class="level2">
+<h2 class="anchored" data-anchor-id="pengujian">Pengujian</h2>
+<p>Pengujian program adalah proses sistematis untuk mengevaluasi kualitas dan kinerja program. Tujuan utamanya adalah untuk memastikan bahwa program berfungsi dengan benar, memberikan output yang sesuai, dan memenuhi persyaratan yang ditentukan. Berikut adalah beberapa jenis pengujian program yang umum dilakukan:</p>
+<section id="pengujian-fungsional" class="level3">
+<h3 class="anchored" data-anchor-id="pengujian-fungsional">Pengujian Fungsional</h3>
+<p>Pengujian fungsional bertujuan untuk memastikan bahwa semua fungsi yang ada di situs web berjalan dengan benar. Ini melibatkan memeriksa tautan, navigasi, formulir, fitur interaktif, dan fungsionalitas lainnya.</p>
+</section>
+<section id="pengujian-kompatibilitas" class="level3">
+<h3 class="anchored" data-anchor-id="pengujian-kompatibilitas">Pengujian Kompatibilitas</h3>
+<p>Pengujian kompatibilitas dilakukan untuk memastikan bahwa situs web dapat berfungsi dengan baik di berbagai platform, perangkat, dan peramban web yang berbeda. Ini mencakup pengujian responsif untuk memastikan tampilan yang sesuai di perangkat mobile, tablet, dan desktop</p>
+<p><br></p>
+</section>
+<section id="pengujian-kinerja" class="level3">
+<h3 class="anchored" data-anchor-id="pengujian-kinerja">Pengujian Kinerja</h3>
+<p>Pengujian kinerja bertujuan untuk memastikan bahwa situs web dapat menangani beban lalu lintas yang tinggi dan memberikan kinerja yang baik dalam kondisi yang berbeda. Ini melibatkan pengujian kecepatan loading halaman, waktu respon server, penggunaan sumber daya seperti memori dan CPU, dan pengujian beban untuk menguji batasan situs web.</p>
+<p><br></p>
+</section>
+<section id="pengujian-keamanan" class="level3">
+<h3 class="anchored" data-anchor-id="pengujian-keamanan">Pengujian Keamanan</h3>
+<p>Pengujian keamanan penting untuk melindungi situs web dari ancaman seperti serangan hacker, serangan DDoS, peretasan data, dan kerentanan lainnya. Ini mencakup pengujian kerentanan, pengujian serangan (misalnya, serangan injeksi SQL), dan pengujian autentikasi serta otorisasi untuk memastikan bahwa situs web memiliki lapisan keamanan yang memadai.</p>
+<p><br></p>
+</section>
+</section>
+<section id="browser-developer-tools---inspect" class="level2">
+<h2 class="anchored" data-anchor-id="browser-developer-tools---inspect">Browser Developer tools - Inspect</h2>
+<section id="inspect" class="level3">
+<h3 class="anchored" data-anchor-id="inspect">Inspect</h3>
+<p>Pada browser web modern telah difasilitasi dengan fitur inspect yang memungkinkan pengembang web untuk dapat memeriksa dan menganalisis elemen-elemen pada halaman web.</p>
+<p><br></p>
+</section>
+<section id="membuka-inspect" class="level3">
+<h3 class="anchored" data-anchor-id="membuka-inspect">Membuka Inspect</h3>
+<p>Fungsi inspect dapat diakses dengan klik kanan pada halaman web lalu pilih inspect</p>
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
+<figure class="figure">
+<p><img src="assets/pengujian/openinspect.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Open Inspect</figcaption>
+</figure>
+</div>
+<p><br></p>
+</section>
+<section id="memeriksa-pesan-kesalahan" class="level3">
+<h3 class="anchored" data-anchor-id="memeriksa-pesan-kesalahan">Memeriksa Pesan Kesalahan</h3>
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
+<figure class="figure">
+<p><img src="assets/pengujian/panelinspect.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Panel Inspect</figcaption>
+</figure>
+</div>
+<p>Terlihat pada halaman tersebut terdapat 3 pesan kesalahan mengenai variabel for dan id yang tidak memiliki kesesuaian sehingga antara label dan form tidak terhubung. Hal tersebut akan mengakibatkan label yang diklik tidak mengarah pada form yang dimaksudkan.</p>
+<p><br></p>
+</section>
+<section id="network" class="level3">
+<h3 class="anchored" data-anchor-id="network">Network</h3>
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
+<figure class="figure">
+<p><img src="assets/pengujian/network.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Tab Network</figcaption>
+</figure>
+</div>
+<p>Melalui tab network digunakan untuk memonitor lalu lintas jaringan yang dihasilkan oleh situs web, seperti melihat permintaan HTTP, waktu respon, dan memeriksa apakah ada masalah koneksi atau pengalihan yang tidak diinginkan.</p>
+<p><br></p>
+</section>
+<section id="responsive-web" class="level3">
+<h3 class="anchored" data-anchor-id="responsive-web">Responsive Web</h3>
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
+<figure class="figure">
+<p><img src="assets/pengujian/responsivepreview.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Responsive Preview</figcaption>
+</figure>
+</div>
+<p>Dengan melakukan pengecekan responsive web dapat diketahui bagaimana kompatibilitas website pada perangkat mobile, tablet, dan desktop.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2_pengenalan_tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengenalan tools</span></a>
+ <span class="menu-text">Pengenalan Tools</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -171,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./6_praktik_database_todolist.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Praktek Database</span></a>
+ <span class="menu-text">Praktik Database</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./9_penguji_web.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pengujian Web Apps</span></a>
+ <span class="menu-text">Pengujian Web</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,7 +204,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#basis-data-database" id="toc-basis-data-database" class="nav-link active" data-scroll-target="#basis-data-database">Basis Data (Database)</a></li>
+  <li><a href="#tipe-data" id="toc-tipe-data" class="nav-link" data-scroll-target="#tipe-data">Tipe Data</a>
+  <ul class="collapse">
+  <li><a href="#tipe-data-numerik" id="toc-tipe-data-numerik" class="nav-link" data-scroll-target="#tipe-data-numerik">Tipe Data Numerik</a></li>
+  <li><a href="#tipe-data-string" id="toc-tipe-data-string" class="nav-link" data-scroll-target="#tipe-data-string">Tipe Data String</a></li>
+  <li><a href="#tipe-data-date" id="toc-tipe-data-date" class="nav-link" data-scroll-target="#tipe-data-date">Tipe Data Date</a></li>
+  </ul></li>
+  <li><a href="#constraint-kekangan-nilai" id="toc-constraint-kekangan-nilai" class="nav-link" data-scroll-target="#constraint-kekangan-nilai">Constraint / Kekangan Nilai</a>
+  <ul class="collapse">
+  <li><a href="#constraint-not-null" id="toc-constraint-not-null" class="nav-link" data-scroll-target="#constraint-not-null">Constraint NOT NULL</a></li>
+  <li><a href="#constraint-unique" id="toc-constraint-unique" class="nav-link" data-scroll-target="#constraint-unique">Constraint UNIQUE</a></li>
+  <li><a href="#constraint-auto-increment" id="toc-constraint-auto-increment" class="nav-link" data-scroll-target="#constraint-auto-increment">Constraint AUTO INCREMENT</a></li>
+  </ul></li>
+  <li><a href="#pembuatan-database" id="toc-pembuatan-database" class="nav-link" data-scroll-target="#pembuatan-database">Pembuatan Database</a></li>
+  <li><a href="#perintah-mysql-ddl-dml-dcl" id="toc-perintah-mysql-ddl-dml-dcl" class="nav-link" data-scroll-target="#perintah-mysql-ddl-dml-dcl">Perintah MySQL (DDL, DML, DCL)</a>
+  <ul class="collapse">
+  <li><a href="#data-definition-language-ddl" id="toc-data-definition-language-ddl" class="nav-link" data-scroll-target="#data-definition-language-ddl">Data Definition Language (DDL)</a></li>
+  <li><a href="#data-manipulation-language-dml" id="toc-data-manipulation-language-dml" class="nav-link" data-scroll-target="#data-manipulation-language-dml">Data Manipulation Language (DML)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -212,7 +236,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Konsep Database</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">database</div>
+    <div class="quarto-category">tipe data</div>
+  </div>
+  </div>
 
 
 
@@ -226,27 +254,306 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<!-- ---
-title: "Konsep Database"
-format: html
---- -->
-<p>Basis Data (Database) <br> Secara umum, sekumpulan data terintegrasi dengan ukuran yang sangat besar, dikelola (diolah) dengan cara tertentu yang secara khusus menjelaskan aktifitas - aktifitas dari satu atau beberapa organisasi yang satu sama lain saling terkait. <br> Apa itu DDL? <br> DDL ( Data Definition Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi: <br> CREATE: Pernyataan ini membuat objek database baru, seperti tabel, tampilan, atau indeks. Misalnya, pernyataan SQL berikut membuat tabel yang disebut “pelanggan”: <br></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> pelanggan ( <span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>, name <span class="dt">VARCHAR</span>(<span class="dv">255</span>), address <span class="dt">VARCHAR</span>(<span class="dv">255</span>));</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> ALTER: Pernyataan ini digunakan untuk memodifikasi objek database yang sudah ada. Misalnya, pernyataan SQL berikut menambahkan kolom baru bernama ” email ” ke tabel ” customers “: <br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pelanggan <span class="kw">ALTER</span> <span class="kw">TABLE</span> <span class="kw">ADD</span> email <span class="dt">VARCHAR</span>(<span class="dv">255</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> DROP: Pernyataan ini digunakan untuk menghapus objek database yang sudah ada. Misalnya, pernyataan SQL berikut menghapus tabel “pelanggan”: <br> pelanggan DROP TABLE; <br> TRUNCATE: Pernyataan ini digunakan untuk menghapus semua baris dalam tabel, tetapi tidak seperti pernyataan DROP, pernyataan ini mempertahankan struktur dan indeks tabel. <br> RENAME: Pernyataan ini digunakan untuk mengganti nama objek database yang sudah ada. Misalnya, pernyataan SQL berikut mengganti nama tabel “pelanggan” menjadi “klien”: <br></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RENAME</span> <span class="kw">TABLE</span> pelanggan <span class="kw">TO</span> klien;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> Penting untuk dicatat bahwa pernyataan DDL dieksekusi segera dan bersifat permanen, artinya setelah objek dibuat, diubah, atau dihapus, perubahan tidak dapat diurungkan. Oleh karena itu, sangat penting untuk berhati-hati dan memastikan bahwa Anda memiliki cadangan basis data sebelum menjalankan pernyataan DDL apa pun. Selain itu, pernyataan DDL biasanya dijalankan oleh administrator database atau pengembang dengan hak istimewa dan izin yang sesuai untuk mengubah struktur database. <br> Apa itu DML? <br> DML ( Data Manipulation Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk memanipulasi data dalam database. Pernyataan DML digunakan untuk menyisipkan, memperbarui, dan menghapus data dalam database. Beberapa pernyataan DML yang paling umum meliputi: <br> SELECT: Pernyataan ini digunakan untuk mengambil data dari satu atau lebih tabel dalam database. Sebagai contoh, kueri SQL berikut mengambil semua rekaman dari tabel “pelanggan”: <br></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> pelanggan;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> INSERT: Pernyataan ini digunakan untuk memasukkan data baru ke dalam tabel. Sebagai ilustrasi, pernyataan SQL berikut menyisipkan baris baru ke dalam tabel “pelanggan”: <br></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> pelanggan (<span class="kw">id</span>, nama, alamat) <span class="kw">VALUES</span> (<span class="dv">1</span>, <span class="st">'John Smith,'</span> <span class="st">'123 Main St'</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> UPDATE: Pernyataan ini digunakan untuk memodifikasi data yang ada dalam sebuah tabel. Misalnya, pernyataan SQL berikut memperbarui alamat pelanggan dengan ID 1 di tabel “pelanggan”: <br></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> pelanggan <span class="kw">SET</span> address <span class="op">=</span> <span class="st">'456 Park Ave'</span> <span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br> DELETE: Pernyataan ini digunakan untuk menghapus data dari tabel. Misalnya, pernyataan SQL berikut menghapus pelanggan dengan ID 1 dari tabel “pelanggan”: <br></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> pelanggan <span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="basis-data-database" class="level2">
+<h2 class="anchored" data-anchor-id="basis-data-database">Basis Data (Database)</h2>
+<p>Secara umum, sekumpulan data terintegrasi dengan ukuran yang sangat besar, dikelola (diolah) dengan cara tertentu yang secara khusus menjelaskan aktifitas - aktifitas dari satu atau beberapa organisasi yang satu sama lain saling terkait. <br></p>
+</section>
+<section id="tipe-data" class="level2">
+<h2 class="anchored" data-anchor-id="tipe-data">Tipe Data</h2>
+<p>Tipe Data dalam ilmu komputer erat kaitannya dengan pemrgoraman dan database. Didalam pemrograman tipe data biasa digunakan untuk mendefinisikan (menetapkan) isi dari sebuah variabel.</p>
+<p>Perbedaannya dalam database, tipe data ini digunakan untuk menentukan isi dari sebuah data yang akan disimpan.</p>
+<p>Tipe data ini berbeda-beda tergantung dari bahasa pemgrograman atau jenis database yang kita gunakan.</p>
+<p>Tipe data ini akan dikelompokan menjadi 5 bagian utama. Pada tipe data dalam MySQL dibagi menjadi 3, yaitu :</p>
+<ul>
+<li>Tipe Data Numerik,</li>
+<li>Tipe Data String, dan</li>
+<li>Tipe Data Date/Time.</li>
+</ul>
+<section id="tipe-data-numerik" class="level3">
+<h3 class="anchored" data-anchor-id="tipe-data-numerik">Tipe Data Numerik</h3>
+<p>Adalah tipe data numerik untuk mengukur nilai secara matematik, misalnya mata uang, angka desimal, dll.</p>
+<table class="table-striped table-hover table">
+<caption>Tabel Tipe Data Numerik</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 50%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">No</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+<th>Penerapan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.</td>
+<td>INTEGER(size)</td>
+<td>Tipe data yang berisi kumpulan bilangan bulat, baik dalam bentuk bilangan positif maupun negatif</td>
+<td>Angka secara umum</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2.</td>
+<td>FLOAT(size)</td>
+<td>Bilangan desimal dengan presisi tunggal (single-precision)</td>
+<td>π, desimal dengan fokus pada nilai input contoh : 3.14159265359</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3.</td>
+<td>DOUBLE(size, d)</td>
+<td>Bilangan desimal dengan presisi ganda (double-precision). Jumlah total digit ditentukan oleh size, jumlah digit setelah titik decimal ditentukan oleh d</td>
+<td>Uang, dengan fokus jumlah desimal 2 angka di belakang koma <br> contoh: 2.500,00</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tipe-data-string" class="level3">
+<h3 class="anchored" data-anchor-id="tipe-data-string">Tipe Data String</h3>
+<p>Merupakan suatu teks dengan panjang variabel dimana setiap huruf dapat memiliki ukuran lebih kecil atau besar daripada satuan lainnya. Misalkan nama depan, nama belakang, alamat, nomor telepon, website, serta informasi lainnya.</p>
+<table class="table-striped table-hover table">
+<caption>Tabel Tipe Data String</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 50%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">No</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+<th>Penerapan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.</td>
+<td>CHAR(size)</td>
+<td>Menyatakan deretan karakter (String) yang lebarnya tetap. <br> Size : 0 hingga 255 karakter</td>
+<td>Jenis_kelamin (L/P) <br> contoh : L</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2.</td>
+<td>VARCHAR(size)</td>
+<td>Menyatakan data String yang lebarnya bervariasi. <br> Size : 0 hingga 255 karakter</td>
+<td>Nama pengguna <br> contoh : Amanda</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3.</td>
+<td>TEXT(size, d)</td>
+<td>Menampung string Panjang yang lebarnya tidak dapat diprediksi.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tipe-data-date" class="level3">
+<h3 class="anchored" data-anchor-id="tipe-data-date">Tipe Data Date</h3>
+<p>Menyimpan tanggal dan waktu dalam format tertentu seperti tahun, bulan, dan hari, jam, menit, dan detik. Tipe data date bisa digunakan untuk mengatur kronologis dari peristiwa.</p>
+<table class="table-striped table-hover table">
+<caption>Tabel Tipe Data Date</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 50%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">No</th>
+<th>Tipe</th>
+<th>Keterangan</th>
+<th>Penerapan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.</td>
+<td>DATE(size)</td>
+<td>Digunakan dengan tanggal dengan format “YYYY-MM-DD”</td>
+<td>2004-09-21</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2.</td>
+<td>TIME(size)</td>
+<td>Digunakan untuk waktu dengan format “hh:mm:ss”</td>
+<td>12:33:12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3.</td>
+<td>DATETIME(size, d)</td>
+<td>Digunakan untuk tanggal dan waktu dengan format “YYYY-MM-DD hh:mm:ss”</td>
+<td>2012-11-29 11:55:23</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="constraint-kekangan-nilai" class="level2">
+<h2 class="anchored" data-anchor-id="constraint-kekangan-nilai">Constraint / Kekangan Nilai</h2>
+<p>Constraint atau kekangan nilai digunakan untuk menentukan aturan yang mengizinkan atau membatasi nilai yang akan dimasukkan dalam tabel. Kekangan Nilai Menyediakan Metode Yang sesuai untuk memastikan akurasi dan integritas data di dalam table.</p>
+<p>Contoh constraint, yaitu :</p>
+<ul>
+<li>Membuat Nilai Tidak Kosong(NOT NULL)</li>
+<li>Membuat Nilai Unik(UNIQUE)</li>
+<li>Membuat kenaikan nilai secara otomatis(AUTO INCREMENT)</li>
+<li>Membuat Kunci tamu(FOREIGN KEY)</li>
+<li>Menggunakan Alias table dan query antartable (INNER JOIN)</li>
+</ul>
+<section id="constraint-not-null" class="level3">
+<h3 class="anchored" data-anchor-id="constraint-not-null">Constraint NOT NULL</h3>
+<p>Constraint NOT NULL mengatur agar data tertentu harus terisi atau tidak kosong. Ada kolom tertentu dari suatu table harus terisi dengan nilai valid. Contoh case :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> `mahasiswa`(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    `nama` <span class="dt">VARCHAR</span>(<span class="dv">50</span>), <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    `nim` <span class="dt">VARCHAR</span>(<span class="dv">30</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Untuk case di atas maka nama dan nim yang diinputkan ke dalam database tidak boleh kosong.</p>
+</section>
+<section id="constraint-unique" class="level3">
+<h3 class="anchored" data-anchor-id="constraint-unique">Constraint UNIQUE</h3>
+<p>Constraint UNIQUE ditujukan untuk memastikan bahwa nilai dalam kolom unik, artinya kolom tidak dapat menyimpan nilai duplikat. Contoh case:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> `mahasiswa`(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    `nama` <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    `nim` <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">UNIQUE</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Untuk case di atas nama mahasiswa bisa saja sama, tapi NIM mahasiswa tidak akan pernah sama maka diberi Constraint UNIQUE</p>
+</section>
+<section id="constraint-auto-increment" class="level3">
+<h3 class="anchored" data-anchor-id="constraint-auto-increment">Constraint AUTO INCREMENT</h3>
+<p>Auto increment digunakan untuk menaikkan nilai secara otomatis pada field numerik. Ada beberapa hal yang harus diperhatikan dalam menggunakan auto increment:</p>
+<ul>
+<li>Hanya Dapat Digunakan Pada field numerik</li>
+<li>Field harus bersifat primary key atau unik</li>
+<li>Field tidak boleh bersifat null</li>
+<li>Dalam Satu Tabel hanya ada satu field yang menggunakan auto increment</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> `mahasiswa`(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    `id` <span class="dt">VARCHAR</span>(<span class="dv">11</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> AUTO_INCREMENT,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    `nama` <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    `nim` <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">UNIQUE</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="pembuatan-database" class="level2">
+<h2 class="anchored" data-anchor-id="pembuatan-database">Pembuatan Database</h2>
+<p>Dalam pembuatan database dapat dibuat dalam 2 cara, yaitu menggunakan platform dan menggunakan scripting</p>
+<div class="quarto-layout-panel" style="text-align:center;">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/database/platform.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Menggunakan Platform</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/database/scripting.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Menggunakan scripting</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="perintah-mysql-ddl-dml-dcl" class="level2">
+<h2 class="anchored" data-anchor-id="perintah-mysql-ddl-dml-dcl">Perintah MySQL (DDL, DML, DCL)</h2>
+<p>Secara umum perintah fungsi MySQL dibagi menjadi 3, yaitu :</p>
+<ul>
+<li>DDL (Data Definition Language),</li>
+<li>DML(Data Manipulation), dan</li>
+<li>DCL (Data Control Language).</li>
+</ul>
+<p>Pada modul ini akan dibatasi pada DDL dan DML untuk praktek.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align:center;">
+<figure class="figure">
+<p><img src="assets/database/arsitekturdb.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">DDL, DML, DCL</figcaption>
+</figure>
+</div>
+<section id="data-definition-language-ddl" class="level3">
+<h3 class="anchored" data-anchor-id="data-definition-language-ddl">Data Definition Language (DDL)</h3>
+<p>Data Definition Language (DDL) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur dalam sebuah database. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi:</p>
+<section id="create" class="level4">
+<h4 class="anchored" data-anchor-id="create">CREATE</h4>
+<p>Pernyataan ini membuat objek database baru, seperti tabel, tampilan, atau indeks. Misalnya, pernyataan SQL berikut membuat tabel yang disebut “pelanggan”:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> pelanggan ( <span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>, name <span class="dt">VARCHAR</span>(<span class="dv">255</span>), address <span class="dt">VARCHAR</span>(<span class="dv">255</span>));</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="alter" class="level4">
+<h4 class="anchored" data-anchor-id="alter">ALTER</h4>
+<p>Pernyataan ini digunakan untuk memodifikasi objek database yang sudah ada. Misalnya, pernyataan SQL berikut menambahkan kolom baru bernama ” email ” ke tabel ” customers “:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pelanggan <span class="kw">ALTER</span> <span class="kw">TABLE</span> <span class="kw">ADD</span> email <span class="dt">VARCHAR</span>(<span class="dv">255</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="drop" class="level4">
+<h4 class="anchored" data-anchor-id="drop">DROP</h4>
+<p>Pernyataan ini digunakan untuk menghapus objek database yang sudah ada. Misalnya, pernyataan SQL berikut menghapus tabel “pelanggan”:</p>
+<p>pelanggan DROP TABLE;</p>
+</section>
+<section id="truncate" class="level4">
+<h4 class="anchored" data-anchor-id="truncate">TRUNCATE</h4>
+<p>Pernyataan ini digunakan untuk menghapus semua baris dalam tabel, tetapi tidak seperti pernyataan DROP, pernyataan ini mempertahankan struktur dan indeks tabel. <br></p>
+</section>
+<section id="rename" class="level4">
+<h4 class="anchored" data-anchor-id="rename">RENAME</h4>
+<p>Pernyataan ini digunakan untuk mengganti nama objek database yang sudah ada. Misalnya, pernyataan SQL berikut mengganti nama tabel “pelanggan” menjadi “klien”:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RENAME</span> <span class="kw">TABLE</span> pelanggan <span class="kw">TO</span> klien;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Penting untuk dicatat bahwa pernyataan DDL dieksekusi segera dan bersifat permanen, artinya setelah objek dibuat, diubah, atau dihapus, perubahan tidak dapat diurungkan. Oleh karena itu, sangat penting untuk berhati-hati dan memastikan bahwa Anda memiliki cadangan basis data sebelum menjalankan pernyataan DDL apa pun. Selain itu, pernyataan DDL biasanya dijalankan oleh administrator database atau pengembang dengan hak istimewa dan izin yang sesuai untuk mengubah struktur database. <br></p>
+</section>
+<section id="show" class="level4">
+<h4 class="anchored" data-anchor-id="show">SHOW</h4>
+<p>Perintah DDL ini digunakan untuk menampilkan daftar database atau tabel yang ada.</p>
+<p>Penerapan :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>SHOW <span class="kw">TABLES</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Latihan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Latihan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Untuk Latihan</p>
+<p><br></p>
+</div>
+</div>
+</section>
+</section>
+<section id="data-manipulation-language-dml" class="level3">
+<h3 class="anchored" data-anchor-id="data-manipulation-language-dml">Data Manipulation Language (DML)</h3>
+<p>Data Manipulation Language (DML) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk memanipulasi data dalam database. Sehingga pernyataan DML ini dapat digunakan ketika database dan tabel telah dibuat. Pernyataan DML digunakan untuk menyisipkan, memperbarui, dan menghapus data dalam database. Beberapa pernyataan DML yang paling umum meliputi:</p>
+<section id="insert" class="level4">
+<h4 class="anchored" data-anchor-id="insert">INSERT</h4>
+<p>Pernyataan ini digunakan untuk memasukkan data baru ke dalam tabel. Sebagai ilustrasi, pernyataan SQL berikut menyisipkan baris baru ke dalam tabel “pelanggan”:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> pelanggan (<span class="kw">id</span>, nama, alamat) <span class="kw">VALUES</span> (<span class="dv">1</span>, <span class="st">'John Smith,'</span> <span class="st">'123 Main St'</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="select" class="level4">
+<h4 class="anchored" data-anchor-id="select">SELECT</h4>
+<p>Pernyataan ini digunakan untuk mengambil data dari satu atau lebih tabel dalam database. Sebagai contoh, kueri SQL berikut mengambil semua rekaman dari tabel “pelanggan”:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> pelanggan;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update" class="level4">
+<h4 class="anchored" data-anchor-id="update">UPDATE</h4>
+<p>Pernyataan ini digunakan untuk memodifikasi data yang ada dalam sebuah tabel. Misalnya, pernyataan SQL berikut memperbarui alamat pelanggan dengan ID 1 di tabel “pelanggan”:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> pelanggan <span class="kw">SET</span> address <span class="op">=</span> <span class="st">'456 Park Ave'</span> <span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="delete" class="level4">
+<h4 class="anchored" data-anchor-id="delete">DELETE</h4>
+<p>Pernyataan ini digunakan untuk menghapus data dari tabel. Misalnya, pernyataan SQL berikut menghapus pelanggan dengan ID 1 dari tabel “pelanggan”:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> pelanggan <span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -490,7 +797,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./6_praktik_database_todolist.html" class="pagination-link">
-        <span class="nav-page-text">Praktek Database</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Praktik Database</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

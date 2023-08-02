@@ -11,6 +11,6 @@ Selamat telah menyelesaikan course-course yang diberikan.
 Di akhir sesi terdapat tugas akhir yang harus dikerjakan untuk menyelesaikan course Junior Web Developer ini.
 <br>
 
-## **Penilaian Final Project**
+## Penilaian Final Project
 
 Dari Projek Poliklinik yang telah dibuat, peserta dapat menambahkan variasi fitur hingga tampilan.

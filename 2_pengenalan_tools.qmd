@@ -4,7 +4,7 @@ format: html
 categories: [instalasi, tools]
 ---
 
-# Pengenalan Tools {.unnumbered}
+# Pengenalan Tools
 Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu!
 <br>
 
@@ -114,7 +114,7 @@ Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isi
 
 Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat. Sampai dengan modul ini dibuat, Bootstrap telah mengalami pembaruan Bootstrap versi 5. Berikut merupakan penjelasan mengenai Bootstrap v5.
 
-{{< video https://www.youtube.com/embed/yqVJwUr3kLI?controls=0&amp;start=18  >}}
+{{< video https://www.youtube.com/embed/yqVJwUr3kLI?start=18  >}}
 
 <br>
 

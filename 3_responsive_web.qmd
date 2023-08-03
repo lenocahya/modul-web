@@ -4,7 +4,7 @@ format: html
 categories: [ui, bootstrap, responsive]
 ---
 
-# Responsive Web Design {.unnumbered}
+# Responsive Web Design
 
 ## Pengenalan Responsive Web Design
 

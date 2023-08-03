@@ -4,7 +4,7 @@ format: html
 categories: [database, 'tipe data']
 ---
 
-# Konsep Database {.unnumbered}
+# Konsep Database
 
 ## Basis Data (Database) 
 

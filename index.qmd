@@ -1,4 +1,4 @@
-# Pengenalan {.unnumbered}
+# **Pengantar** {.unnumbered}
 
 Pelatihan Web Developer terbagi menjadi dua tahap (kelas) yaitu Junior Web 
 Developer dan Web Developer. Materi yang diajarkan pada kedua kelas berbeda namun berkelanjutan. Pada modul Junior Web Developer berisi tentang dasar-dasar dari pemrograman web dengan permasalahan yang sering dialami mahasiswa. Sedangkan pada modul Web Developer berisi materi pemrograman web dengan menggunakan framework.

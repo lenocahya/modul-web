@@ -1,10 +1,10 @@
 ---
 # title: "Praktik Database"
 format: html
-categories: [database, praktik]
+categories: [database, praktik, 'studi kasus']
 ---
 
-# Praktik Database {.unnumbered}
+# Praktik Database
 
 Membuat database untuk aplikasi To Do List
 
@@ -13,7 +13,7 @@ Membuat database untuk aplikasi To Do List
 <br>
 Dari web To Do List kita perlu membuat database sesuai tabel di bawah ini
 
-![Tabel To Do List](assets/database/tabel){width="50%" style="text-align:center;"}
+![Tabel To Do List](assets/database/tabel.png){width="50%" style="text-align:center;"}
 
 <br>
 
@@ -30,7 +30,7 @@ Untuk membuat database dapat menggunakan fasilitas dari platform atau scripting.
 
 Berikut merupakan video penjelasan mengenai phpmyadmin
 
-{{< video https://www.youtube.com/embed/fxe6qev-bno?controls=0&amp;start=2453 >}}
+{{< video https://www.youtube.com/embed/fxe6qev-bno?start=2453 >}}
 
 Untuk membuat database menggunakan phpMyAdmin perlu mengaktifkan terlebih dahulu apache dan mysql pada xampp agar terhubung pada phpMyAdmin. Lalu memulai aplikasi phpMyAdmin melalui [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
 
@@ -46,7 +46,7 @@ Untuk membuat database melalui phpMyAdmin dapat melalui langkah-langkah berikut:
 4. Masukan nama untuk databse yang akan di buat
 5. Lalu klik enter atau Create.
 
-![Create Database melalui Platform](assets/database/create%20database.png){width="80%" style="text-align:center;"}
+![Create Database melalui Platform](assets/database/createdatabase.png){width="80%" style="text-align:center;"}
 
 <br>
 
@@ -59,7 +59,7 @@ Setelah database dibuat langkah selanjutnya adalah membuat tabel-tabel yang akan
 3. Klik tab Tables dan pilih tabel mana yang ingin anda tambahkan
 4. Pada form Create Table masukkan nama tabel dan jumlah kolom yang akan dibuat.
 
-![Create Table](assets/database/create%20tabel.png){width=80% style="text-align:center;"}
+![Create Table](assets/database/createtabel.png){width=80% style="text-align:center;"}
 
 5. Isi form field sesuai perintah yang telah disediakan
 6. Tekan save.

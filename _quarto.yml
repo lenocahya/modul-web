@@ -7,24 +7,28 @@ book:
   date: "6/3/2023"
   chapters:
     - index.qmd
+    - konsep.qmd
     - 1_konsep_dasar_web.qmd
     - 2_pengenalan_tools.qmd
     - 3_responsive_web.qmd
     - 4_pembuatan_front_page.qmd
     - 5_konsep_database.qmd
     - 6_praktik_database_todolist.qmd
+    - 9_penguji_web.qmd
+    - studi_kasus.qmd
     - 7_program_todolist.qmd
     - 8_studi_kasus_poliklinik.qmd
-    - 9_penguji_web.qmd
     - 10_tugas_akhir.qmd
  
    
 
-bibliography: references.bib
+# bibliography: references.bib
 
 format:
   html:
-    theme: cerulean
+    theme: 
+      light: flatly
+      dark: darkly 
   pdf:
     documentclass: scrreprt
 

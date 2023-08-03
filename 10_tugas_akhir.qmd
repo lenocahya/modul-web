@@ -3,7 +3,7 @@ title: "Tugas Akhir dan Penilaian"
 format: html
 --- -->
 
-# Tugas Akhir {.unnumbered}
+# **Tugas Akhir** {.unnumbered}
 
 Selamat telah menyelesaikan course-course yang diberikan.
 <br>

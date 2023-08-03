@@ -4,7 +4,7 @@ format: html
 categories: [studi kasus]
 ---
 
-# Program To Do List {.unnumbered}
+# 1 Program To Do List {.unnumbered}
 
 Berikut adalah tampilan dari to do list untuk latihan membuat web sederhana.
 

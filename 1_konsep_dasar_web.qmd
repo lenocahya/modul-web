@@ -1,10 +1,10 @@
 ---
-# title: "Konsep Dasar Web Programming"
+title: "Konsep Dasar Web Programming"
 format: html
 categories: [teori]
 ---
 
-# Konsep Dasar Web Programmming {.unnumbered}
+<!-- # Konsep Dasar Web Programmming -->
 
 ## Apa itu Pemrograman Web?
 
@@ -12,6 +12,7 @@ Pemrograman web adalah proses menciptakan dan mengembangkan aplikasi web menggun
 
 Aplikasi web dapat diakses melalui browser web dan memungkinkan pengguna untuk berinteraksi dengan konten dan layanan yang disediakan.
 
+<br>
 
 ## Lingkungan Pengembangan Web
 
@@ -23,6 +24,7 @@ Aplikasi web dapat diakses melalui browser web dan memungkinkan pengguna untuk b
 
 - Server lokal: Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik.
 
+<br>
 
 ## Konsep Dasar Pemrograman Web
 
@@ -38,7 +40,7 @@ Protokol komunikasi yang digunakan untuk mentransfer data antara klien dan serve
 
 Markup languages adalah bahasa yang digunakan untuk membuat struktur dan tampilan konten dalam halaman web. 
 
-{{< video https://www.youtube.com/embed/71a2zeC71gk?controls=0&amp;start=630 >}}
+{{< video https://www.youtube.com/embed/71a2zeC71gk?start=630 >}}
 
 HTML (HyperText Markup Language) adalah markup language yang paling umum digunakan untuk membangun struktur halaman web. XML (eXtensible Markup Language) digunakan untuk menyimpan dan mengirim data secara terstruktur. 
 
@@ -88,7 +90,7 @@ Debugging adalah proses untuk menemukan, mendiagnosis, dan memperbaiki bug atau 
 
 API adalah antarmuka yang memungkinkan aplikasi web berkomunikasi dan berbagi data dengan aplikasi atau layanan lain. RESTful API adalah pendekatan populer untuk mengembangkan API yang menggunakan protokol HTTP dan standar seperti JSON atau XML untuk bertukar data.
 
-
+<br>
 
 ## PHP (Hypertext Preprocessor)
 

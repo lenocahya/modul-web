@@ -4,9 +4,9 @@ format: html
 categories: ['studi kasus', crud, praktik]
 ---
 
-# Studi Kasus (Poliklinik) {.unnumbered}
+# 2 Studi Kasus (Poliklinik) {.unnumbered}
 <br>
-Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan fitur home, data master (berisi data dokter dan pasien), dan periksa.
+Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan beberapa halaman, diantaranya adalah home, data master (berisi data dokter dan pasien), dan periksa. Pada web tersebut dilengkapi dengan navbar untuk berpindah dari setiap halaman. Pada setiap halaman dapat melakukan CRUD (Create Read Update Delete) sesuai dengan tabel dan kebutuhan halaman tersebut dalam database.
 
 ::: {layout="[[43,-4,43]]"}
 ![Preview Poliklinik](assets/poliklinik/home.png)
@@ -19,6 +19,7 @@ Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poli
 :::
 
 ## Database
+
 Membuat database baru pada [localhost/phpmyadmin](http://localhost/phpmyadmin/) dengan nama poliklinik. setelah itu dapat membuat  tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.
 <br>
 
@@ -99,26 +100,66 @@ Pada bagian index akan menampilkan home atau dashboard dari web poliklinik yang 
 **Navbar**
 <br>
 
-Untuk membuat navbar dapat membuka bootstrap dan mencari pada kolom pencarian yang telah disediakan dengan kata kunci nav atau navbar. Carilah navbar yang sesuai dengan navbar yang ada pada tampilan home poliklinik di atas. Pada navbar ditampilkan nama website, home, dropdown yang berisi dokter dan pasien, dan yang terakhir adalah periksa. Modifikasi kode navbar dari Bootstrap, hapus bagian yang tidak digunakan.
-<br>
+Untuk membuat navbar dapat membuka bootstrap dan mencari pada kolom pencarian yang telah disediakan dengan kata kunci nav atau navbar.
 
-> Pada bagian href untuk mengarahkan atau berpindah halaman web dapat langsung menuliskan nama/path file, untuk file dinamis maka dapat menuliskan alamat href seperti berikut.
+![Navbar Bootstrap](assets/poliklinik/bootstrap-navbar.png){width="80%" style="text-align:center;"}
+
+Carilah navbar yang sesuai dengan navbar yang ada pada tampilan home poliklinik di atas. Pada navbar ditampilkan nama website, home, dropdown yang berisi dokter dan pasien, dan yang terakhir adalah periksa. Modifikasi kode navbar dari Bootstrap, hapus bagian yang tidak digunakan.
 <br>
 
 ```php
-<li>
-    <a class="dropdown-item" href="index.php?page=dokter">
-        Dokter
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      Sistem Informasi Poliklinik
     </a>
-</li>
-<li>
-    <a class="dropdown-item" href="index.php?page=pasien">
-        Pasien
-    </a>
-    </li>
+    <button class="navbar-toggler"
+    type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false"
+    aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php">
+            Home
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+            Data Master
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="index.php?page=dokter">
+                Dokter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="index.php?page=pasien">
+                Pasien
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+          href="index.php?page=periksa">
+            Periksa
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 ```
 
-> Dari kode diatas melalui file index dapat menampilkan tampilan atau data sesuai dengan parameter yang dimasukkan, misalnya tampilan halaman dokter.
+Pada bagian href untuk mengarahkan atau berpindah halaman web dapat langsung menuliskan nama/path file, untuk file dinamis maka dapat menuliskan alamat href seperti berikut.
+<br>
+
+Dari kode diatas melalui file index dapat menampilkan tampilan atau data sesuai dengan parameter yang dimasukkan, misalnya tampilan halaman dokter.
 
 **Membuat tampilan dinamis.**
 <br>

@@ -4,7 +4,7 @@ format: html
 categories: [ui, praktik, bootstrap]
 ---
 
-# Front Page {.unnumbered}
+# Front Page
 
 Setelah mempelajari responsive web dan framework bootstrap, selanjutnya adalah mengaplikasikan bootstrap ke php yang akan dibuat. Berikut adalah contoh tampilan front page sederhana untuk mengaplikasikan bootstrap pada website.
 

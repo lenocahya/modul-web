@@ -1,10 +1,12 @@
-# Pengenalan {.unnumbered}
+# **Pengantar** {.unnumbered}
 
-<br> Pelatihan Web Developer terbagi menjadi dua tahap (kelas) yaitu Junior Web 
-Developer dan Web Developer. 
-<br>
-Peserta yang lulus pada tiap tahap (kelas) berhak melanjutkan ke tahap (kelas) selanjutnya.
-<br>
+Pelatihan Web Developer terbagi menjadi dua tahap (kelas) yaitu Junior Web 
+Developer dan Web Developer. Materi yang diajarkan pada kedua kelas berbeda namun berkelanjutan. Pada modul Junior Web Developer berisi tentang dasar-dasar dari pemrograman web dengan permasalahan yang sering dialami mahasiswa. Sedangkan pada modul Web Developer berisi materi pemrograman web dengan menggunakan framework.
+Sehingga peserta yang lulus pada setiap kelas berhak melanjutkan ke kelas selanjutnya.
+
+## Materi Junior Web Developer
+
+Terdapat topik-topik dan materi-materi yang akan diajarkan, diantaranya sebagai berikut:
 
 |  Topik  |  Materi  |  Outcome | 
 |:--------|:---------|:---------|
@@ -14,8 +16,8 @@ Peserta yang lulus pada tiap tahap (kelas) berhak melanjutkan ke tahap (kelas) s
 | Konsep Basis Data Dan Menggunakan SQL (J.620100.020.02) | 1. Review Konsep Basis Data <br><br> 2. Query SQL: DDL, DML <br><br> 3. Praktek membuat database dan tabel aplikasi To Do List <br><br> | Peserta memiliki pengetahuan mengenai konsep Basis Data dan menggunakan Database Management System (DBMS) berbasis SQL <br><br> | 
 | Menerapkan Pemrograman Terstruktur (J.620100.017.02) Dan Akses Basis Data (J.620100.021.02) <br><br> | Praktek pembuatan Aplikasi To Do List <br><br> Praktek Studi Kasus aplikasi Poliklinik (langkah-langkah pembuatan) <br><br> | Peserta mampu menerapkan konsep dasar pemrograman terstruktur dan mengakses basis data menggunakan kode program <br><br> |
 | Debugging, Pengujian Program dan Code Review (J.620100.025.02, J.620100.036.02, J.620100.032.01) <br><br> | Pengenalan Tool untuk melakukan pengujian aplikasi berbasis web <br> <br> Praktek software testing aplikasi Poliklinik <br><br> | Peserta mampu melakukan debugging, pengujian program, meninjau dan memeriksa kode program yang telah dibuat <br><br> |
-| Pembaharuan Perangkat Lunak pada Web Dasar (J.620100.047.01) | Praktek mengembangkan aplikasi Poliklinik <br><br> Penilaian final project <br><br> | Peserta dapat mengambahkan fitur tambahan dari project web yang diberikan <br><br> |
+| Pembaruan Perangkat Lunak pada Web Dasar (J.620100.047.01) | Praktek mengembangkan aplikasi Poliklinik <br><br> Penilaian final project <br><br> | Peserta dapat menambahkan fitur tambahan dari project web yang diberikan <br><br> |
 
-: Topik dan Materi Junior Web Developer
+: Topik dan Materi Junior Web Developer {.striped .hover}
 
 

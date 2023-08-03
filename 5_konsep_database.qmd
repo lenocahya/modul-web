@@ -1,70 +1,252 @@
-<!-- ---
-title: "Konsep Database"
+---
+# title: "Konsep Database" {.unnumbered}
 format: html
---- -->
+categories: [database, 'tipe data']
+---
 
-# Konsep Database {.unnumbered}
-Basis Data (Database) 
-<br>
+# Konsep Database
+
+## Basis Data (Database) 
+
 Secara umum, sekumpulan data terintegrasi dengan ukuran yang sangat besar, dikelola (diolah) dengan cara tertentu yang secara khusus menjelaskan aktifitas - aktifitas dari satu atau beberapa organisasi yang satu sama lain saling terkait.
 <br>
-Apa itu DDL?
-<br>
-DDL ( Data Definition Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi:
-<br>
-CREATE: Pernyataan ini membuat objek database baru, seperti tabel, tampilan, atau indeks. Misalnya, pernyataan SQL berikut membuat tabel yang disebut "pelanggan":
-<br>
+
+## Tipe Data
+
+Tipe Data dalam ilmu komputer erat kaitannya dengan pemrgoraman dan database. Didalam pemrograman tipe data biasa digunakan untuk mendefinisikan (menetapkan) isi dari sebuah variabel. 
+
+Perbedaannya dalam database, tipe data ini digunakan untuk menentukan isi dari sebuah data yang akan disimpan. 
+
+Tipe data ini berbeda-beda tergantung dari bahasa pemgrograman atau jenis database yang kita gunakan. 
+
+Tipe data ini akan dikelompokan menjadi 5 bagian utama. Pada tipe data dalam MySQL dibagi menjadi 3, yaitu :
+
+- Tipe Data Numerik,
+- Tipe Data String, dan
+- Tipe Data Date/Time.
+
+### Tipe Data Numerik
+Adalah tipe data numerik untuk mengukur nilai secara matematik, misalnya mata uang, angka desimal, dll.
+
+| No  |  Tipe   |        Keterangan         |  Penerapan |
+|:---:|---------|---------------------------|------------|
+|1.| INTEGER(size) | Tipe data yang berisi kumpulan bilangan bulat, baik dalam bentuk bilangan positif maupun negatif | Angka secara umum |
+|2.| FLOAT(size) | Bilangan desimal dengan presisi tunggal (single-precision) | π, desimal dengan fokus pada nilai input contoh : 3.14159265359 |
+|3.|  DOUBLE(size, d) | Bilangan desimal dengan presisi ganda (double-precision).  Jumlah total digit ditentukan oleh size, jumlah digit setelah titik decimal ditentukan oleh d | Uang, dengan fokus jumlah desimal 2 angka di belakang koma <br> contoh: 2.500,00 |
+
+: Tabel Tipe Data Numerik {.striped .hover}
+
+
+### Tipe Data String
+Merupakan suatu teks dengan panjang variabel dimana setiap huruf 
+dapat memiliki ukuran lebih kecil atau besar daripada satuan lainnya. Misalkan nama depan, nama belakang, alamat, nomor telepon, website, serta informasi lainnya.
+
+| No  |  Tipe   |        Keterangan         |  Penerapan |
+|:---:|---------|---------------------------|------------|
+| 1. | CHAR(size) | Menyatakan deretan karakter (String) yang lebarnya tetap. <br> Size : 0 hingga 255 karakter | Jenis_kelamin (L/P) <br> contoh : L |
+| 2. | VARCHAR(size) | Menyatakan data String yang lebarnya bervariasi. <br> Size : 0 hingga 255 karakter | Nama pengguna <br> contoh : Amanda |
+| 3. |  TEXT(size, d) | Menampung string Panjang yang lebarnya tidak dapat diprediksi. | |
+
+: Tabel Tipe Data String {.striped .hover}
+
+
+### Tipe Data Date
+
+Menyimpan tanggal dan waktu dalam format tertentu seperti tahun, bulan, dan hari, jam, menit, dan detik. Tipe data date bisa digunakan untuk mengatur kronologis dari peristiwa.
+
+| No  |  Tipe   |        Keterangan         |  Penerapan |
+|:---:|---------|---------------------------|------------|
+| 1. | DATE(size) | Digunakan dengan tanggal dengan format “YYYY-MM-DD" | 2004-09-21 |
+| 2. | TIME(size) | Digunakan untuk waktu dengan format “hh:mm:ss” | 12:33:12 |
+| 3. | DATETIME(size, d) | Digunakan untuk tanggal dan waktu dengan format “YYYY-MM-DD hh:mm:ss” | 2012-11-29 11:55:23 |
+
+: Tabel Tipe Data Date {.striped .hover}
+
+## Constraint / Kekangan Nilai
+
+Constraint atau kekangan nilai digunakan untuk menentukan aturan yang mengizinkan atau membatasi nilai yang akan dimasukkan dalam tabel. Kekangan Nilai Menyediakan Metode Yang sesuai untuk memastikan akurasi dan integritas data di dalam table.
+
+Contoh constraint, yaitu :
+
+- Membuat Nilai Tidak Kosong(NOT NULL)
+- Membuat Nilai Unik(UNIQUE)
+- Membuat kenaikan nilai secara otomatis(AUTO INCREMENT)
+- Membuat Kunci tamu(FOREIGN KEY)
+- Menggunakan Alias table dan query antartable (INNER JOIN)
+
+### Constraint NOT NULL
+
+Constraint NOT NULL mengatur agar data tertentu harus terisi atau tidak kosong. Ada kolom tertentu dari suatu table harus terisi dengan nilai valid. 
+Contoh case :
+
+```sql
+CREATE TABLE `mahasiswa`(
+    `nama` VARCHAR(50), NOT NULL,
+    `nim` VARCHAR(30) NOT NULL  
+)
+```
+Untuk case di atas maka nama dan nim yang diinputkan ke dalam database tidak boleh kosong.
+
+### Constraint UNIQUE
+
+Constraint UNIQUE ditujukan untuk memastikan bahwa nilai dalam kolom unik, artinya kolom tidak dapat menyimpan nilai duplikat.
+Contoh case:
+
+```sql
+CREATE TABLE `mahasiswa`(
+    `nama` VARCHAR(50) NOT NULL,
+    `nim` VARCHAR(50) NOT NULL UNIQUE
+)
+```
+
+Untuk case di atas nama mahasiswa bisa saja sama, tapi NIM mahasiswa tidak akan pernah sama maka diberi Constraint UNIQUE
+
+
+### Constraint AUTO INCREMENT
+
+Auto increment digunakan untuk menaikkan nilai secara otomatis pada field numerik. Ada beberapa hal yang harus diperhatikan dalam menggunakan auto increment:
+
+- Hanya Dapat Digunakan Pada field numerik
+- Field harus bersifat primary key atau unik
+- Field tidak boleh bersifat null
+- Dalam Satu Tabel hanya ada satu field yang menggunakan auto increment
+
+```sql
+CREATE TABLE `mahasiswa`(
+    `id` VARCHAR(11) NOT NULL AUTO_INCREMENT,
+    `nama` VARCHAR(50) NOT NULL,
+    `nim` VARCHAR(50) NOT NULL UNIQUE
+)
+```
+
+
+## Pembuatan Database
+
+Dalam pembuatan database dapat dibuat dalam 2 cara, yaitu menggunakan platform dan menggunakan scripting
+
+:::{layout-ncol=2 style="text-align:center;"}
+![Menggunakan Platform](assets/database/platform.png)
+
+![Menggunakan scripting](assets/database/scripting.png)
+:::
+
+## Perintah MySQL (DDL, DML, DCL)
+
+Secara umum perintah fungsi MySQL dibagi menjadi 3, yaitu :
+
+- DDL (Data Definition Language), 
+- DML(Data Manipulation), dan 
+- DCL (Data Control Language).
+
+Pada modul ini akan dibatasi pada DDL dan DML untuk praktek.
+
+![DDL, DML, DCL](assets/database/arsitekturdb.png){width=80% style="text-align:center;"}
+
+
+### Data Definition Language (DDL)
+
+Data Definition Language (DDL) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk mendefinisikan struktur database dan objeknya, seperti tabel, tampilan, indeks, dan prosedur dalam sebuah database. Pernyataan DDL digunakan untuk membuat, mengubah, dan menghapus objek database, termasuk tabel, tampilan, indeks, dan prosedur tersimpan. Beberapa pernyataan DDL yang paling umum meliputi:
+
+#### CREATE
+
+Pernyataan ini membuat objek database baru, seperti tabel, tampilan, atau indeks. Misalnya, pernyataan SQL berikut membuat tabel yang disebut "pelanggan":
+
 ```sql
 CREATE TABLE pelanggan ( id INT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255));
 ```
-<br>
-ALTER: Pernyataan ini digunakan untuk memodifikasi objek database yang sudah ada. Misalnya, pernyataan SQL berikut menambahkan kolom baru bernama " email " ke tabel " customers ":
-<br>
+
+
+#### ALTER
+
+Pernyataan ini digunakan untuk memodifikasi objek database yang sudah ada. Misalnya, pernyataan SQL berikut menambahkan kolom baru bernama " email " ke tabel " customers ":
 
 ```sql
 pelanggan ALTER TABLE ADD email VARCHAR(255);
 ```
-<br>
-DROP: Pernyataan ini digunakan untuk menghapus objek database yang sudah ada. Misalnya, pernyataan SQL berikut menghapus tabel "pelanggan":
-<br>
+
+
+#### DROP
+
+Pernyataan ini digunakan untuk menghapus objek database yang sudah ada. Misalnya, pernyataan SQL berikut menghapus tabel "pelanggan":
+
 pelanggan DROP TABLE;
+
+
+#### TRUNCATE
+
+Pernyataan ini digunakan untuk menghapus semua baris dalam tabel, tetapi tidak seperti pernyataan DROP, pernyataan ini mempertahankan struktur dan indeks tabel.
 <br>
-TRUNCATE: Pernyataan ini digunakan untuk menghapus semua baris dalam tabel, tetapi tidak seperti pernyataan DROP, pernyataan ini mempertahankan struktur dan indeks tabel.
-<br>
-RENAME: Pernyataan ini digunakan untuk mengganti nama objek database yang sudah ada. Misalnya, pernyataan SQL berikut mengganti nama tabel "pelanggan" menjadi "klien":
-<br>
+
+#### RENAME
+
+Pernyataan ini digunakan untuk mengganti nama objek database yang sudah ada. Misalnya, pernyataan SQL berikut mengganti nama tabel "pelanggan" menjadi "klien":
+
 ```sql
 RENAME TABLE pelanggan TO klien;
 ```
-<br>
+
 Penting untuk dicatat bahwa pernyataan DDL dieksekusi segera dan bersifat permanen, artinya setelah objek dibuat, diubah, atau dihapus, perubahan tidak dapat diurungkan. Oleh karena itu, sangat penting untuk berhati-hati dan memastikan bahwa Anda memiliki cadangan basis data sebelum menjalankan pernyataan DDL apa pun. Selain itu, pernyataan DDL biasanya dijalankan oleh administrator database atau pengembang dengan hak istimewa dan izin yang sesuai untuk mengubah struktur database.
 <br>
-Apa itu DML?
-<br>
-DML ( Data Manipulation Language) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk memanipulasi data dalam database. Pernyataan DML digunakan untuk menyisipkan, memperbarui, dan menghapus data dalam database. Beberapa pernyataan DML yang paling umum meliputi:
-<br>
-SELECT: Pernyataan ini digunakan untuk mengambil data dari satu atau lebih tabel dalam database. Sebagai contoh, kueri SQL berikut mengambil semua rekaman dari tabel "pelanggan":
-<br>
+
+#### SHOW
+
+Perintah DDL ini digunakan untuk menampilkan daftar database atau tabel yang ada.
+
+Penerapan :
+
 ```sql
-SELECT * FROM pelanggan;
+SHOW TABLES;
 ```
+
 <br>
-INSERT: Pernyataan ini digunakan untuk memasukkan data baru ke dalam tabel. Sebagai ilustrasi, pernyataan SQL berikut menyisipkan baris baru ke dalam tabel "pelanggan":
+
+::: {.callout-note title="Latihan"}
+Untuk Latihan
+
+
 <br>
+
+:::
+
+
+### Data Manipulation Language (DML)
+
+Data Manipulation Language (DML) adalah bagian dari SQL (Structured Query Language) yang digunakan untuk memanipulasi data dalam database. Sehingga pernyataan DML ini dapat digunakan ketika database dan tabel telah dibuat. Pernyataan DML digunakan untuk menyisipkan, memperbarui, dan menghapus data dalam database. Beberapa pernyataan DML yang paling umum meliputi:
+
+
+#### INSERT
+
+Pernyataan ini digunakan untuk memasukkan data baru ke dalam tabel. Sebagai ilustrasi, pernyataan SQL berikut menyisipkan baris baru ke dalam tabel "pelanggan":
+
 ```sql
 INSERT INTO pelanggan (id, nama, alamat) VALUES (1, 'John Smith,' '123 Main St');
 ```
-<br>
-UPDATE: Pernyataan ini digunakan untuk memodifikasi data yang ada dalam sebuah tabel. Misalnya, pernyataan SQL berikut memperbarui alamat pelanggan dengan ID 1 di tabel "pelanggan":
-<br>
+
+
+#### SELECT 
+
+Pernyataan ini digunakan untuk mengambil data dari satu atau lebih tabel dalam database. Sebagai contoh, kueri SQL berikut mengambil semua rekaman dari tabel "pelanggan":
+
+```sql
+SELECT * FROM pelanggan;
+```
+
+
+#### UPDATE
+
+Pernyataan ini digunakan untuk memodifikasi data yang ada dalam sebuah tabel. Misalnya, pernyataan SQL berikut memperbarui alamat pelanggan dengan ID 1 di tabel "pelanggan":
+
 ```sql
 UPDATE pelanggan SET address = '456 Park Ave' WHERE id = 1;
 ```
-<br>
-DELETE: Pernyataan ini digunakan untuk menghapus data dari tabel. Misalnya, pernyataan SQL berikut menghapus pelanggan dengan ID 1 dari tabel "pelanggan":
-<br>
+
+
+#### DELETE
+
+Pernyataan ini digunakan untuk menghapus data dari tabel. Misalnya, pernyataan SQL berikut menghapus pelanggan dengan ID 1 dari tabel "pelanggan":
+
 ```sql
 DELETE FROM pelanggan WHERE id = 1;
 ```
-<br>
+
 

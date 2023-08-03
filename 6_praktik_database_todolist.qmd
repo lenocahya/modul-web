@@ -1,6 +1,156 @@
-<!-- ---
-title: "Praktek Database"
+---
+# title: "Praktik Database"
 format: html
---- -->
+categories: [database, praktik, 'studi kasus']
+---
 
-# Praktek Database {.unnumbered}
+# Praktik Database
+
+Membuat database untuk aplikasi To Do List
+
+![Tampilan To Do List](assets/frontpage/frontpage.png){width="80%" style="text-align:center;"}
+
+<br>
+Dari web To Do List kita perlu membuat database sesuai tabel di bawah ini
+
+![Tabel To Do List](assets/database/tabel.png){width="50%" style="text-align:center;"}
+
+<br>
+
+## Membuat Database
+
+Untuk membuat database dapat menggunakan fasilitas dari platform atau scripting. Pada halaman beranda phpMyAdmin terdapat menu Database dan SQL. Pada Database dapat membuat database baru dengan menggunakan platform atau GUI dari phpMyAdmin. Sedangkan pada menu SQL dapat memasukkan script CREATE untuk membuat database baru dengan menggunakan code SQL.
+
+:::{layout-ncol=2 style="text-align:center;"}
+![Menggunakan Platform](assets/database/platform.png)
+
+![Menggunakan scripting](assets/database/scripting.png)
+:::
+
+
+Berikut merupakan video penjelasan mengenai phpmyadmin
+
+{{< video https://www.youtube.com/embed/fxe6qev-bno?start=2453 >}}
+
+Untuk membuat database menggunakan phpMyAdmin perlu mengaktifkan terlebih dahulu apache dan mysql pada xampp agar terhubung pada phpMyAdmin. Lalu memulai aplikasi phpMyAdmin melalui [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
+
+<br>
+
+## Create Database dari GUI PHPMyAdmin
+
+Untuk membuat database melalui phpMyAdmin dapat melalui langkah-langkah berikut:
+
+1. Buka phpMyAdmin pada web browser
+2. Klik menu **Databases** di sisi kiri atas
+3. Pada halaman baru, klik tombol **Create Database**
+4. Masukan nama untuk databse yang akan di buat
+5. Lalu klik enter atau Create.
+
+![Create Database melalui Platform](assets/database/createdatabase.png){width="80%" style="text-align:center;"}
+
+<br>
+
+## Create Table dari Platform
+
+Setelah database dibuat langkah selanjutnya adalah membuat tabel-tabel yang akan digunakan. Berikut adalah langkah-langkah membuat tabel baru:
+
+1. Login ke platform (phpMyAdmin)
+2. Pilih database yang ingin dituju
+3. Klik tab Tables dan pilih tabel mana yang ingin anda tambahkan
+4. Pada form Create Table masukkan nama tabel dan jumlah kolom yang akan dibuat.
+
+![Create Table](assets/database/createtabel.png){width=80% style="text-align:center;"}
+
+5. Isi form field sesuai perintah yang telah disediakan
+6. Tekan save.
+
+![Inset Columns](assets/database/insertcolumn.png){width=80% style="text-align:center;"}
+
+<br>
+
+### Preview Scripting SQL
+
+Meskipun meembuat tabel melalui platform atau GUI dari phpMyAdmin tetap kita dapat melihat bagaimana kode yang berjalan pada proses pembuatan tabel tersebut dengan klik tombol preview SQL yang terdapata pada sebelah tombol save atau simpan.
+
+![Preview Script SQL](assets/database/previewscript.png){width=80% style="text-align:center;"}
+
+<br>
+
+## Menambahkan Primary Key
+
+Menambahkan primary key pada suatu table adalah
+proses untuk menjadikan salah satu atau beberapa column dari
+table sebagai referensi unik, agar tidak ada dua data yang memiliki nilai yang sama pada semua row tsb. Proses ini dilakukan setelah membuat columns baru pada table. Jika pada pembuatan tabel belum diinisialisasi untuk primary key, dapat mengubah dalah satu kolom menjadi primary key melalui perintan alter. Sehingga perlu membuka menu SQL untuk memasukkan kode sql untuk merubah data menjadi primary key.
+
+![Primary Key](assets/database/primarykey.png){width=80% style="text-align:center;"}
+
+Selain itu dapat mengubah data yang bersifat primary key melalui platform phpmyadmin dengan cara membuka database lalu tabel yang akan digunakan lali pilih menu arsitektur. Melalui menu tersebut akan ditampilkan kolom-kolom dari tabel. Checklist kolom yang ingin diatur lalu klik ubah atau Change, atau langsung klik primary dengan ikon kunci untuk merubah suatu kolom menjadi primary.
+
+<br>
+
+## Membuat Auto Increment melalui Platform
+
+Auto increment merupakan cara untuk mengatur nilai otomatis pada kolom yang memiliki tipe data integer, yang akan diisi secara berurutan dan tidak boleh ada duplikasi. Auto Increment biasa digunakan untuk membuat primary key secara otomatis untuk setiap kali data baru dimasukan ke database, maka value yang diinput akan ditetapkan oleh sistem dan tidak dapat dirubah lagi oleh user.
+
+![Auto Increment](assets/database/autoincrement.png){width=80% style="text-align:center;"}
+
+<br>
+
+## Insert Data 
+
+Setelah database dan tabel telah dibuat, langkah selanjutnya adalah melakukan input data kedalam tabel yang sesuai. Melalui phpMyAdmin dapat melakukan perintah insert untuk input data melalui platform atau perintah SQL.
+
+### Insert melalui Platform
+
+Untuk melakukan insert data melalui platform dapat dilakukan melalui beberapa tahap berikut:
+langkah-langkah insert data melalui GUI phpMyadmin:
+
+1. Buka Database lalu tabel yang ingin dilakukan input data.
+2. Klik menu insert pada Tab Tabel.
+3. Isikan data-data pada form sesuai dengan tipe data yang diinginkan. Pada kolom yang bersifat auto increment tidak perlu diisi apapun karena akan di*generate* oleh sistem.
+4. Setelah semua terisi klik Go.
+
+![Insert melalui Platform](assets/database/inserttableplatform.png){width=80% style="text-align:center;"}
+
+
+### Insert Table Melalui SQL
+
+Selain melalui platform dengan kemudahan yang diberikan, dapat juga melakukan input data dengan menggunakan kode SQL sehingga dapat melatih kemampuan dalam mengolah bahasa pemrograman untuk database SQL. Adapun langkah-langkah yang bisa dilakukan sebagai berikut:
+
+1. Buka Database lalu tabel yang ingin dilakukan input data.
+2. Klik SQL pada menu Tab Tabel.
+3. Terdapat textbox untuk mengisikan kode SQL untuk menyimpan, mengubah bahkan menghapus data pada database sesuai dengan syntax yang ada.
+4. Inputkan perintah untuk melakukan insert pada tabel, seperti berikut:
+
+```sql
+INSERT INTO `kegiatan` 
+(`id`, `isi`, `tgl_awal`, `tgl_akhir`,`status`) 
+VALUES 
+(NULL, 'Belanja Bulanan', '2023-05-15', '2023-06-11', 0);
+```
+
+![Insert melalui SQL](assets/database/insertsql.png){width=80% style="text-align:center;"}
+
+### Insert Bertumpuk dalam SQL
+
+Proses insert pada database bisa juga secara serentak atau bersamaan sekaligus melalui kode sql seperti berikut.
+
+![Insert Bertumpuk](assets/database/insertbertumpuk.png){width=80% style="text-align:center;"}
+
+Pada insert tabel tidak perlu menginputkan id atau kolom yang bertugas sebagai primary key. Hal tersebut terjadi karena telah diatur otomatis melalui perintah auto increment, sehingga pada input ataupun update data tidak ada input atau menyimpan id karena telah di atur oleh sistem.
+
+<br>
+
+## Preview SQL perintah yang berhasil berjalan.
+
+Setiap selesai proses pada database baik melalui platform yang diberikan maupun kode SQL akan selalu muncul script kode SQL dari program yang baru saja berjalan, seperti berikut 
+
+![Preview Script](assets/database/previewinsertsql.png){width=80% style="text-align:center;"}
+
+<br>
+
+## Preview Hasil Table
+
+Berikut adalah hasil dari praktikum database untuk studi kasus To Do List:
+
+![Hasil Database](assets/database/hasiltabel.png){width=80% style="text-align:center;"}

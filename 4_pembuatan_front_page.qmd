@@ -1,13 +1,14 @@
-<!-- ---
-title: "Front Page To Do List"
+---
+# title: "Front Page To Do List"
 format: html
---- -->
+categories: [ui, praktik, bootstrap]
+---
 
-# Front Page {.unnumbered}
+# Front Page
 
 Setelah mempelajari responsive web dan framework bootstrap, selanjutnya adalah mengaplikasikan bootstrap ke php yang akan dibuat. Berikut adalah contoh tampilan front page sederhana untuk mengaplikasikan bootstrap pada website.
 
-![Front Page](assets/frontpage/frontpage.png){width="60%"}
+![Front Page](assets/frontpage/frontpage.png){width="70%" style="text-align:center;"}
 
 <br>
 Pembuatan frontpage merupakan langkah awal dalam mengembangkan sebuah situs web. Frontpage, atau halaman depan, adalah halaman pertama yang dilihat oleh pengunjung saat mengakses situs web Anda. Tujuan dari frontpage adalah memberikan informasi yang jelas, menarik, dan menggambarkan dengan baik apa yang situs web Anda tawarkan.
@@ -34,7 +35,7 @@ Berikut adalah beberapa langkah untuk membuat frontpage sederhana:
 
 ## Desain Front Page
 
-![Desain Front Page](assets/frontpage/frontpage_wireframe.png){width="60%"}
+![Desain Front Page](assets/frontpage/frontpage_wireframe.png){width="70%" style="text-align:center;"}
 
 <br>
 Dalam modul Junior Web Developer ini hanya membuat front page sederhana yaitu mengenai To Do List, dimana tahapan yang dilakukan adalah membuat desain, menentukan tata letak, dan bagian-bagian didalamnya. Dari desain tata letak di atas terdapat beberapa komponen yang digunakan, yaitu Header, Form, Table, dan Button. Untuk pembuatan tampilan atau UI menggunakan framework Bootstrap.
@@ -42,10 +43,10 @@ Dalam modul Junior Web Developer ini hanya membuat front page sederhana yaitu me
 
 ## Membuat Front Page
 
-Pada pengenalan tools telah dijelaskan mengenai [installasi bootstrap](2_pengenalan_tools.html#bootstrap). Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumenasi bootstrap.
+Pada pengenalan tools telah dijelaskan mengenai [instalasi bootstrap](2_pengenalan_tools.html#bootstrap). Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumentasi bootstrap.
 <br>
 
-Memulai dengan kode html5 serta menambahkan tag meta dengan name="viewport" untuk membuat web yang responsif, selain itu juga melakukan installasi css hingga javascript.
+Memulai dengan kode html5 serta menambahkan tag meta dengan name="viewport" untuk membuat web yang responsif, selain itu juga melakukan instalasi css hingga javascript.
 <br>
 
 ```php
@@ -73,10 +74,10 @@ Memulai dengan kode html5 serta menambahkan tag meta dengan name="viewport" untu
 </body>
 </html>
 ```
-Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah di pelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-*export*-nya dan membuat folder asets pada lokasi folder projek untuk menyimpan file paket dari bootstrap.
+Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah dipelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-*export*-nya dan membuat folder assets pada lokasi folder projek untuk menyimpan file paket dari bootstrap.
 <br>
 
-Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
+Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunaan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
 <br>
 
 ```php
@@ -84,7 +85,7 @@ Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan 
 ```
 
 <br>
-Pada tampilan yang dinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container.
+Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container.
 <br>
 
 ### **Judul (heading)**
@@ -101,7 +102,7 @@ Pada tampilan yang dinginkan adalah memusatkan dan mengelompokkan konten utama, 
 ```
 <br>
 
-Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan kelas text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memilikki tingkat kepentingan lebih rendah.
+Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah.
 <br>
 
 ### **Form**
@@ -141,10 +142,10 @@ name="myForm"">
 ```
 <br>
 
-Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang disetting untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga di gunakan kelas "visually-hidden" untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja.
+Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur dengan autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga digunakan kelas "visually-hidden" untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja.
 <br>
 
-Selain form juga terdapat button yang  bertype submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience.
+Selain form juga terdapat button yang  bertipe submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience.
 <br>
 
 ### **Tabel**
@@ -195,20 +196,20 @@ Selain form juga terdapat button yang  bertype submit dengan kelas dari btn, btn
 </table>
 ```
 <br>
-Kelas tabel yang digunakan adalah "table table-hover" dimana ketika pointer berada diatas tabel maka baris data akan di*highlight*.
+Kelas tabel yang digunakan adalah "table table-hover" dimana ketika pointer berada diatas tabel maka baris data akan di *highlight*.
 <br>
 
 ### Button
 Pada form dan tabel terdapat button dengan berbagai warna. Pada kelas button terdapat "btn" yang merupakan kelas dasar yang mengindikasikan bahwa itu adalah kelas button. Lalu terdapat btn-danger merupakan kelas tambahan yang memberikan tampilan warna merah yang menunjukkan bahaya atau aksi negatif. Biasanya digunakan untuk tombol yang mengindikasikan tindakan yang dapat memiliki dampak negatif atau risiko. Selain itu juga terdapat rounded-pill yang merupakan kelas tambahan yang memberikan elemen tersebut sudut yang lebih bulat sehingga tampak seperti bentuk bulat. Dan terdapat px-3 yang juga kelas tambahan yang memberikan padding horizontal pada tombol. Dengan kelas tersebut akan ditampilkan sebagai tombol dengan warna merah, sudut yang lebih bulat, dan padding horizontal yang lebih besar.
 <br>
 
-![Button Bootstrap](assets/frontpage/button.png){width="60%"}
+![Button Bootstrap](assets/frontpage/button.png){width="70%" style="text-align:center;"}
 
 <br>
 
 ### Warna
 
-Terdapat beberapa template kelas warna yang di sediakan oleh Bootstrap diantaranya
+Terdapat beberapa template kelas warna yang disediakan oleh Bootstrap diantaranya
 <br>
 
 1. Primary: (Biru tua)
@@ -221,4 +222,4 @@ Terdapat beberapa template kelas warna yang di sediakan oleh Bootstrap diantaran
 8. Dark: (Hitam atau hampir hitam)
 
 <br>
-Pemilihan warna juga merupakan hal yang sanggat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut *user experience*
+Pemilihan warna juga merupakan hal yang sangat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut *user experience*

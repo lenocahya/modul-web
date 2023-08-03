@@ -1,53 +1,54 @@
-<!-- ---
-title: "Aplikasi To Do List"
+---
+# title: "Program To Do List"
 format: html
---- -->
+categories: [studi kasus]
+---
 
-# Program To Do List {.unnumbered}
+# 1 Program To Do List {.unnumbered}
 
 Berikut adalah tampilan dari to do list untuk latihan membuat web sederhana.
 
-![Tampilan Index](assets/todolist/index.png){width="60%"}
+![Tampilan Index](assets/todolist/index.png){width="80%" style="text-align:center;"}
 
 Sebelum kita mulai membuat program to do list tersebut ada beberapa tahapan yang diperlukan, seperti menghidupkan server yang digunakan (xampp), membuat database, koneksi, hingga membuat tampilan dari program.
 
-## **XAMPP**
+## XAMPP
 Untuk dapat menampilkan file php memerlukan server sehingga diperlukan xampp untuk menampilkan php pada server dengan mengaktifkan apache.
 <br>
 
-![Memulai XAMPP](assets/todolist/xampp.png){width="60%"}
+![Memulai XAMPP](assets/todolist/xampp.png){width="80%" style="text-align:center;"}
 
 <br>
-Pada panel xampp, klik start pada Apache dan MySQL untuk mengaktifkan. Apache diperlukan karena sebagai web serer untuk mengakses localhost dan menampilkan file php. Sedangkan pada MySQL diperlukan untuk manajemen dan akses ke database.
+Pada panel xampp, klik start pada Apache dan MySQL untuk mengaktifkan. Apache diperlukan karena sebagai web server untuk mengakses localhost dan menampilkan file php. Sedangkan pada MySQL diperlukan untuk manajemen dan akses ke database.
 
-## **Folder di htdocs**
+## Folder di htdocs
 Untuk dapat mengakses website localhost dari xampp, diperlukan folder project di direktori C:\\xampp\\htdocs, sesuai dengan direktori xampp yang sedang aktif. Untuk memastikan lokasi direktori xampp dapat klik tombol Explorer pada control panel xampp
 <br>
 
-![Explorer XAMPP](assets/todolist/explorer.png){width="40%"}
+![Explorer XAMPP](assets/todolist/explorer.png){width="50%" style="text-align:center;"}
 
 <br>
 
-Setelah membuka folder xampp lalu htdocs, selanjutna membuat folder projek.
+Setelah membuka folder xampp lalu htdocs, selanjutnya membuat folder projek.
 
 <br>
 
-![Folder Projek](assets/todolist/folder-projek.png){width="60%"}
+![Folder Projek](assets/todolist/folder-projek.png){width="80%" style="text-align:center;"}
 
 <br>
 Folder projek ini digunakan sebagai tempat menyimpan file php dan file lain untuk yang digunakan untuk membuat web yang berhubungan dengan projek.
 <br>
 
-## **Database **
+## Database 
 Dari contoh di atas hanya diperlukan 1 tabel, yaitu tabel yang dapat menyimpan daftar kegiatan. Berikut adalah komponen-komponen dari tabel yang diperlukan. <br>
 
-![Tabel Kegiatan](assets/todolist/database.jpg){width="60%"}
+![Tabel Kegiatan](assets/todolist/database.jpg){width="80%" style="text-align:center;"}
 
 <br>
-Dari tabel diatas dapat dibuat pada [localhost/phpmyadmin](http://localhost/phpmyadmin/) dengan membuat database baru lalu membuat tabel baru dengan nama tabel "kegiatan". Buat field dan sesuaikan pada tabel di atas mulai dari nama field, type dan sizenya. Field "id" berfungsi sebagai primary key. Pada field isi, tgl_awal, dan tgl_akhir tidak memerlukan size karena bertype text dan date. Pada field status bertype int dengan size hanya 1 karena nantinya akan menyimpan nilai 0 dan 1 yang merepresentasikan belum dan sudah.
+Dari tabel diatas dapat dibuat pada [localhost/phpmyadmin](http://localhost/phpmyadmin/) dengan membuat database baru lalu membuat tabel baru dengan nama tabel "kegiatan". Buat field dan sesuaikan pada tabel di atas mulai dari nama field, type dan sizenya. Field "id" berfungsi sebagai primary key. Pada field isi, tgl_awal, dan tgl_akhir tidak memerlukan size karena bertipe text dan date. Pada field status bertipe int dengan size hanya 1 karena nantinya akan menyimpan nilai 0 dan 1 yang merepresentasikan belum dan sudah.
 <br>
 
-## **Koneksi**
+## Koneksi
 
 Koneksi diperlukan untuk menghubungkan php dengan database yang kita buat, dimana sebelumnya kita membuat database sql. Untuk menghubungkan php dengan sql menggunakan argumen mysqli_connect. Maka perlu membuat file **koneksi.php** lalu di *include*-kan pada file php yang terhubung dengan database. 
 <br>
@@ -58,7 +59,7 @@ $databaseHost = 'localhost';
 $databaseName = 'kegiatan';
 $databaseUsername = 'root';
 $databasePassword = '';
- 
+
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, 
     $databasePassword, $databaseName);
 ```
@@ -87,7 +88,7 @@ diisi dengan password user yang terdaftar pada server mysql. Secara default kare
 pada parameter mysql_database diisikan nama database yang telah kita buat. Database yang kita buat sebelumnya adalah kegiatan atau sesuai yang telah anda buat.
 
 
-## **Index**
+## Index
 
 Pada langkah sebelumnya kita telah membuat database dan koneksi untuk menghubungkan database dengan file php, selanjutnya adalah membuat file website. File website utama yang akan otomatis ditampilkan ketika telah membuka htdocs/(folder projek) adalah index.php. Pada file index perlu memuat atau me*load* file koneksi.php yang telah dibuat sebelumnya agar website dapat terhubung pada database yang telah dibuat.
 <br>
@@ -101,7 +102,7 @@ include_once("koneksi.php");
 Untuk memuat file php lain dapat menggunakan fungsi php yaitu require, require_once atau include atau include_once. Lalu apa perbedaan fungsi-fungsi tersebut?
 <br>
 
-- Jika fungsi include, ketika terjadi error pada file yang di panggil maka akan menampilkan warning error pada kode yang error saja, namun kode-kode selanjutnya akan tetap dijalankan.
+- Jika fungsi include, ketika terjadi error pada file yang dipanggil maka akan menampilkan warning error pada kode yang error saja, namun kode-kode selanjutnya akan tetap dijalankan.
 - Sedangkan fungsi require, ketika terjadi error pada file yang dipanggil maka akan menampilkan fatal error, atau menghentikan program yang berjalan sehingga kode program setelahnya tidak akan dieksekusi.
 - Untuk include_once dan require_once sama dengan fungsi include dan require, namun fungsi itu hanya akan me*load* file sekali, sehingga ketika terdapat program yang memuat file yang sama setelahnya tidak akan dijalankan.
 
@@ -134,22 +135,20 @@ Memulai dengan kode html untuk membuat website.
 </body>
 </html>
 ```
-Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah di pelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-*export*-nya dan membuat folder asets pada lokasi folder projek untuk menyimpan file paket dari bootstrap.
+Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang akan digunakan, pada kode diatas menggunakan html5. Seperti yang telah dipelajari sebelumnya mengenai framework bootstrap, perlu memuat file bootstrap. Jika dalam menjalankan program selalu terhubung dengan internet dapat memuat css maupun js bootstrap dapat diakses pada halaman dokumentasi bootstrap bagian introduction. Namun jika dalam keadaan jarang terhubung internet maka dapat mengunduh terlebih dahulu file bootstrap lalu dapat meng-*export*-nya dan membuat folder assets pada lokasi folder projek untuk menyimpan file paket dari bootstrap.
 <br>
 
-Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunakan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
+Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunaan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
 <br>
 
 ```php
 <div class="container">
 ```
 
-<br>
-Pada tampilan yang dinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container.
+Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container.
 <br>
 
-**Judul (heading)**
-<br>
+### Judul (heading)
 
 ```php
 <h3>
@@ -162,11 +161,10 @@ Pada tampilan yang dinginkan adalah memusatkan dan mengelompokkan konten utama, 
 ```
 <br>
 
-Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan kelas text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memilikki tingkat kepentingan lebih rendah.
+Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah.
 <br>
 
-**Form**
-<br>
+### Form
 
 ```php
 <form class="form-inline" method="POST" action=""
@@ -225,7 +223,7 @@ name="myForm" onsubmit="return(validate());">
 ```
 <br>
 
-Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang disetting untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga di gunakan kelas "visually-hidden" untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja.
+Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan class "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga digunakan class "visually-hidden" untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja.
 <br>
 
 Terdapat kode PHP untuk menghubungkan form dengan database, dengan cara mengambil data dari database lalu dimunculkan melalui value berdasarkan variabel yang sesuai, berdasarkan id dari data ketika dilakukan ubah data. Untuk mengambil data dari database digunakan perintah SQl:
@@ -240,66 +238,73 @@ SELECT * FROM kegiatan WHERE id='" . $_GET['id'] . "'
 Nilai id didapat dari get data id yang dikirimkan ketika klik tombol ubah.
 <br>
 
-Selain form juga terdapat button yang  bertype submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience.
+Selain form juga terdapat button yang  bertipe submit dengan class dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience.
 <br>
-<br>
-**Tabel**
-<br>
+
+
+### Tabel
+
 ```php
-        <table class="table table-hover">
-            <!--thead atau baris judul-->
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Kegiatan</th>
-                    <th scope="col">Awal</th>
-                    <th scope="col">Akhir</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Aksi</th>
-                </tr>
-            </thead>
-            <!--tbody berisi isi tabel sesuai dengan judul atau head-->
-            <tbody>
-                <!-- Kode PHP untuk menampilkan semua isi dari tabel urut
-                berdasarkan status dan tanggal awal-->
-                <?php
-                $result = mysqli_query($mysqli, "SELECT * FROM kegiatan ORDER BY status,tgl_awal");
-                $no = 1;
-                while ($data = mysqli_fetch_array($result)) {
-                ?>
-                    <tr>
-                        <th scope="row"><?php echo $no++ ?></th>
-                        <td><?php echo $data['isi'] ?></td>
-                        <td><?php echo $data['tgl_awal'] ?></td>
-                        <td><?php echo $data['tgl_akhir'] ?></td>
-                        <td>
-                            <?php
-                            if ($data['status'] == '1') {
-                            ?>
-                                <a class="btn btn-success rounded-pill px-3" type="button" 
-                                href="index.php?id=<?php echo $data['id'] ?>&aksi=ubah_status&status=0">
-                                Sudah
-                                </a>
-                            <?php
-                            } else {
-                            ?>
-                                <a class="btn btn-warning rounded-pill px-3" type="button" 
-                                href="index.php?id=<?php echo $data['id'] ?>&aksi=ubah_status&status=1">
-                                Belum</a>
-                            <?php
-                            }
-                            ?>
-                        </td>
-                        <td>
-                            <a class="btn btn-info rounded-pill px-3" href="index.php?id=<?php echo $data['id'] ?>">Ubah</a>
-                            <a class="btn btn-danger rounded-pill px-3" href="index.php?id=<?php echo $data['id'] ?>&aksi=hapus">Hapus</a>
-                        </td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
+<table class="table table-hover">
+    <!--thead atau baris judul-->
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Awal</th>
+            <th scope="col">Akhir</th>
+            <th scope="col">Status</th>
+            <th scope="col">Aksi</th>
+        </tr>
+    </thead>
+    <!--tbody berisi isi tabel sesuai dengan judul atau head-->
+    <tbody>
+        <!-- Kode PHP untuk menampilkan semua isi dari tabel urut
+        berdasarkan status dan tanggal awal-->
+        <?php
+        $result = mysqli_query(
+            $mysqli,"SELECT * FROM kegiatan ORDER BY status,tgl_awal"
+            );
+        $no = 1;
+        while ($data = mysqli_fetch_array($result)) {
+        ?>
+            <tr>
+                <th scope="row"><?php echo $no++ ?></th>
+                <td><?php echo $data['isi'] ?></td>
+                <td><?php echo $data['tgl_awal'] ?></td>
+                <td><?php echo $data['tgl_akhir'] ?></td>
+                <td>
+                    <?php
+                    if ($data['status'] == '1') {
+                    ?>
+                        <a class="btn btn-success rounded-pill px-3" type="button" 
+                        href="index.php?id=<?php echo $data['id'] ?>&aksi=ubah_status&status=0">
+                        Sudah
+                        </a>
+                    <?php
+                    } else {
+                    ?>
+                        <a class="btn btn-warning rounded-pill px-3" type="button" 
+                        href="index.php?id=<?php echo $data['id'] ?>&aksi=ubah_status&status=1">
+                        Belum</a>
+                    <?php
+                    }
+                    ?>
+                </td>
+                <td>
+                    <a class="btn btn-info rounded-pill px-3" 
+                    href="index.php?id=<?php echo $data['id'] ?>">Ubah
+                    </a>
+                    <a class="btn btn-danger rounded-pill px-3" 
+                    href="index.php?id=<?php echo $data['id'] ?>&aksi=hapus">Hapus
+                    </a>
+                </td>
+            </tr>
+        <?php
+        }
+        ?>
+    </tbody>
+</table>
 ```
 <br>
 
@@ -311,7 +316,7 @@ SELECT * FROM kegiatan ORDER BY status,tgl_awal
 ```
 
 <br>
-Selain itu pada kode php juga mendeklarasikan dan memberi nilai awal $no = 1 untuk menampilkan nomor urut data dengan menggunakan looping while3 sebanyak data yang ada dalam database. Nomor yang ditampilkan bukanlah id dari database.
+Selain itu pada kode php juga mendeklarasikan dan memberi nilai awal $no = 1 untuk menampilkan nomor urut data dengan menggunakan looping while sebanyak data yang ada dalam database. Nomor yang ditampilkan bukanlah id dari database.
 <br>
 
 Selain menampilkan data juga terdapat bagian status yang menggunakan kondisi ketika belum maka nilai awalnya adalah 0 namun ketika di klik maka akan melakukan fungsi ubah_status (yang akan kita buat nanti) menjadi 1 atau sudah begitupun sebaliknya jika data statusnya sudah.

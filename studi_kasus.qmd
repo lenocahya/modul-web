@@ -1,1 +1,18 @@
-# **Studi Kasus** {.unnumbered}
+---
+format: html
+toc-title: "On this page"
+---
+
+# <b>Studi Kasus</b> {.unnumbered}
+
+Berdasarkan konsep yang telah diberikan terdapat beberapa studi kasus yang dapat dipelajari dengan permasalahan yang umum dialami.
+
+## Program To Do List
+
+Pada Front Page telah dibuat tampilan dari Program To Do List sehingga perlu untuk menyelesakan kurusus Front Page.
+
+Pada praktikum database kita telah membuat database dengan studi kasus dari to do list ini selanjutnya akan dijelaskan bagaimana memfungsikan tombol dan menghubungkan program to do list dengan database.
+
+## Poliklinik
+
+Pada program poliklinik merupakan pengembangan pemahaman dari yang telah dipelajari sebelumnya sehingga program yang dibuat dapat memodifikasi dari studi kasus sebelumnya.

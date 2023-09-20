@@ -2,49 +2,44 @@
 # title: "Studi Kasus"
 format: html
 categories: ['studi kasus', crud, praktik]
+toc-title: "On this page"
 ---
 
-# 2 Studi Kasus (Poliklinik) {.unnumbered}
-<br>
+# Poliklinik {.unnumbered}
+
+## Studi Kasus Poliklinik Sederhana
 Dalam studi kasus poliklinik mahasiswa dapat membuat web sederhana mengenai poliklinik dengan beberapa halaman, diantaranya adalah home, data master (berisi data dokter dan pasien), dan periksa. Pada web tersebut dilengkapi dengan navbar untuk berpindah dari setiap halaman. Pada setiap halaman dapat melakukan CRUD (Create Read Update Delete) sesuai dengan tabel dan kebutuhan halaman tersebut dalam database.
 
-::: {layout="[[43,-4,43]]"}
-![Preview Poliklinik](assets/poliklinik/home.png)
+::: {style="text-align:center;"}
+![Preview Poliklinik](assets/poliklinik/home.png){width="80%"}
 
-![Preview Dokter](assets/poliklinik/dokter.png)
+![Preview Dokter](assets/poliklinik/dokter.png){width="80%"}
 
-![Preview Pasien](assets/poliklinik/pasien.png)
+![Preview Pasien](assets/poliklinik/pasien.png){width="80%"}
 
-![Preview Periksa](assets/poliklinik/periksa.png)
+![Preview Periksa](assets/poliklinik/periksa.png){width="80%"}
 :::
+
+<br>
 
 ## Database
 
-Membuat database baru pada [localhost/phpmyadmin](http://localhost/phpmyadmin/) dengan nama poliklinik. setelah itu dapat membuat  tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.
+Membuat database baru pada [localhost/phpmyadmin](http://localhost/phpmyadmin/){.external target="_blank"} dengan nama poliklinik. setelah itu dapat membuat  tabel-tabel yang diperlukan, yaitu tabel dokter, tabel pasien, tabel periksa.
 <br>
 
 ![Tabel Database Poliklinik](assets/poliklinik/tabeldatabase.png){width="80%" style="text-align:center;"}
 
 <br>
 Tabel Dokter dan Pasien bisa dikatakan memiliki hubungan many-to-many, jika setiap dokter dapat melayani banyak pasien, dan setiap pasien dapat ditangani banyak dokter. Sehingga diperlukan adanya tabel penghubung dari kedua tabel tersebut, yaitu tabel periksa.
+
+Buatlah tabel-tabel yang diperlukan untuk membuat web mengenai poliklinik sesuai dengan yang telah diperlajari pada [Praktik Database](6_praktik_database_todolist.qmd).
+
 <br>
 
-1. **Dokter**
+### 1. Tabel Dokter
+
 <br>
 Pada tabel dokter dapat menyimpan id, nama, alamat dan nomor hp. Pada tabel tersebut id merupakan primary key dengan tipe data integer, pada field nama, alamat, dan nomor hp memiliki tipe data varchar.
-<br>
-
-2. **Pasien**
-<br>
-Pada tabel pasien dapat menyimpan id, data nama, alamat, dan nomor hp. Primary key terletak pada id dengan tipe data integer, pada field nama, alamat dan nomor hp bertipe data varchar.
-<br>
-
-3. **Periksa**
-<br>
-Pada tabel periksa menyimpan data id periksa, id dokter, id pasien, tanggal periksa dan catatan. Pada tabel periksa saling terhubung dengan tabel dokter dan pasien melalui id dokter dan id pasien. id dokter dan id pasien berperan sebagai foreign key.
-<br>
-
-Buatlah tabel-tabel yang diperlukan untuk membuat web mengenai poliklinik sesuai dengan yang telah diperlajari sebelumnya, berikut adalah contoh pembuatan tabel dokter.
 <br>
 
 ![Tabel Dokter](assets/poliklinik/tabel-dokter.png)
@@ -63,6 +58,17 @@ CREATE TABLE `poliklinik`.`dokter` (
 <br>
 Id pada setiap tabel ditambahkan dengan auto increment, sehingga id akan secara otomatis menambahkan data integer secara berurut pada setiap id tabel. Dari contoh tabel dokter di atas dapat dilanjutkan dengan membuat 2 tabel lainnya, yaitu tabel pasien dan tabel periksa.
 
+### 2. Pasien
+<br>
+Pada tabel pasien dapat menyimpan id, data nama, alamat, dan nomor hp. Primary key terletak pada id dengan tipe data integer, pada field nama, alamat dan nomor hp bertipe data varchar.
+<br>
+
+### 3. Periksa
+<br>
+Pada tabel periksa menyimpan data id periksa, id dokter, id pasien, tanggal periksa dan catatan. Pada tabel periksa saling terhubung dengan tabel dokter dan pasien melalui id dokter dan id pasien. id dokter dan id pasien berperan sebagai foreign key.
+
+<br>
+
 ## Koneksi
 Koneksi merupakan penghubung antara database dengan web yang dibuat.
 <br>
@@ -80,7 +86,7 @@ $mysqli = mysqli_connect($databaseHost,
 
 <br>
 
-Sama seperti yang digunakan sebelumnya, dimana untuk menghubungkan SQL dengan PHP digunakan fungsi mysqli_connect dengan parameter host, username, password, dan nama dari database.
+Sama seperti studi kasus sebelumnya, dimana untuk menghubungkan SQL dengan PHP digunakan fungsi mysqli_connect dengan parameter host, username, password, dan nama dari database. Untuk mengingat kembali mengenai koneksi dapat membuka kembali pada studi kasus sebelumnya atau klik [disini](7_program_todolist.qmd#koneksi)
 
 ## Index
 

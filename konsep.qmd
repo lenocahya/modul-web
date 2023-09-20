@@ -1,8 +1,36 @@
-# **Konsep** {.unnumbered}
+---
+format: html
+toc-title: "On this page"
+---
 
-Learning Path
+# <b>Konsep</b> {.unnumbered}
 
-1. Konsep Dasar
-2. Pengenalan Tools
-3. Responsive Web
-4. Database
+Terdapat beberapa konsep dasar yang perlu dipelajari untuk dapat memahami apa itu pemrograman web. Berikut adalah materi-materi yang perlu dipahami:
+
+1. **Konsep dasar web**
+<br>
+Menjelaskan konsep dasar atau materi pengantar dari pemrograman web.
+
+2. **Pengenalan tools**
+<br>
+Installasi dan penjelasan mengenai tools-tools yang digunakan.
+
+3. **Responsive web**
+<br>
+materi dasar dari responsive web dan style dari Bootstrap.
+
+4. **Front Page**
+<br>
+Mengembangkan web yang responsive menggunakan framework CSS dari Bootstrap
+
+5. **Database**
+<br>
+Konsep dan dasar-dasar dari database menggunakan mysql.
+
+6. **Praktik Database**
+<br>
+Mengembangkan pemahaman dari database dengan praktik database dari studi kasus To Do List.
+
+7. **Pengujian Web**
+<br>
+Melakukan pengujian sederhana dengan dengan menggunakan fitur developer pada browser.

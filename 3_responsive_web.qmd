@@ -2,13 +2,14 @@
 # title: "Responsive Web Design"
 format: html
 categories: [ui, bootstrap, responsive]
+toc-title: "On this page"
 ---
 
-# Responsive Web Design
+# 3. Responsive Web Design {.unnumbered}
 
 ## Pengenalan Responsive Web Design
 
-Desain Web Responsif (Responsive Web Design)merupakan penggunaan HTML dan CSS untuk dapat mengubah ukuran, menyembunyikan, mengecilkan, atau memperbesar situs web secara otomatis, agar dapat terlihat bagus pada semua perangkat (desktop, tablet, dan handphone).
+Desain Web Responsif (Responsive Web Design) merupakan penggunaan HTML dan CSS untuk dapat mengubah ukuran, menyembunyikan, mengecilkan, atau memperbesar situs web secara otomatis, agar dapat terlihat bagus pada semua perangkat (desktop, tablet, dan handphone).
 <br>
 
 ![Responsive Web](assets/responsive/responsive_web.jpg){width="70%" style="text-align:center;"}
@@ -50,7 +51,7 @@ Responsive pada text dapat diterapkan dengan menggunakan unit "vw", yang berarti
 
 ## Responsive Web Design Framework (Bootstrap)
 
-Bootstrap merupakan HTML, CSS dan Javascript framework paling popular untuk mengambangkan responsive web design yang mengutamakan tampilan mobile (mobile first) Bootstrap dapat diunduh secara gratis pada laman [https://getbootstrap.com/](https://getbootstrap.com/). Sampai saat modul ini dibuat versi terakhir adalah Bootstrap v5.3.
+Bootstrap merupakan HTML, CSS dan Javascript framework paling popular untuk mengambangkan responsive web design yang mengutamakan tampilan mobile (mobile first) Bootstrap dapat diunduh secara gratis pada laman [https://getbootstrap.com/](https://getbootstrap.com/){.external target="_blank"}. Sampai saat modul ini dibuat versi terakhir adalah Bootstrap v5.3.
 
 ### Mengapa menggunakan Bootstrap?
 
@@ -92,7 +93,7 @@ Jika menggunakan Text Editor Visual Studio Code, ketika mengetikan html di awal 
 
 ![Snippets](assets/tools/vscode/snippets.png){width="70%" style="text-align:center;"}
 
-### Bootstrap Grid System
+### Grid System
 
 Pada Bootstrap menerapkan grid system dengan 12 (dua belas) kolom pada setiap halaman. Jika kita tidak menginginkan layout menggunakan
 ke-12 kolom, kita bisa mengelompokkan kolom bersama untuk membuat kolom yang lebih lebar. Sebagai contoh gambaran dari grid system dengan 12 kolom ditampilkan seperti pada gambar di bawah ini.
@@ -112,4 +113,130 @@ Sistem grid pada bootstrap dapat menyesuaikan terhadap enam keadaan atau ukuran 
 - Ekstra ekstra besar atau extra extra large (xxl)
 <br>
 
-![Tabel Penjelasan Grid](assets/responsive/gridtable.png){width="70%" style="text-align:center;"}
+![Tabel Breakpoint Grid](assets/responsive/gridtable.png){width="70%" style="text-align:center;"}
+
+### Fungsi Bootsrtap yang umum digunakan
+
+1. **Grid**
+<br>
+Seperti yang telah dijelaskan pada [Grid System](#grid-system), bahwa pada bootstrap dapat mengelompokkan layout menjadi 12 kolom, dimana kita dapat menggunakan grid ini dengan kelas row yang didalamnya terdapat kelas col, seperti berikut:<br>
+
+    ```html
+    <div class="row">
+        <div class="col"></div>
+        ...
+    </div><!-- row-->
+    ```
+<br>
+Dalam kelas col ini dapat dituliskan dengan value seperti col-4, yang artinya objek yang diberikan kelas tersebut pada row atau baris akan mengisi sebanyak 4 kolom. Dalam 1 row tersebut dapat berisi dengan akumulai 12 kolom.
+<br><br>
+Selain iitu juga bisa dikombinasikan dengan class breakpoint. Pada seperti yang dijelaskan pada tabel penjelasan grid system bahwa kolom akan mengikuti ukuran breakppoint dari device yang dimasukkan. Misalkan col-md-4, maka ketika ukuran dari device yang digunakan lebih besar dari atau sama dengan 768px maka tampilan kolom akan mendatar memenuhi row, namun akan berubah tampilannya jika ukuran devicenya berkurang 1 pixel saja (kurang dari 768px).
+
+2. **Warna**
+<br>
+Terdapat beberapa template kelas warna yang disediakan oleh Bootstrap diantaranya
+<br>
+    * Primary: (Biru tua)
+    * Secondary: (Abu-abu)
+    * Success: (Hijau)
+    * Danger: (Merah)
+    * Warning: (Kuning)
+    * Info: (Biru cerah)
+    * Light: (Putih atau hampir putih)
+    * Dark: (Hitam atau hampir hitam)
+<br>
+
+    Pemilihan warna juga merupakan hal yang sangat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut *user experience*
+
+3. **Typografi**
+<br>
+Dalam cara penulisan pada bootstrap memberikan kemudahan dalam mengatur tampilan teks, melalui beberapa class, seperti
+<br>
+    * **Heading**, selain menggunakan tag `<h1>,<h2>,..,<h6>` pada bootstrap juga terdapat kelas heading contohnya:<br>
+
+        ```html
+        <p class="h1">Heading 1<p>
+        ```
+    * **Display**, dengan manambahkan class display pada teks akan memberikan tampilan teks yang besar namun dengan style font yang tipis, misalnya: <br>
+
+        ```html
+        <p class="display-1">Display 1</p>
+        ```
+    * **Font Size**, class font size atau yang ditulis fs memberikan styling berupa ukuran dari teks dimana semakin besar nilai fs akan semakin kecil font yang ditampilkan: <br>
+
+        ```html
+        <p class="fs-1">ini teks</p>
+        ```
+    * **Font Weight**, melalui font weight dapat memberikan pengaturan terhadap tebal tipis dari font atau teks, dengan parameter bolder, bold, light, lighter, dan normal, berikut contoh penggunaannya: <br>
+
+        ```html
+        <p class="fw-bold">Ini tebal</p>
+        ```
+
+    * **Font Style**, dengan font style kita dapat merubah style dari font atau teks bold dan italic tanpa menggunakan tag html `<b> dan <i>`, atau sebagai berikut: <br>
+    
+        ```html
+        <p class="fst-italic">ini font style</p>
+        <p class="fst-normal">ini font style</p>
+        ```
+
+
+4. Spacing & Sizing
+<br>
+
+    Pengaturan Spasi dan ukuran pada Bootstrap dapat menggunakan padding dan margin, Padding merupakan bagian yang membatasi konten dengan border, sedangkan margin merupakkan bagian yang membatasi antara border dengan bagian luar dari konten. Pengaturan margin dan padding dapat dilakukan dengan mudah hanya dengan menambahkan class m untuk margin dan p untuk padding yang diikuti dengan parameter t (top), b (bottom), s (start), e (end), x (menambahkan pada kedua sis horizontal), y (menambahkan pada kedua sisi vertikal), serta diikuti oleh besar margin atau padding yang diinginkan dengan nilai mulai dari 1 hingga 5, atau seperti berikut:
+    
+        ```html
+        <!-- Heading -->
+        <div class="item mt-5 mb-3">item1</div>
+        <div class="item ms-2 me-3">item2</div>
+        <div class="item my-5">item3</div>
+        <div class="item mx-3">item4</div>
+        <div class="item m-3">item4</div>
+
+        <!-- Padding -->
+        <div class="item pt-5 pb-3">item1</div>
+        <div class="item ps-2 pe-3">item2</div>
+        <div class="item py-5">item3</div>
+        <div class="item px-3">item4</div>
+        <div class="item p-3">item4</div>
+        ```
+
+![Margin-Padding-Border](assets/responsive/margin-padding.png){width="70%" style="text-align:center;"}
+
+<br>
+
+
+### Komponen yang umum digunakan
+
+1. **Navbar**
+Navbar pada bootstrap sudah memiliki kemampuan untuk responsif ketika ukuran dari perangkat yang digunakan terlalu kecil untuk menampilkan konten atau menu didalamnya akan otomatis menjadi *humberger menu*, berikut salah satu contoh dokumentasi navbar yang umum digunakan.
+
+![Navbar](assets/responsive/navbar.png){width="70%" style="text-align:center;"}
+
+2. Table
+Pada class yang disediakan bootstrap terdapat beberapa pilihan tampilan table dan modifikasi yang diberikan, dengan memasukkan tag table ke dalam div yang diberikan kelas dari table yang diinginkan misalnya seperti berikut :
+
+![Table](assets/responsive/table.png){width="70%" style="text-align:center;"}
+
+3. Button
+Tombol merupakan bagian terpenting dalam suatu tampilan website yang dapat mengirimkan input dari pengguna ke server. Dalam bootstrap terdapat beberapa variasi yang diberikan untuk penggunaan tombol atau button misalnya warna, bentuk, style, rounded dan masih banyak lagi yang bisa didalami melalui dokumentasi yang ada pada halaman bootstrap 
+
+![Button](assets/responsive/button.png){width="70%" style="text-align:center;"}
+
+4. Card
+Pada website blog atau e-commerce biasanya menampilkan artikel-artikel mereka pada card dapat menampilkan gambar, serta deskripsi atau tombol untuk melihat lebih banyak mengenai informasi dari blog tersebut. berikut adalah contoh penggunaan card:
+
+![Card](assets/responsive/card.png){width="70%" style="text-align:center;"}
+
+<br>
+<hr>
+
+
+:::{.callout title="Responsive design menggunakan Bootstrap"}
+*Berikut penjelasan mengenai penggunaan bootstrap dan elemen-elemen yang banyak digunakan!*
+
+{{< video https://youtu.be/VWY3yFcq-Ho >}}
+
+:::
+

@@ -1,10 +1,11 @@
 ---
-title: "Konsep Dasar Web Programming"
+# title: "Konsep Dasar Web Programming"
 format: html
 categories: [teori]
+toc-title: "On this page"
 ---
 
-<!-- # Konsep Dasar Web Programmming -->
+# 1. Konsep Dasar Web Programmming {.unnumbered}
 
 ## Apa itu Pemrograman Web?
 
@@ -16,68 +17,177 @@ Aplikasi web dapat diakses melalui browser web dan memungkinkan pengguna untuk b
 
 ## Lingkungan Pengembangan Web
 
-- Editor kode: Gunakan editor teks atau lingkungan pengembangan terintegrasi (IDE) seperti Visual Studio Code, Sublime Text, atau Atom untuk menulis kode web.
+### Editor kode
+
+![Visual Studio Code](assets/tools/vscode/vscode.png){width="80%" style="text-align:center;"}
+
+Gunakan editor teks atau lingkungan pengembangan terintegrasi (IDE) seperti Visual Studio Code, Sublime Text, atau Atom untuk menulis kode web.
 <br>
 
-- Browser: Berbagai browser seperti Chrome, Firefox, atau Safari digunakan untuk menguji dan melihat hasil dari halaman web yang dikembangkan.
+### Browser
+
+Berbagai browser seperti Chrome, Firefox, atau Safari digunakan untuk menguji dan melihat hasil dari halaman web yang dikembangkan.
 <br>
 
-- Server lokal: Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik.
+### Server lokal
 
-<br>
+Anda dapat menginstal server web lokal seperti Apache, Nginx, atau XAMPP untuk menguji halaman web secara lokal sebelum diunggah ke server publik.
 
-## Konsep Dasar Pemrograman Web
 
 ### URL (Uniform Resource Locator)
 
 Alamat yang digunakan untuk mengakses halaman web. URL terdiri dari protokol (misalnya http:// atau https://), nama domain, dan path halaman.
 
+<hr>
+
 ### HTTP (Hypertext Transfer Protocol)
 
 Protokol komunikasi yang digunakan untuk mentransfer data antara klien dan server. Permintaan klien dan respons server terjadi melalui metode HTTP seperti GET, POST, PUT, dan DELETE.
+
+<hr>
 
 ### Markup Languages
 
 Markup languages adalah bahasa yang digunakan untuk membuat struktur dan tampilan konten dalam halaman web. 
 
-{{< video https://www.youtube.com/embed/71a2zeC71gk?start=630 >}}
+{{< video https://www.youtube.com/embed/hMDJyb7VkYw >}}
 
 HTML (HyperText Markup Language) adalah markup language yang paling umum digunakan untuk membangun struktur halaman web. XML (eXtensible Markup Language) digunakan untuk menyimpan dan mengirim data secara terstruktur. 
 
+**Struktur Dasar HTML**
+
+Merupakan bahasa markup paling popular, disusul eXtensible Markup Language (XML). XML adalah bahasa yang digunakan untuk membuat bahasa markup lain yaitu Wireless Markup Language (WML).Bahasa markup bukan bahasa pemrograman. Oleh karena itu, penyebutan bahasa pemrograman HTML adalah kurang tepat.
+
+**Format Dasar HTML**
+
+```php
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1">
+</head>
+<body>
+{ Tempat untuk coding }
+</body>
+</html>
+```
+
+**< HTML >**
+
+Dokumen HTML harus diawali dengan tag < html > dan diakhiri dengan < /html >memberi tahu kepada browser bahwa yang berada dalam kedua tag tersebut adalah dokumen HTML.
+
+**< HEAD >**
+Bagian header dalam dokumen HTML. Biasanya berisi judul halaman web. Bentuk secara umum:
+
+```php
+<head>
+<title>Judul ini akan ditampilkan pada bagian atas
+browser
+</title>
+</head>
+```
+
+**< BODY >**
+
+Bagian isi dari dokumen HTML yang dapat disisipkan teks, gambar, video maupun link. Sesuatu yang ditulis di dalam bodyakan ditampilkan pada halaman web. 
+
+**HTML Tags**
+
+Instruksi/perintah dalam HTML disebut tag. Tag pada HTML tidak bersifat case sensitive.
+
+```html
+<element atribut=value>
+```
+
+Keterangan:
+
+- element = nama tag
+- atribut = atribut
+- value = nilai dari atribut
+Contoh:
+
+```html
+<font color=red>
+```
+
+- FONT merupakan element,
+- COLOR merupakan atribut,
+- RED adalah value
+
+::: {.callout-note title="Contoh HTML"}
+
+```php
+<html>
+<head>
+<title>
+Halaman Latihan 1
+</title>
+</head>
+<body>
+<h1>
+Ini adalah latihan pemrograman web pertamaku.
+</h1>
+</body>
+</html>
+```
+:::
+
+
 CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan gaya elemen-elemen dalam halaman web.
 
+<hr>
 
 ### Arsitektur Klien dan Server
 
+![Arsitektur Klien dan Server](assets/dasar/server-client.png){width="70%" style="text-align:center;"}
+
+
 Pada pemrograman web, arsitektur klien dan server digunakan. Klien (misalnya browser web) mengirimkan permintaan ke server, dan server merespons dengan mengirimkan halaman web yang diminta.
-<br>
 
 Klien menginterpretasikan halaman web menggunakan HTML, CSS, dan JavaScript, sementara server mengurus pemrosesan data dan logika di balik halaman.
 
+<hr>
 
 ### Database
 
+![Database MySQL](assets/dasar/db-mysql.png){width="70%" style="text-align:center;"}
+
 DBMS atau Database Management System digunakan untuk menyimpan dan mengelola data dalam aplikasi web. Beberapa sistem database yang umum digunakan termasuk MySQL, PostgreSQL, MongoDB, dan Oracle. Pemahaman tentang database meliputi pembuatan tabel dan relasi antar tabel, manipulasi data dengan menggunakan bahasa query seperti SQL, dan pengoptimalan kinerja database
+
+<hr>
 
 ### Framework
 
-Framework adalah kerangka kerja perangkat lunak yang menyediakan struktur, komponen, dan alat bantu untuk membangun aplikasi web dengan lebih cepat dan efisien. Framework menyediakan aturan dan konvensi yang konsisten, menyederhanakan tugas umum seperti routing, validasi data, interaksi dengan database, dan lainnya. Contoh framework yang populer termasuk Laravel (PHP), CodeIgniter (PHP), Django (Python), Ruby on Rails (Ruby), Express.js (Node.js), dan ASP.NET (C#).
+:::{layout-ncol=2 layout-valign="bottom" style="text-align:center;"}
+![Laravel](assets/dasar/laravel.jpg){.p-3 .m-auto}
 
+![Bootstrap](assets/dasar/Bootstrap.png){.p-3}
+:::
+
+Framework adalah kerangka kerja perangkat lunak yang menyediakan struktur, komponen, dan alat bantu untuk membangun aplikasi web dengan lebih cepat dan efisien. Framework menyediakan aturan dan konvensi yang konsisten, menyederhanakan tugas umum, jika seperti routing, validasi data, interaksi dengan database, dan lainnya. Dalam pemrograman web khsusnya dengan menggunakan bahasa pemrograman php yang populer termasuk Laravel dan CodeIgniter. Dalam pemrograman web, 
+
+<hr>
 
 ### Web Servers
 
+![Apache Server](assets/dasar/Apache-server.png){width="70%" style="text-align:center;"}
+
 Web server adalah perangkat lunak yang mengelola permintaan dari browser dan mengirimkan halaman web ke pengguna melalui protokol HTTP. Beberapa server web yang umum digunakan adalah Apache, Nginx, dan IIS (Internet Information Services). Pemahaman tentang konfigurasi server web, manajemen domain, dan penanganan permintaan HTTP penting dalam pengembangan web.
 
+<hr>
 
 ### Version Control
 
 Version control adalah metode untuk melacak perubahan kode sumber selama pengembangan aplikasi. Git adalah sistem version control yang populer yang memungkinkan pengembang untuk bekerja secara kolaboratif, membuat cabang (branch), menggabungkan perubahan (merge), dan melakukan pemulihan (revert) jika terjadi kesalahan. Version control membantu dalam manajemen kode, pengendalian versi, dan kolaborasi tim.
 
+<hr>
 
 ### Resposive Web Design
 
 Responsive web design adalah pendekatan desain web yang memastikan tampilan dan pengalaman pengguna yang optimal di berbagai perangkat dan ukuran layar. Ini melibatkan penggunaan teknik seperti media queries, flexible grids, dan CSS frameworks (seperti Bootstrap atau Foundation) untuk mengatur tata letak dan tampilan halaman web secara responsif.
 
+<hr>
 
 ### Testing and Debugging
 
@@ -85,11 +195,13 @@ Testing dan debugging adalah proses penting dalam pengembangan web untuk memasti
 Testing adalah proses verifikasi dan validasi untuk memastikan bahwa aplikasi web berfungsi sesuai dengan yang diharapkan dan memenuhi persyaratan bisnis yang telah ditetapkan. Tujuan dari testing adalah untuk menemukan bug atau kesalahan dalam aplikasi sebelum dirilis ke pengguna akhir.
 Debugging adalah proses untuk menemukan, mendiagnosis, dan memperbaiki bug atau kesalahan dalam kode aplikasi web. 
 
+<hr>
 
 ### API (Application Programming Interface)
 
 API adalah antarmuka yang memungkinkan aplikasi web berkomunikasi dan berbagi data dengan aplikasi atau layanan lain. RESTful API adalah pendekatan populer untuk mengembangkan API yang menggunakan protokol HTTP dan standar seperti JSON atau XML untuk bertukar data.
 
+<hr>
 <br>
 
 ## PHP (Hypertext Preprocessor)

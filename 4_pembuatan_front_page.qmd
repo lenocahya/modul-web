@@ -2,9 +2,10 @@
 # title: "Front Page To Do List"
 format: html
 categories: [ui, praktik, bootstrap]
+toc-title: "On this page"
 ---
 
-# Front Page
+# 4. Front Page {.unnumbered}
 
 Setelah mempelajari responsive web dan framework bootstrap, selanjutnya adalah mengaplikasikan bootstrap ke php yang akan dibuat. Berikut adalah contoh tampilan front page sederhana untuk mengaplikasikan bootstrap pada website.
 
@@ -33,6 +34,8 @@ Berikut adalah beberapa langkah untuk membuat frontpage sederhana:
 
 8. Uji dan perbaikan: Setelah selesai membuat frontpage, uji situs web Anda di berbagai perangkat dan periksa kembali apakah semua elemen berfungsi dengan baik. Terima umpan balik dari pengguna atau orang lain untuk memperbaiki dan menyempurnakan frontpage Anda.
 
+<br>
+
 ## Desain Front Page
 
 ![Desain Front Page](assets/frontpage/frontpage_wireframe.png){width="70%" style="text-align:center;"}
@@ -43,13 +46,19 @@ Dalam modul Junior Web Developer ini hanya membuat front page sederhana yaitu me
 
 ## Membuat Front Page
 
+### Membuat Folder dan File Projek
+
+Pada pembiatan frontpage ini karena belum berhubungan dengan database, dapat membuat folder atau file projek diluar folder xampp dan kita bisa membuat file dalam format html. 
+
+### Memulai HTML
+
 Pada pengenalan tools telah dijelaskan mengenai [instalasi bootstrap](2_pengenalan_tools.html#bootstrap). Telah diketahui komponen-komponen yang digunakan, yaitu Header, Form, Table, dan Button yang dapat langsung dicari kelas-kelasnya di dokumentasi bootstrap.
 <br>
 
 Memulai dengan kode html5 serta menambahkan tag meta dengan name="viewport" untuk membuat web yang responsif, selain itu juga melakukan instalasi css hingga javascript.
 <br>
 
-```php
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,20 +66,22 @@ Memulai dengan kode html5 serta menambahkan tag meta dengan name="viewport" untu
     <meta name="viewport" content="width=device-width, 
     initial-scale=1.0">
 
-    <!-- Bootstrap offline -->
-
+    <!-- Bootstrap offline sesuai lokasi file disimpan -->
     <link rel="stylesheet" href="assets/css/bootstrap.css"> 
 
     <!-- Bootstrap Online -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">   <!-- Gunakan salah satu cara saja -->
     
     <title>To Do List</title>   <!--Judul Halaman-->
 </head>
 <body>
-    
+
+    <!-- Load js secara offline sesuai lokasi file disimpan -->
+    <script src="js/bootstrap.bundle.js"></script> 
+    <!-- Load JS online -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>   
+    <!-- cukup gunakan salah satu saja -->
 </body>
 </html>
 ```
@@ -80,18 +91,21 @@ Pada vscode ketika menuliskan html maka akan muncul pilihan template html yang a
 Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan button. Untuk menggunakan framework pada komponen tersebut dapat melihat pada halaman docs bootstrap untuk melihat dokumentasi dari penggunaan bootstrap lalu cari dokumentasi komponen yang ingin digunakan. Pilih dokumentasi yang sesuai dan modifikasi sesuai dengan kebutuhan yang ingin digunakan.
 <br>
 
-```php
-<div class="container">
+```html
+<div class="container mt-3">
+...
+</div>
 ```
 
 <br>
-Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container.
+Pada tampilan web kita ingin memusatkan dan mengelompokkan konten utama, maka digunakan container selain itu agar terdapat jarak antara konten dan tepi atas browser ditambahkan class "mt-3".
 <br>
 
 ### **Judul (heading)**
-<br>
 
-```php
+![Heading](assets/frontpage/heading.png){style="text-align:center;" .border}
+
+```html
 <h3>
     To Do List
     <small class="text-muted">
@@ -102,56 +116,60 @@ Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama,
 ```
 <br>
 
-Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah.
+Menampilkan judul dapat menggunakan heading 1 hingga 6 atau dengan tag `<p>` yang diberikan class "h1" - "h6". Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. 
+<br>
+
+Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah.
+
 <br>
 
 ### **Form**
-<br>
 
-```php
-<form class="form-inline" method="POST" action=""
-name="myForm"">
-    <div class="row">
-        <div class="col">
-            <label for="inputIsi" class="visually-hidden">
-            Kegiatan
-            </label>
-            <input type="text" class="form-control" name="isi" 
-            placeholder="Kegiatan">
-        </div>
-        <div class="col">
-            <label for="inputTanggalAwal" class="visually-hidden">
-            Tanggal Awal
-            </label>
-            <input type="text" class="form-control" name="tgl_awal" 
-            placeholder="Tanggal Awal">
-        </div>
-            <div class="col">
-            <label for="inputTanggalAkhir" class="visually-hidden">
-            Tanggal Akhir
-            </label>
-            <input type="text" class="form-control" name="tgl_akhir" 
-            placeholder="Tanggal Akhir">
-        </div>
-        <div class="col">
-        <button type="submit" class="btn btn-primary rounded-pill px-3" 
-        name="simpan">Simpan</button>
-        </div>
+![Form](assets/frontpage/form.png){style="text-align:center;" .border}
+
+```html
+ <!-- Form -->
+
+<form class="form row" method="POST" action="" name="myForm"">
+    <div class="col mb-2">
+        <label for="inputIsi" class="form-label fw-bold">
+        Kegiatan
+        </label>
+        <input type="text" class="form-control" name="isi" id="inputIsi" placeholder="Kegiatan">
+    </div>
+    <div class="col mb-2">
+        <label for="inputTanggalAwal" class="form-label fw-bold">
+        Tanggal Awal
+        </label>
+        <input type="date" class="form-control" name="tgl_awal" id="inputTanggalAwal" placeholder="Tanggal Awal">
+    </div>
+        <div class="col mb-2">
+        <label for="inputTanggalAkhir" class="form-label fw-bold">
+        Tanggal Akhir
+        </label>
+        <input type="date" class="form-control" name="tgl_akhir" id="inputTanggalAkhir" placeholder="Tanggal Akhir">
+    </div>
+    <div class="col mb-2 d-flex">
+    <button type="submit" class="btn btn-primary rounded-pill px-3 mt-auto" 
+    name="simpan">Simpan</button>
     </div>
 </form>
+
 ```
 <br>
 
-Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur dengan autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan kelas "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga digunakan kelas "visually-hidden" untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja.
+Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur dengan auto increment sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris atau secara inline dapat menggunakan grid, yaitu dengan kelas "row" pada form dan "col" pada pembungkus div dari form hingga button. Pastikan for pada label dan id pada input sama agar ketika label diklik akan membuat form input itu aktif. Pada form input akan menampilkan placeholder keterangan sesuai inputan form. 
 <br>
 
-Selain form juga terdapat button yang  bertipe submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience.
+Selain form juga terdapat button yang  bertipe submit dengan kelas dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience. Selain itu pada div pembungkus button diberikan class d-flex agar div dari button bersifat flexible sehingga posisi button dapat diatur.
+
 <br>
 
 ### **Tabel**
-<br>
 
-```php
+![Table](assets/frontpage/table.png) {style="text-align: center;"}
+
+```html
 <table class="table table-hover">
     <thead>
         <tr>
@@ -197,29 +215,12 @@ Selain form juga terdapat button yang  bertipe submit dengan kelas dari btn, btn
 ```
 <br>
 Kelas tabel yang digunakan adalah "table table-hover" dimana ketika pointer berada diatas tabel maka baris data akan di *highlight*.
-<br>
-
-### Button
-Pada form dan tabel terdapat button dengan berbagai warna. Pada kelas button terdapat "btn" yang merupakan kelas dasar yang mengindikasikan bahwa itu adalah kelas button. Lalu terdapat btn-danger merupakan kelas tambahan yang memberikan tampilan warna merah yang menunjukkan bahaya atau aksi negatif. Biasanya digunakan untuk tombol yang mengindikasikan tindakan yang dapat memiliki dampak negatif atau risiko. Selain itu juga terdapat rounded-pill yang merupakan kelas tambahan yang memberikan elemen tersebut sudut yang lebih bulat sehingga tampak seperti bentuk bulat. Dan terdapat px-3 yang juga kelas tambahan yang memberikan padding horizontal pada tombol. Dengan kelas tersebut akan ditampilkan sebagai tombol dengan warna merah, sudut yang lebih bulat, dan padding horizontal yang lebih besar.
-<br>
-
-![Button Bootstrap](assets/frontpage/button.png){width="70%" style="text-align:center;"}
 
 <br>
 
-### Warna
+:::{.callout-tip}
 
-Terdapat beberapa template kelas warna yang disediakan oleh Bootstrap diantaranya
-<br>
+Setiap penulisan suati kode jangan lupa untuk menambahkan komentar. Komentar berfungsi untuk memberikan keterangan pada script atau baris kode. Memberikan penjelasan apabila akan dilakukan perubahan oleh programmer lain. Selain itu juga mengingatkan kembali alur atau penjelasan dari script bagi programmer itu sendiri.
 
-1. Primary: (Biru tua)
-2. Secondary: (Abu-abu)
-3. Success: (Hijau)
-4. Danger: (Merah)
-5. Warning: (Kuning)
-6. Info: (Biru cerah)
-7. Light: (Putih atau hampir putih)
-8. Dark: (Hitam atau hampir hitam)
+:::
 
-<br>
-Pemilihan warna juga merupakan hal yang sangat penting dan perlu diperhatikan.Pemilihan warna akan sangat berpengaruh pada tampilan atau UI sehingga akan mempercantik tampilan dan menarik bagi user. Selain itu dengan warna yang sesuai akan membantu menyampaikan fungsi dari fitur, misalnya merah menandakan suatu yang penting yang memerlukan perhatian lebih, hal tersebut akan memudahkan konsumen dalam menggunakan aplikasi atau disebut *user experience*

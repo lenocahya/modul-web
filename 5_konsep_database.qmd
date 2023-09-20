@@ -1,10 +1,11 @@
 ---
-# title: "Konsep Database" {.unnumbered}
+# title: "Konsep Database"
 format: html
 categories: [database, 'tipe data']
+toc-title: "On this page"
 ---
 
-# Konsep Database
+# 5. Konsep Database {.unnumbered}
 
 ## Basis Data (Database) 
 
@@ -34,7 +35,7 @@ Adalah tipe data numerik untuk mengukur nilai secara matematik, misalnya mata ua
 |2.| FLOAT(size) | Bilangan desimal dengan presisi tunggal (single-precision) | π, desimal dengan fokus pada nilai input contoh : 3.14159265359 |
 |3.|  DOUBLE(size, d) | Bilangan desimal dengan presisi ganda (double-precision).  Jumlah total digit ditentukan oleh size, jumlah digit setelah titik decimal ditentukan oleh d | Uang, dengan fokus jumlah desimal 2 angka di belakang koma <br> contoh: 2.500,00 |
 
-: Tabel Tipe Data Numerik {.striped .hover}
+: Tabel Tipe Data Numerik {.striped .responsive .hover}
 
 
 ### Tipe Data String
@@ -47,7 +48,7 @@ dapat memiliki ukuran lebih kecil atau besar daripada satuan lainnya. Misalkan n
 | 2. | VARCHAR(size) | Menyatakan data String yang lebarnya bervariasi. <br> Size : 0 hingga 255 karakter | Nama pengguna <br> contoh : Amanda |
 | 3. |  TEXT(size, d) | Menampung string Panjang yang lebarnya tidak dapat diprediksi. | |
 
-: Tabel Tipe Data String {.striped .hover}
+: Tabel Tipe Data String {.striped .responsive .hover}
 
 
 ### Tipe Data Date
@@ -60,7 +61,7 @@ Menyimpan tanggal dan waktu dalam format tertentu seperti tahun, bulan, dan hari
 | 2. | TIME(size) | Digunakan untuk waktu dengan format “hh:mm:ss” | 12:33:12 |
 | 3. | DATETIME(size, d) | Digunakan untuk tanggal dan waktu dengan format “YYYY-MM-DD hh:mm:ss” | 2012-11-29 11:55:23 |
 
-: Tabel Tipe Data Date {.striped .hover}
+: Tabel Tipe Data Date {.striped .responsive .hover}
 
 ## Constraint / Kekangan Nilai
 
@@ -200,11 +201,47 @@ SHOW TABLES;
 
 <br>
 
-::: {.callout-note title="Latihan"}
-Untuk Latihan
-
-
+::: {.callout-note title="Latihan DDL"}
+1. Create Database Mahasiswa dan Table identitas
 <br>
+    
+    ```sql
+    CREATE DATABASE mahasiswa;
+    CREATE TABLE identitas (`Nama` VARCHAR(250) NOT NULL PRIMARY KEY);
+    ```
+
+2. Alter Table
+<br>
+    
+    ```sql
+    ALTER TABLE identitas ADD NIM VARCHAR(15) UNIQUE
+    ```
+
+3. Rename Table
+<br>
+    
+    ```sql
+    RENAME TABLE identitas TO id_mahasiswa
+    ```
+
+4. Show Table
+<br>
+    
+    ```sql
+    SHOW TABLES;
+    ```
+
+5. Drop Table
+<br>
+    
+    ```sql
+    DROP TABLE id_mahasiswa
+    ```
+
+6. Coba kreasikan Database kalian dengan perintah DDL!</br>
+Buatlah Database `kuliah` berisi 2 table yaitu `id_dosen` dan `id_mahasiswa`</br>
+Table `id_dosen` berisi kolom : nama, NIDN, Jabatan</br>
+Table `id_mahasiswa` berisi kolom : nama, NIM, Prodi
 
 :::
 
@@ -249,4 +286,36 @@ Pernyataan ini digunakan untuk menghapus data dari tabel. Misalnya, pernyataan S
 DELETE FROM pelanggan WHERE id = 1;
 ```
 
+::: {.callout-note title="Latihan DML"}
+Gunakan Database yang telah kalian kerjakan pada `Latihan DDL` sebelumnya!
 
+1. Insert Data
+
+    ```sql
+    INSERT INTO id_mahasiswa VALUES ('Amanda', 'A11.2020.54321',);
+    ```
+2. Select Data
+
+    ```sql
+    SELECT Nama, NIM FROM id_mahasiswa;
+    ```
+3. Update Data
+
+    ```sql
+    UPDATE id_mahasiswa SET `Prodi`='Ilmu Komunikasi' WHERE `Prodi`='';
+    ```
+4. Delete Data
+
+    ```sql
+    DELETE FROM id_mahasiswa WHERE `NIM`='A11.2020.54321';
+    ```
+5. Kreasikan database kalian dengan perintah dari DDL dan DML !
+:::
+
+
+:::{.callout title="Konsep Database"}
+*Berikut merupakan penjelasan dari konsep database!*
+
+{{< video https://youtu.be/b2fWiClQYiM >}}
+
+:::

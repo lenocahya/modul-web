@@ -2,9 +2,10 @@
 # title: "Praktik Database"
 format: html
 categories: [database, praktik, 'studi kasus']
+toc-title: "On this page"
 ---
 
-# Praktik Database
+# 6. Praktik Database {.unnumbered}
 
 Membuat database untuk aplikasi To Do List
 
@@ -27,12 +28,7 @@ Untuk membuat database dapat menggunakan fasilitas dari platform atau scripting.
 ![Menggunakan scripting](assets/database/scripting.png)
 :::
 
-
-Berikut merupakan video penjelasan mengenai phpmyadmin
-
-{{< video https://www.youtube.com/embed/fxe6qev-bno?start=2453 >}}
-
-Untuk membuat database menggunakan phpMyAdmin perlu mengaktifkan terlebih dahulu apache dan mysql pada xampp agar terhubung pada phpMyAdmin. Lalu memulai aplikasi phpMyAdmin melalui [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
+Untuk membuat database menggunakan phpMyAdmin perlu mengaktifkan terlebih dahulu apache dan mysql pada xampp agar terhubung pada phpMyAdmin. Lalu memulai aplikasi phpMyAdmin melalui [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/){.external target="_blank"}
 
 <br>
 
@@ -122,12 +118,12 @@ Selain melalui platform dengan kemudahan yang diberikan, dapat juga melakukan in
 3. Terdapat textbox untuk mengisikan kode SQL untuk menyimpan, mengubah bahkan menghapus data pada database sesuai dengan syntax yang ada.
 4. Inputkan perintah untuk melakukan insert pada tabel, seperti berikut:
 
-```sql
-INSERT INTO `kegiatan` 
-(`id`, `isi`, `tgl_awal`, `tgl_akhir`,`status`) 
-VALUES 
-(NULL, 'Belanja Bulanan', '2023-05-15', '2023-06-11', 0);
-```
+    ```sql
+    INSERT INTO `kegiatan` 
+    (`id`, `isi`, `tgl_awal`, `tgl_akhir`,`status`) 
+    VALUES 
+    (NULL, 'Belanja Bulanan', '2023-05-15', '2023-06-11', 0);
+    ```
 
 ![Insert melalui SQL](assets/database/insertsql.png){width=80% style="text-align:center;"}
 
@@ -154,3 +150,12 @@ Setiap selesai proses pada database baik melalui platform yang diberikan maupun 
 Berikut adalah hasil dari praktikum database untuk studi kasus To Do List:
 
 ![Hasil Database](assets/database/hasiltabel.png){width=80% style="text-align:center;"}
+
+
+::: {.callout title="Praktek Database"}
+
+*Berikut adalah penjelasan mengenai praktik pembuatan database!*
+
+{{< video https://youtu.be/E_JO70Dwp4s >}}
+
+:::

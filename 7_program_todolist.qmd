@@ -2,9 +2,14 @@
 # title: "Program To Do List"
 format: html
 categories: [studi kasus]
+toc-title: "On this page"
 ---
 
-# 1 Program To Do List {.unnumbered}
+# To Do List {.unnumbered}
+
+## Studi Kasus Program To Do List
+
+To Do List merupakan program untuk mencatat serangkaian kegiatan yang akan dikerjakan hingga diselesaikan pada waktu tertentu. Sehingga dalam program tersebut harus mampu menyimpan lalu menampilkan hingga mengubah atau menghapus data seperti kegiatan, tanggal dan keterangan apakah sudah dilaksanakan atau belum.
 
 Berikut adalah tampilan dari to do list untuk latihan membuat web sederhana.
 
@@ -12,7 +17,7 @@ Berikut adalah tampilan dari to do list untuk latihan membuat web sederhana.
 
 Sebelum kita mulai membuat program to do list tersebut ada beberapa tahapan yang diperlukan, seperti menghidupkan server yang digunakan (xampp), membuat database, koneksi, hingga membuat tampilan dari program.
 
-## XAMPP
+## Server Lokal (XAMPP)
 Untuk dapat menampilkan file php memerlukan server sehingga diperlukan xampp untuk menampilkan php pada server dengan mengaktifkan apache.
 <br>
 
@@ -22,14 +27,16 @@ Untuk dapat menampilkan file php memerlukan server sehingga diperlukan xampp unt
 Pada panel xampp, klik start pada Apache dan MySQL untuk mengaktifkan. Apache diperlukan karena sebagai web server untuk mengakses localhost dan menampilkan file php. Sedangkan pada MySQL diperlukan untuk manajemen dan akses ke database.
 
 ## Folder di htdocs
-Untuk dapat mengakses website localhost dari xampp, diperlukan folder project di direktori C:\\xampp\\htdocs, sesuai dengan direktori xampp yang sedang aktif. Untuk memastikan lokasi direktori xampp dapat klik tombol Explorer pada control panel xampp
+Untuk dapat mengakses website localhost dari xampp, diperlukan folder project di direktori C:\\xampp\\htdocs, sesuai dengan direktori xampp yang sedang aktif.
+
+1. Buka direktori  C:\\xampp\\htdocs. Untuk memastikan lokasi direktori xampp dapat klik tombol **Explorer** pada control panel xampp
 <br>
 
 ![Explorer XAMPP](assets/todolist/explorer.png){width="50%" style="text-align:center;"}
 
 <br>
 
-Setelah membuka folder xampp lalu htdocs, selanjutnya membuat folder projek.
+2. Setelah membuka folder xampp lalu htdocs, selanjutnya membuat folder projek.
 
 <br>
 
@@ -45,7 +52,16 @@ Dari contoh di atas hanya diperlukan 1 tabel, yaitu tabel yang dapat menyimpan d
 ![Tabel Kegiatan](assets/todolist/database.jpg){width="80%" style="text-align:center;"}
 
 <br>
-Dari tabel diatas dapat dibuat pada [localhost/phpmyadmin](http://localhost/phpmyadmin/) dengan membuat database baru lalu membuat tabel baru dengan nama tabel "kegiatan". Buat field dan sesuaikan pada tabel di atas mulai dari nama field, type dan sizenya. Field "id" berfungsi sebagai primary key. Pada field isi, tgl_awal, dan tgl_akhir tidak memerlukan size karena bertipe text dan date. Pada field status bertipe int dengan size hanya 1 karena nantinya akan menyimpan nilai 0 dan 1 yang merepresentasikan belum dan sudah.
+
+Membuat database pada localhost/phpmyadmin"
+
+1. Membuaka [localhost/phpmyadmin](http://localhost/phpmyadmin/){.external target="_blank"}.
+2. Membuat database baru lalu membuat tabel baru dengan nama tabel "kegiatan".
+3. Buat field dan sesuaikan pada tabel di atas mulai dari nama field, type dan sizenya. 
+
+Proses pembuatan database secara lebih lengkap dapat diklik [disini](6_praktik_database_todolist.qmd#membuat-database)
+
+Field "id" berfungsi sebagai primary key. Pada field isi, tgl_awal, dan tgl_akhir tidak memerlukan size karena bertipe text dan date. Pada field status bertipe int dengan size hanya 1 karena nantinya akan menyimpan nilai 0 dan 1 yang merepresentasikan belum dan sudah.
 <br>
 
 ## Koneksi
@@ -90,7 +106,7 @@ pada parameter mysql_database diisikan nama database yang telah kita buat. Datab
 
 ## Index
 
-Pada langkah sebelumnya kita telah membuat database dan koneksi untuk menghubungkan database dengan file php, selanjutnya adalah membuat file website. File website utama yang akan otomatis ditampilkan ketika telah membuka htdocs/(folder projek) adalah index.php. Pada file index perlu memuat atau me*load* file koneksi.php yang telah dibuat sebelumnya agar website dapat terhubung pada database yang telah dibuat.
+Pada langkah sebelumnya kita telah membuat database dan koneksi untuk menghubungkan database dengan file php, selanjutnya adalah membuat file website. File website utama yang akan otomatis ditampilkan ketika telah membuka `localhost/(folder projek dalam htdoc)` adalah index.php. Pada file index perlu memuat atau me*load* file koneksi.php yang telah dibuat sebelumnya agar website dapat terhubung pada database yang telah dibuat.
 <br>
 
 ```php
@@ -98,7 +114,7 @@ Pada langkah sebelumnya kita telah membuat database dan koneksi untuk menghubung
 include_once("koneksi.php");
 ?>
 ```
-<br>
+
 Untuk memuat file php lain dapat menggunakan fungsi php yaitu require, require_once atau include atau include_once. Lalu apa perbedaan fungsi-fungsi tersebut?
 <br>
 
@@ -107,8 +123,8 @@ Untuk memuat file php lain dapat menggunakan fungsi php yaitu require, require_o
 - Untuk include_once dan require_once sama dengan fungsi include dan require, namun fungsi itu hanya akan me*load* file sekali, sehingga ketika terdapat program yang memuat file yang sama setelahnya tidak akan dijalankan.
 
 <br>
-Memulai dengan kode html untuk membuat website.
-<br>
+
+### 1. Memulai html
 
 ```php
 <!DOCTYPE html>
@@ -146,9 +162,10 @@ Pada body diisikan konten yang ingin ditampilkan, yaitu judul, form, tabel, dan 
 ```
 
 Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama, maka digunakan container.
+
 <br>
 
-### Judul (heading)
+### 2. Judul (heading)
 
 ```php
 <h3>
@@ -162,13 +179,15 @@ Pada tampilan yang diinginkan adalah memusatkan dan mengelompokkan konten utama,
 <br>
 
 Menampilkan judul dapat menggunakan heading 1 hingga 6. Semakin besar angka heading maka akan semakin kecil ukuran dari teks yang akan ditampilkan. Pada judul menampilkan kalimat **"To Do List"** sebagai kalimat utama dan **"Catat semua hal yang akan kamu kerjakan"** sebagai slogan atau kalimat penjelas sehingga pada slogan tersebut dimasukkan kedalam tag small dengan class text-muted untuk mengecilkan huruf dan memberikan warna seakan redup karena teks tersebut memiliki tingkat kepentingan lebih rendah.
+
 <br>
 
-### Form
+### 3. Form
 
 ```php
-<form class="form-inline" method="POST" action=""
-name="myForm" onsubmit="return(validate());">
+<!--Form Input Data-->
+
+<form class="form row" method="POST" action="" name="myForm" onsubmit="return(validate());">
     <!-- Kode php untuk menghubungkan form dengan database -->
     <?php
     $isi = '';
@@ -189,41 +208,32 @@ name="myForm" onsubmit="return(validate());">
     <?php
     }
     ?>
-    <div class="row">
     <div class="col">
-        <label for="inputIsi" class="visually-hidden">
-        Kegiatan
+        <label for="inputIsi" class="form-label fw-bold">
+            Kegiatan
         </label>
-        <input type="text" class="form-control" name="isi" 
-        placeholder="Kegiatan" 
-        value="<?php echo $isi ?>">
+        <input type="text" class="form-control" name="isi" id="inputIsi" placeholder="Kegiatan" value="<?php echo $isi ?>">
     </div>
     <div class="col">
-        <label for="inputTanggalAwal" class="visually-hidden">
-        Tanggal Awal
+        <label for="inputTanggalAwal" class="form-label fw-bold">
+            Tanggal Awal
         </label>
-        <input type="text" class="form-control" name="tgl_awal" 
-        placeholder="Tanggal Awal" 
-        value="<?php echo $tgl_awal ?>">
+        <input type="date" class="form-control" name="tgl_awal" id="inputTanggalAwal" placeholder="Tanggal Awal" value="<?php echo $tgl_awal ?>">
     </div>
-        <div class="col">
-        <label for="inputTanggalAkhir" class="visually-hidden">
+    <div class="col mb-2">
+        <label for="inputTanggalAkhir" class="form-label fw-bold">
         Tanggal Akhir
         </label>
-        <input type="text" class="form-control" name="tgl_akhir" 
-        placeholder="Tanggal Akhir" 
-        value="<?php echo $tgl_akhir ?>">
+        <input type="date" class="form-control" name="tgl_akhir" id="inputTanggalAkhir" placeholder="Tanggal Akhir" value="<?php echo $tgl_akhir ?>">
     </div>
     <div class="col">
-    <button type="submit" class="btn btn-primary rounded-pill px-3" 
-    name="simpan">Simpan</button>
-    </div>
+        <button type="submit" class="btn btn-primary rounded-pill px-3" name="simpan">Simpan</button>
     </div>
 </form>
 ```
 <br>
 
-Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan class "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. Sebenarnya terdapat label, namun karena telah terdapat placeholder maka label tersebut kurang berfungsi sehingga digunakan class "visually-hidden" untuk tidak menampilkan pada tampilan web. Label bisa saja dihapus namun untuk kebutuhan aksesibilitas maka label tersebut disembunyikan saja.
+Terdapat tiga input pada form, yaitu kegiatan, tanggal awal, dan tanggal akhir. Namun pada database terdapat field id yang diatur untuk autoincrement sehingga akan terisi otomatis sesuai urutan data disimpan. pada bootstrap v5 untuk membuat form dalam satu baris dapat menggunakan grid, yaitu dengan class "row" dan "col". Pada form akan menampilkan placeholder keterangan sesuai inputan form. 
 <br>
 
 Terdapat kode PHP untuk menghubungkan form dengan database, dengan cara mengambil data dari database lalu dimunculkan melalui value berdasarkan variabel yang sesuai, berdasarkan id dari data ketika dilakukan ubah data. Untuk mengambil data dari database digunakan perintah SQl:
@@ -233,18 +243,17 @@ Terdapat kode PHP untuk menghubungkan form dengan database, dengan cara mengambi
 SELECT * FROM kegiatan WHERE id='" . $_GET['id'] . "'
 ```
 
-<br> 
-
 Nilai id didapat dari get data id yang dikirimkan ketika klik tombol ubah.
 <br>
 
 Selain form juga terdapat button yang  bertipe submit dengan class dari btn, btn-primary untuk memberikan warna biru atau dapat memberi variasi lain yang sesuai dengan btn-(kode warna yang ada pada dokumentasi bootstrap). Dalam pemilihan warna pada tombol harus disesuaikan dengan user experience.
+
 <br>
 
-
-### Tabel
+### 4. Tabel
 
 ```php
+<!-- Table-->
 <table class="table table-hover">
     <!--thead atau baris judul-->
     <thead>

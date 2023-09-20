@@ -2,9 +2,10 @@
 # title: "Pengenalan Tools"
 format: html
 categories: [instalasi, tools]
+toc-title: "On this page"
 ---
 
-# Pengenalan Tools
+# 2. Pengenalan Tools {.unnumbered}
 Sebelum memulai ada tools-tools yang digunakan dan perlu diinstall terlebih dahulu!
 <br>
 
@@ -21,7 +22,7 @@ Banyak pilihan untuk teks editor yang dapat digunakan, seperti *Notepad++*, *Sub
 Teks Editor yang umum digunakan saat ini adalah Visual Studio Code. Untuk melakukan instalasi Visual Studio Code silah ikuti langkah-langkah berikut:
 <br>
 
-1. Silahkan download file installer dari [Visual Studio Code](https://code.visualstudio.com/download). Klik download pada halaman web Visual Studio Code sesuai dengan sistem operasi yang digunakan.
+1. Silahkan download file installer dari [Visual Studio Code](https://code.visualstudio.com/download){.external target="_blank"}. Klik download pada halaman web Visual Studio Code sesuai dengan sistem operasi yang digunakan.
 
 ![Laman VSCode](assets/tools/vscode/webvscode.png){width="70%" style="text-align:center;"}
 
@@ -44,6 +45,12 @@ Teks Editor yang umum digunakan saat ini adalah Visual Studio Code. Untuk melaku
 8. Klik install dan jalankan Visual Studio Code
 
 ![vscode](assets/tools/vscode/vscode.png){width="70%" style="text-align:center;"}
+
+:::{.callout title="Intalasi Visual Studio Code"}
+
+{{< video https://youtu.be/fPG5FeLBJbA >}}
+
+:::
 
 
 ## Web Browser
@@ -83,7 +90,7 @@ XAMPP menyediakan semua komponen yang diperlukan untuk mengelola sebuah website,
 Untuk menginstall XAMPP ikuti langkah-langkah berikut:
 <br>
 
-1. Unduh file installer dari website [XAMPP](https://www.apachefriends.org/download.html). Unduh sesuai dengan sistem operasi atau komputer yang digunakan.
+1. Unduh file installer dari website [XAMPP](https://www.apachefriends.org/download.html){.external target="_blank"}. Unduh sesuai dengan sistem operasi atau komputer yang digunakan.
 <br>
 
 ![Web XAMPP](assets/tools/xampp/webxampp.png){width="70%" style="text-align:center;"}
@@ -106,15 +113,20 @@ Untuk melihat konfigurasi php dapat membuka config pada baris apache lalu membuk
 ![Apache Config](assets/tools/php-config.png){width="70%" style="text-align:center;"}
 
 
-Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya <?php phpinfo(); ?>, letakkan pada [`C:\xampp\htdocs`](C:\xampp\htdocs).  Lalu buka [`localhost/info.php`](http://localhost/info.php) pada browser
+Cek versi php dan ekstensi lain dengan cara membuat file “info.php” yang isinya `<?php phpinfo(); ?>`, letakkan pada [`C:\xampp\htdocs`](C:\xampp\htdocs){.external target="_blank"}.  Lalu buka [`localhost/info.php`](http://localhost/info.php){.external target="_blank"} pada browser
+
+
+:::{.callout title="Instalasi Xampp"}
+
+{{< video https://youtu.be/hNotk93jtDQ >}}
+
+:::
 
 <br>
 
 ## Bootstrap
 
-Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat. Sampai dengan modul ini dibuat, Bootstrap telah mengalami pembaruan Bootstrap versi 5. Berikut merupakan penjelasan mengenai Bootstrap v5.
-
-{{< video https://www.youtube.com/embed/yqVJwUr3kLI?start=18  >}}
+Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk pengembangan desain web responsif (responsive web design). Dikembangkan oleh tim Twitter, Bootstrap menyediakan serangkaian komponen dan gaya CSS yang dapat digunakan untuk membangun tampilan web yang konsisten, menarik, dan responsif secara cepat. Sampai dengan modul ini dibuat, Bootstrap telah mengalami pembaruan Bootstrap versi 5. 
 
 <br>
 
@@ -126,7 +138,7 @@ Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk 
 **Cara instalasi Bootstrap**
 <br>
 
-1.	Buka halaman resmi Bootstrap di https://getbootstrap.com.
+1.	Buka halaman resmi Bootstrap di [https://getbootstrap.com](https://getbootstrap.com){.external target="_blank"}.
 
 2.	Di halaman utama, Anda akan melihat tombol "Download" di bagian bawah. Klik tombol tersebut untuk mengunduh file Bootstrap.
 <br>
@@ -158,7 +170,7 @@ Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 ```
 
-8.	Juga di dalam elemen <body> atau sebelum penutup tag </body> dalam file HTML, tambahkan tag script berikut untuk menautkan file JavaScript Bootstrap:
+8.	Juga di dalam elemen `<body>` atau sebelum penutup tag `</body>` dalam file HTML, tambahkan tag script berikut untuk menautkan file JavaScript Bootstrap:
 <br>
 
 ```html
@@ -166,3 +178,12 @@ Bootstrap adalah sebuah kerangka kerja (framework) front-end yang populer untuk 
 ```
 
 9.	Sekarang, Anda dapat menggunakan kelas-kelas, komponen, dan gaya Bootstrap dalam halaman web Anda.Sekarang, Anda dapat menggunakan kelas-kelas, komponen, dan gaya Bootstrap dalam halaman web Anda.
+
+
+::: {.callout title="Instalasi Bootstrap"}
+
+*Berikut adalah penjelasan mengenai instalasi bootstrap!*
+
+{{< video https://youtu.be/p_sqxUZ6b0Q >}}
+
+:::

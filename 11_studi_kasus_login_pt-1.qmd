@@ -1,0 +1,334 @@
+---
+# title: "[Part I] - Login Form"
+format: html
+categories: [studi kasus, session, controller]
+toc-title: "On this page"
+---
+
+# [Part I] - Login Form {.unnumbered}
+
+## Pengantar
+
+::: {.justify}
+
+Acapkali berbagai macam situs website menawarkan kepada kita untuk bergabung sebagai komunitas, anggota, atau peserta. Sebagai contoh, <b>LMS Kulino</b> yang tengah kita pakai saat ini mewajibkan user-nya untuk masuk ke dalam sistem tersebut dengan menggunakan <b>username</b> dan <b>password</b> yang telah terdaftar. Apabila user belum terdaftar, maka mereka akan diarahkan menuju formulir registrasi untuk melakukan pendaftaran akun baru pada laman tersebut.
+
+Dari formulir registrasi dan login tersebut, pada studi kasus kali ini kita akan menelaah hal-hal apa sajakah yang dibutuhkan untuk membangun komponen yang ada di dalam sistem registrasi serta login tersebut. Hal ini mencakup berbagai hal termasuk <b>sessions</b>, <b>authentication</b>, dan sebagainya di dalam modul ini. So, what are you waiting for? Let’s get started, Champ!
+
+:::
+
+## Merancang Database
+
+::: {.justify}
+
+*First things first*, yang perlu kita persiapkan adalah database. Buatlah database baru dengan nama <b>`account`</b>. Database tersebut nantinya akan kita gunakan dalam pembuatan studi kasus kita kali ini. Setelah berhasil dibuat, kita membuat tabel dengan nama <b>`usertable`</b> yang di dalamnya memuat <b>id, name, email, password, code, dan status</b>. Anda dapat membuatnya secara manual atau bisa juga salin kueri SQL berikut ini:
+
+:::
+
+```sql
+CREATE TABLE `usertable` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(255) NOT NULL,
+    `email` varchar(255) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    `code` mediumint(50) NOT NULL,
+    `status` text NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+
+## Koneksi ke Database
+
+::: {.justify}
+
+Masih ingat dengan prosedur pengkoneksian ke database phpMyAdmin? Ya, tentu saja, kita akan menerapkan konsep yang sama seperti studi kasus sebelumnya dalam hal ini. Namun apabila Anda lupa, Anda dapat menyalin kode berikut ini:
+
+:::
+
+```php
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "account";
+
+$con = new mysqli($host, $username, $password, $database);
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+```
+
+## Membuat Formulir Registrasi
+
+::: {.justify}
+
+Langkah awal dari studi kasus ini adalah membuat formulir registrasi. Sangat sederhana hanya membutuhkan beberapa inputan data, seperti <b>nama lengkap, email, password, dan konfirmasi ulang password</b>. Gunakan konsep yang sama di saat pembuatan formulir studi kasus sebelumnya. Berikan nama file registrasi tersebut dengan nama <b>signup-user.php</b>.
+
+:::
+
+![Preview Halaman Registrasi (signup-user.php)](assets/login/signup-user.png){width="60%" style="text-align:center;" #fig-signup}
+
+Sebagai identitas, berikan atribut dan value pada tiap <b>`<input>`</b> dengan parameter sebagai berikut:
+
+|        Komponen       |     Value          |
+|-----------------------|--------------------|
+| Nama Lengkap          |   name="name"      |
+| Email                 |   name="email"     |
+| Password              |   name="password"  |
+| Konfirmasi Password   |   name="cpassword" |
+| Button Signup         |   name="signup"    |
+
+: <b>Parameter Atribut di signup-user.php</b> {.striped .hover}
+
+::: {.justify}
+
+Selain itu, untuk penanganan error dari segala kemungkinan masalah yang dapat terjadi, salin kode berikut ini dengan menempatkannya <b>setelah paragraf</b> "Mudah. Cepat. Praktis." dan <b>sebelum kotak inputan pertama</b>, yaitu Nama Lengkap.
+
+:::
+
+```php
+<?php
+    if (count($errors) == 1) {
+?>
+    <div class="alert alert-danger text-center" style="font-weight: 600;">
+        <?php
+            foreach ($errors as $showerror) {
+                echo $showerror;
+            }
+        ?>
+    </div>
+<?php
+    } elseif (count($errors) > 1) {
+?>
+    <div class="alert alert-danger" style="font-weight: 600;">
+        <?php
+            foreach ($errors as $showerror) {
+        ?>
+            <li><?php echo $showerror; ?></li>
+        <?php } ?>
+    </div>
+<?php } ?>
+```
+
+## Membuat Halaman Login
+
+::: {.justify}
+
+Setelah halaman pendaftaran selesai dibuat, selanjutnya kita akan beralih ke halaman login (<b>login-user.php</b>). Pada halaman login ini cukup simple, karena kita hanya membutuhkan <b>2 inputan data</b>, yaitu <b>email dan password</b>. Cara penyusunan halaman tersebut terbilang sama dengan halaman registrasi, yang membedakan hanya handling disaat error saja.
+
+:::
+
+![Preview Halaman Login (login-user.php)](assets/login/login-user-form.png){width="60%" style="text-align:center;" #fig-login}
+
+Sebagai identitas, berikan atribut dan value pada tiap <b>`<input>`</b> dengan parameter sebagai berikut:
+
+|        Komponen       |     Value          |
+|-----------------------|--------------------|
+| Email                 |   name="email"     |
+| Password              |   name="password"  |
+| Button Login          |   name="login"     |
+
+: <b>Parameter Atribut di login-user.php</b> {.striped .hover}
+
+::: {.justify}
+
+Untuk menangani permasalahan jika terjadi error, Anda dapat menyalin kode di bawah ini; harap letakkan kode berikut **setelah paragraf** "Masuk dengan email dan password Anda" dan **sebelum kotak inputan email**:
+
+:::
+
+```php
+<?php
+    if (count($errors) > 0) {
+?>
+    <div class="alert alert-danger text-center" style="font-weight: 600;">
+        <?php
+            foreach ($errors as $showerror) {
+                echo $showerror;
+            }
+        ?>
+    </div>
+<?php
+    }
+?>
+```
+
+## Merancang Forgot Password
+
+::: {.justify}
+
+Di dalam container form *login* terdapat tautan **"Forgot Password"** atau "Lupa Kata Sandi". Hal ini perlu kita lakukan guna apabila pengguna lupa terhadap kata sandi akun mereka. Sebelum memulai, perlu diketahui bahwa nantinya kita akan menerapkan konsep **One-Time Password (OTP)** untuk studi kasus ini.
+
+*Well then*, mari kita buat file baru dengan nama **forgot-password.php**. Konsep penyusunan halaman mengikuti alur yang sama seperti halaman-halaman sebelumnya.
+
+:::
+
+![Preview Halaman Lupa Password (forgot-password.php)](assets/login/forgot-password.png){width="60%" style="text-align:center;" #fig-forgot}
+
+::: {.justify}
+
+Berikan identitas pada tiap-tiap bagian, yaitu **input-an alamat email dan button "Continue"**. Untuk input-an email, **`name="email"`**; dan button "Continue", **`name="check-email"`**.
+
+Pada halaman ini, input-an hanya berupa email dan email ini sebelumnya sudah harus terdaftar dalam sistem terlebih dahulu. Apabila email yang dimasukkan belum terdaftar, maka akan melemparkan alert atau notifikasi berupa "Akun email Anda belum terdaftar". Praktisi dalam pembuatan kode halaman di atas dapat Anda susun sendiri atau bisa juga salin kode berikut ini:
+
+:::
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form">
+                <form action="forgot-password.php" method="POST" autocomplete="">
+                    <h2 class="text-center">Forgot Password</h2>
+                    <p class="text-center">Masukkan alamat email Anda</p>
+                    <?php
+                        if (count($errors) > 0) {
+                    ?>
+                        <div class="alert alert-danger text-center" style="font-weight: 600;">
+                            <?php
+                                foreach ($errors as $error) {
+                                    echo $error;
+                            }
+                            ?>
+                        </div>
+                    <?php 
+                        } 
+                    ?>
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="Your email address" required value="<?php echo $email ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" name="check-email" value="Continue">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+## Menangani Reset Password
+
+::: {.justify}
+
+Setelah pengiriman alamat email melalui halaman forgot-password.php di atas, selanjutnya kita harus memasukkan kode OTP terlebih dahulu yang di mana kode tersebut akan kita dapatkan melalui alamat email. Sebelum itu, jikalau Anda belum pernah **men-*setting*** pengaturan **Simple Mail Transfer Protocol (SMTP)**, harap perhatikan dengan saksama penjelasan berikut ini:
+
+1. **Pergi** ke dalam **folder XAMPP** Anda dan **buka folder php**
+2. **Gulir ke bawah** hingga Anda menemukan **file php.ini**, setelah itu buka file tersebut. (Lihat @fig-smtp1)
+
+![File **php.ini** yang terdapat di direktori **C:/xampp/php**](assets/login/folder-php.png){width="93%" style="text-align:center;" #fig-smtp1}
+
+3. Setelah itu, **klik kanan** pada **mouse >** Open with **>** pilih **Notepad**
+4. Di dalam file php.ini tersebut, cari **'SMTP'** dengan shortcut **CTRL + F** (Lihat @tbl-config-mail)
+
+|                                                                                   |
+|:---------------------------------------------------------------------------------:|
+|![](assets/login/mail_func-before.png){style="text-align:center;"} <br>**Sebelum** |
+|![](assets/login/main_func-after.png){style="text-align:center;"} <br>**Sesudah**  |
+
+: Konfigurasi **SMTP** pada File **php.ini** {#tbl-config-mail}
+
+5. **Hapus tanda titik koma (;) pada tiap bagian-bagian yang diperlukan**. Harap perhatikan dengan teliti tiap bagian yang dibutuhkan agar tidak menimbulkan *error*/kesalahan.
+6. Untuk bagian **`sendmail_from`** diisikan dengan alamat email aktif dan valid. Apabila Anda memiliki 2 akun email yang aktif, Anda dapat mempergunakan salah satunya.
+
+7. Selepas itu, gulir ke bawah sedikit, lalu Anda akan menemukan seperti pada @tbl-direktori-sendmail berikut ini:
+
+|                                                                                       |
+|:-------------------------------------------------------------------------------------:|
+|![](assets/login/sendmail_path-before.png){style="text-align:center;"} <br>**Sebelum** |
+|![](assets/login/sendmail_path-after.png){style="text-align:center;"} <br>**Sesudah**  |
+
+: Direktori Pengiriman Email pada File **php.ini** {#tbl-direktori-sendmail}
+
+8. **Hapus titik koma (;)** pada bagian **`sendmail_path`**, lalu isikan dengan *path*/direktori yang **sesuai dengan direktori XAMPP** pada perangkat Anda atau Anda dapat menyalin direktori berikut ini:
+
+```php
+"\"C:\xampp\sendmail\sendmail.exe\" -t"
+```
+
+9. **Jangan lupa untuk disimpan** (**CTRL + S**) kemudian tutup.
+
+10. Selanjutnya, kita beralih ke **folder sendmail (C:/xampp/sendmail)** dan **buka file sendmail.ini**
+11. Pada file tersebut, Anda akan menemukan **`smtp_server=mail.mydomain.com`**, ganti isian daripada **`smtp_server`** menjadi **`smtp_server=smtp.gmail.com`**.
+12. Lalu, di bawahnya terdapat **`smtp_port=25`**, ganti isian daripada **`smtp_port`** menjadi **`smtp_port=587`**.
+13. Selanjutnya gulir ke bawah, hingga Anda menemukan **`error_logfile=error.log`** dan **`debug_logfile=debug.log`**. **Hapus titik koma (;)** pada **bagian depan** kedua kode tersebut (Lihat @fig-error-debug-logfile)
+
+![Konfigurasi Enable Error dan Debug Logfile pada File **sendmail.ini**](assets/login/error-logfile-path.png){width="90%" style="text-align:center;" #fig-error-debug-logfile}
+
+14. Setelah itu gulir ke bawah lagi, lalu Anda akan menemukan **`auth_username`**, **`auth_password`**, dan **`force_sender`**. Khusus **`auth_username`** dan **`force_sender`** isikan dengan alamat email Anda yang aktif dan valid (Lihat @fig-auth-userpass)
+
+![Konfigurasi Auth & Pengirim Email pada File **sendmail.ini**](assets/login/auth-userpass.png){width="90%" style="text-align:center;" #fig-auth-userpass}
+
+15. Selanjutnya teruntuk **`auth_password`** dapat Anda **isikan dengan kombinasi password 16-karakter** yang Anda dapatkan dari **alamat email Google Account yang Anda isikan di bagian `auth_username`** dan **`force_sender`**. Lantas bagaimana caranya?
+
+16. Pergi ke [**https://myaccount.google.com/**](https://myaccount.google.com/){.external target="_blank"}. Harap diperhatikan Anda **wajib** menggunakan **akun email yang sama** dengan alamat email yang telah Anda isikan pada **Langkah ke-14**.
+17. Pada laman tersebut, terdapat panel yang berada di sisi kiri layar. Dari halaman **"Beranda"** atau **"Home"** beralihlah ke halaman **"Keamanan"** atau **"Security"**. Pada halaman tersebut, gulir ke bawah lalu Anda akan menemukan **"Cara Anda login ke Google"** atau **"How you sign in to Google"**
+18. Pada bagian tersebut, klik **"Verifikasi 2 Langkah"** atau **"2-Step Verification"**. **Apabila diminta**, masukkan password akun email Anda, lalu Anda akan diminta untuk memverifikasi via Gmail atau nomor telepon dengan menggunakan kode verifikasi, contoh <span class="auth-code">G-123456</span>. Harap ikuti prosedur yang ada pada laman tersebut!
+19. Setelah berhasil masuk, Anda akan melihat tampilan laman seperti berikut ini:
+
+![Halaman Verifikasi 2 Langkah](assets/login/two-step-verif-page.png){width="95%" style="text-align:center;" #fig-two-step-verification}
+
+20. Di dalam halaman tersebut, **gulir ke paling bawah**, hingga Anda menemukan section **"Sandi aplikasi"** atau **"App password"**. **Klik *section* tersebut**, lalu Anda akan melihat tampilan laman seperti berikut ini:
+
+![Tampilan Halaman Sandi Aplikasi](assets/login/page-app-password.png){width="95%" style="text-align:center;" #fig-page-app-password}
+
+21. Pada kotak yang ada di bawah, silakan Anda membuat sandi aplikasi yang baru dengan cara **mengisikan judul aplikasi yang ingin Anda buat**, sebagai contoh **"BK-Login"**. Setelah itu, klik button **"Buat"**
+
+22. Akan muncul pop-up, seperti pada gambar di bawah ini (Lihat @fig-popup-app-pass). Pada popup tersebutlah Anda mendapatkan password 16-karakter yang dapat Anda **copy dan paste** dan Anda isikan ke bagian **`auth_password`** di file **sendmail.ini** (Lihat @fig-auth-userpass)
+
+![Password 16-Karakter Aplikasi Anda](assets/login/popup-app-pass.png){width="65%" style="text-align:center;" #fig-popup-app-pass}
+
+23. Anda sudah siap!
+
+Pengaturan konfigurasi SMTP Anda telah siap, sekarang kita akan melanjutkan proses pembuatan halaman verifikasi kode OTP. Buat file baru dan beri nama **reset-code.php**, di sini kode OTP akan berperan dalam memverifikasi pembuatan *password* baru atau saat lupa *password* atau yang lainnya. Seperti apakah bentuk dari halaman tersebut? Halaman **reset-code.php** sangatlah sederhana sekali seperti pada gambar berikut:
+
+![Preview Halaman Verifikasi Reset Kode OTP (reset-code.php)](assets/login/reset-code.png){width="50%" style="text-align:center;" #fig-reset-code}
+
+Pada halaman tersebut berikan identitas pada tiap-tiap bagian. Untuk kotak input-an kode OTP berikan atribut dan *value* <span style="font-weight: bold; font-size: 23px;">&#8594;</span> **`name="otp"`** dan untuk *button* "Submit" <span style="font-weight: bold; font-size: 23px;">&#8594;</span> **`name="check-reset-otp"`**.
+
+Salah satu hal yang perlu diperhatikan dalam halaman ini adalah ***sessions*** yang diambil dari alamat email yang terdaftar pada sistem. Oleh karena itu, kita perlu melampirkan ***sessions*** di atas halaman. Salin kode berikut dan **letakkan di atas halaman PHP** Anda:
+
+```php
+<?php
+    $email = $_SESSION['email'];
+    if ($email == false) {
+        header('Location: login-user.php');
+    }
+?>
+```
+
+Setelah itu, buatlah kode untuk menampilkan informasi baik itu kode OTP telah dikirimkan melalui email atau notifikasi kemungkinan terjadinya *error*. Untuk penanganan *error*, gunakan cara/konsep yang sama seperti halnya pada halaman **forgot-password.php**. Sedangkan untuk menampilkan notifikasi bahwa kode OTP telah dikirimkan ke email, Anda dapat menyalin kode berikut ini:
+
+:::
+
+```php
+<?php
+    if (isset($_SESSION['info'])) {
+?>
+    <div class="alert alert-success text-center">
+        <?php echo $_SESSION['info']; ?>
+    </div>
+<?php
+    }
+?>
+```
+
+## Akhir Bagian I
+
+::: {.justify}
+
+Selamat Anda telah berhasil menyusun studi kasus hingga pada tahap ini! Harap diingat perjalanan kita masih panjang. Silakan melanjutkan praktik studi kasus ini ke Bagian II. ***Break a leg, Champ!***
+
+:::

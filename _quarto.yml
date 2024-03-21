@@ -20,15 +20,17 @@ book:
       chapters: 
         - 7_program_todolist.qmd
         - 8_studi_kasus_poliklinik.qmd
-   
+        - 11_studi_kasus_login_pt-1.qmd
+        - 12_studi_kasus_login_pt-2.qmd
 
 # bibliography: references.bib
 
 format:
   html:
     theme: 
-      light: flatly
-      dark: darkly 
+      light: [flatly, style-light.scss]
+      dark: [darkly, style-dark.scss]
+    css: styles.css
   pdf:
     documentclass: scrreprt
 

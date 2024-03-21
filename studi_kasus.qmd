@@ -16,3 +16,9 @@ Pada praktikum database kita telah membuat database dengan studi kasus dari to d
 ## Poliklinik
 
 Pada program poliklinik merupakan pengembangan pemahaman dari yang telah dipelajari sebelumnya sehingga program yang dibuat dapat memodifikasi dari studi kasus sebelumnya.
+
+## Login & Registrasi Form
+
+Pada program <b>Login & Registrasi Form</b>, kita akan mempelajari banyak hal mengenai **`$_SESSION[]`**, enkripsi password, <i>controller</i> sistem, penanganan lupa password, dan sebagainya. Studi kasus ini juga akan dibagi menjadi beberapa bagian, yaitu Part I dan Part II.
+
+Tentunya selain materi-materi di atas, kita akan mengimplementasikan semua ilmu yang telah diajarkan dari Program To Do List hingga Poliklinik.
